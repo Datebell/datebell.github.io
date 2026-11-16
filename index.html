@@ -154,7 +154,6 @@ html[lang="th"] .f h3{font-family:"Prompt",var(--display);font-weight:600;letter
 /* final */
 .final{position:relative;overflow:hidden;isolation:isolate;text-align:center;color:#fff;background:radial-gradient(90% 90% at 50% 0%,var(--green-ink),var(--deep) 60%,var(--deeper));padding:84px 0 92px}
 .final .rings{transform:translate(-50%,-30%)}
-.final img.b{width:96px;margin:0 auto 18px;transform-origin:50% 6%;filter:drop-shadow(0 12px 16px rgba(0,0,0,.3));animation:ring 3.6s var(--ease) .6s 3}
 .final h2{color:#fff}
 .final .lede{margin-bottom:6px}
 
@@ -177,11 +176,29 @@ footer a{color:rgba(255,255,255,.86)}
 .js .rv.in{opacity:1;transform:none}
 
 
+
+/* gold bell: swings like "rings" (same keyframes and timing) */
+.dbell{display:block;overflow:visible}
+.dbell .sw{transform-box:view-box;transform-origin:422px 217px}
+.dbell .cl{transform-box:view-box;transform-origin:422px 217px}
+.dbell .w{transform-box:fill-box;transform-origin:center;opacity:.9}
+.mark .dbell{width:52px;height:52px;margin:-8px -6px -8px -10px}
+.final .dbell{width:120px;height:120px;margin:0 auto 14px;filter:drop-shadow(0 12px 16px rgba(0,0,0,.3))}
+.ringing .sw{animation:ring 3s var(--ease) 1}
+.ringing .cl{animation:clap 3s var(--ease) 1}
+.ringing .wl{animation:waveL 3s var(--ease) 1}
+.ringing .wr{animation:waveR 3s var(--ease) 1}
+@keyframes clap{0%,64%,100%{transform:rotate(0)}68%{transform:rotate(-6deg)}74%{transform:rotate(8deg)}80%{transform:rotate(-5deg)}86%{transform:rotate(3deg)}}
+@keyframes waveL{0%,62%,100%{transform:none;opacity:.9}70%{transform:translateX(-40px) scale(1.12);opacity:1}82%{transform:translateX(-10px);opacity:.9}}
+@keyframes waveR{0%,62%,100%{transform:none;opacity:.9}70%{transform:translateX(40px) scale(1.12);opacity:1}82%{transform:translateX(10px);opacity:.9}}
+.mark{cursor:pointer}
+
 /* ---------- motion ---------- */
 @keyframes up{to{opacity:1;transform:none}}
 .js .copy>*{opacity:0;transform:translateY(18px);animation:up .9s var(--ease) forwards}
 .js .copy>:nth-child(2){animation-delay:.08s}.js .copy>:nth-child(3){animation-delay:.18s}.js .copy>:nth-child(4){animation-delay:.28s}
-h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 3s var(--ease) 1.2s 2}
+h1 em{display:inline-block;transform-origin:50% 10%}
+.ringing h1 em,h1.ringing em{animation:ring 3s var(--ease) 1}
 .ripple{position:absolute;left:50%;top:46%;width:0;height:0;z-index:0;pointer-events:none}
 .ripple i{position:absolute;left:-250px;top:-250px;width:500px;height:500px;border-radius:50%;border:2px solid rgba(251,176,59,.4);opacity:0;animation:ripple 5.4s cubic-bezier(.15,.6,.3,1) infinite}
 .ripple i:nth-child(2){animation-delay:1.8s;border-color:rgba(255,255,255,.25)}
@@ -229,7 +246,8 @@ h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 3s var(--ease
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .final img.b,h1 em,.slide{animation:none}
+  .slide{animation:none}
+  .ringing .sw,.ringing .cl,.ringing .w,.ringing h1 em{animation:none}
   .ripple{display:none}
   .js .copy>*{opacity:1;transform:none;animation:none}
   .js .f svg{opacity:1;transform:none;transition:none}
@@ -245,11 +263,12 @@ h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 3s var(--ease
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><clipPath id="dbBc"><path d="M512 270 C392 270 322 360 322 480 L322 610 L262 690 Q250 712 276 712 L748 712 Q774 712 762 690 L702 610 L702 480 C702 360 632 270 512 270 Z"/></clipPath><linearGradient id="dbG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD27A"/><stop offset="1" stop-color="#F7A21F"/></linearGradient></defs></svg>
 
 <header class="hero">
   <svg class="rings" viewBox="0 0 1500 1500" aria-hidden="true"><circle cx="750" cy="750" r="150"/><circle class="y" cx="750" cy="750" r="250"/><circle cx="750" cy="750" r="370"/><circle cx="750" cy="750" r="500"/><circle class="y" cx="750" cy="750" r="620"/><circle cx="750" cy="750" r="740"/></svg>
   <div class="wrap top">
-    <a class="mark" href="./"><img src="icon.png" alt="" width="36" height="36">Datebell</a>
+    <a class="mark" href="./"><svg class="dbell hb" viewBox="72 72 880 880" width="44" height="44" aria-hidden="true"><g class="w wl"><path d="M140 400 Q110 500 150 590" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round"/></g><g class="w wr"><path d="M880 460 Q912 560 872 650" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round"/></g><g class="sw"><g transform="translate(500 530) rotate(-14) scale(1.04) translate(-512 -500)"><circle cx="512" cy="232" r="44" fill="#F7A21F"/><path d="M512 270 C392 270 322 360 322 480 L322 610 L262 690 Q250 712 276 712 L748 712 Q774 712 762 690 L702 610 L702 480 C702 360 632 270 512 270 Z" fill="url(#dbG)"/><g clip-path="url(#dbBc)"><rect x="600" y="250" width="240" height="480" fill="#F59E0B"/></g><path d="M262 690 Q250 712 276 712 L748 712 Q774 712 762 690 Z" fill="#F59E0B"/><path d="M464.486328125 602.9296875C509.0419921875 602.9296875 539.193359375 579.8583984375 539.193359375 548.73046875C539.193359375 527.001953125 524.544921875 507.71484375 497.201171875 504.9072265625V504.541015625C517.8310546875 502.099609375 533.578125 487.939453125 533.578125 465.72265625C533.578125 436.0595703125 505.2578125 415.185546875 464.974609375 415.185546875C420.541015625 415.185546875 394.173828125 440.6982421875 394.173828125 474.0234375H441.537109375C441.537109375 460.9619140625 451.546875 451.806640625 464.974609375 451.806640625C477.7919921875 451.806640625 487.0693359375 460.2294921875 487.0693359375 471.826171875C487.0693359375 483.6669921875 477.42578125 490.625 461.068359375 490.625H443.490234375V524.8046875H461.068359375C478.0361328125 524.8046875 488.900390625 532.7392578125 488.900390625 544.9462890625C488.900390625 556.787109375 478.7685546875 565.087890625 464.2421875 565.087890625C448.12890625 565.087890625 438.36328125 554.7119140625 438.36328125 537.5H390.755859375C390.755859375 571.435546875 412.484375 602.9296875 464.486328125 602.9296875Z M629.58203125 418.115234375H584.66015625L539.982421875 445.458984375V487.451171875L580.509765625 462.6708984375H580.75390625V600.0H629.58203125Z" fill="#16181B"/></g><g class="cl"><g transform="translate(500 530) rotate(-14) scale(1.04) translate(-512 -500)"><path d="M446 742 A66 66 0 0 0 578 742 Z" fill="#E08E14"/></g></g></g></svg>Datebell</a>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-set="th" aria-pressed="true" lang="th">ไทย</button>
       <button type="button" data-set="en" aria-pressed="false" lang="en">EN</button>
@@ -392,7 +411,7 @@ h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 3s var(--ease
   <svg class="rings" viewBox="0 0 1500 1500" aria-hidden="true"><circle cx="750" cy="750" r="150"/><circle class="y" cx="750" cy="750" r="250"/><circle cx="750" cy="750" r="370"/><circle cx="750" cy="750" r="500"/><circle class="y" cx="750" cy="750" r="620"/></svg>
   <div class="ripple"><i></i><i></i><i></i></div>
   <div class="wrap rv">
-    <img class="b" src="img/v17/bell.webp" alt="" width="320" height="324" loading="lazy">
+    <svg class="dbell fb" viewBox="72 72 880 880" width="120" height="120" aria-hidden="true"><g class="w wl"><path d="M140 400 Q110 500 150 590" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round"/></g><g class="w wr"><path d="M880 460 Q912 560 872 650" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round"/></g><g class="sw"><g transform="translate(500 530) rotate(-14) scale(1.04) translate(-512 -500)"><circle cx="512" cy="232" r="44" fill="#F7A21F"/><path d="M512 270 C392 270 322 360 322 480 L322 610 L262 690 Q250 712 276 712 L748 712 Q774 712 762 690 L702 610 L702 480 C702 360 632 270 512 270 Z" fill="url(#dbG)"/><g clip-path="url(#dbBc)"><rect x="600" y="250" width="240" height="480" fill="#F59E0B"/></g><path d="M262 690 Q250 712 276 712 L748 712 Q774 712 762 690 Z" fill="#F59E0B"/><path d="M464.486328125 602.9296875C509.0419921875 602.9296875 539.193359375 579.8583984375 539.193359375 548.73046875C539.193359375 527.001953125 524.544921875 507.71484375 497.201171875 504.9072265625V504.541015625C517.8310546875 502.099609375 533.578125 487.939453125 533.578125 465.72265625C533.578125 436.0595703125 505.2578125 415.185546875 464.974609375 415.185546875C420.541015625 415.185546875 394.173828125 440.6982421875 394.173828125 474.0234375H441.537109375C441.537109375 460.9619140625 451.546875 451.806640625 464.974609375 451.806640625C477.7919921875 451.806640625 487.0693359375 460.2294921875 487.0693359375 471.826171875C487.0693359375 483.6669921875 477.42578125 490.625 461.068359375 490.625H443.490234375V524.8046875H461.068359375C478.0361328125 524.8046875 488.900390625 532.7392578125 488.900390625 544.9462890625C488.900390625 556.787109375 478.7685546875 565.087890625 464.2421875 565.087890625C448.12890625 565.087890625 438.36328125 554.7119140625 438.36328125 537.5H390.755859375C390.755859375 571.435546875 412.484375 602.9296875 464.486328125 602.9296875Z M629.58203125 418.115234375H584.66015625L539.982421875 445.458984375V487.451171875L580.509765625 462.6708984375H580.75390625V600.0H629.58203125Z" fill="#16181B"/></g><g class="cl"><g transform="translate(500 530) rotate(-14) scale(1.04) translate(-512 -500)"><path d="M446 742 A66 66 0 0 0 578 742 Z" fill="#E08E14"/></g></g></g></svg>
     <h2 id="finalH"><span data-l="th" lang="th">ให้กระดิ่ง <em>ช่วยจำ</em></span><span data-l="en" lang="en">Let the bell <em>remember.</em></span></h2>
     <p class="lede"><span data-l="th" lang="th">ฟรีบน iPhone ตั้งค่าเสร็จในนาทีเดียว</span><span data-l="en" lang="en">Free on iPhone. Set up in a minute.</span></p>
     <div class="cta" style="align-items:center">
@@ -552,6 +571,19 @@ h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 3s var(--ease
     if(!auto||!seen||document.hidden)return;
     var n=current()+1;if(rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-4)n=0;goTo(n);
   },3200);
+
+
+  // ring the header bell together with the word "rings", twice after load, again on tap/hover;
+  // the closing bell rings when it scrolls into view
+  function ring(el){if(reduce||!el)return;el.classList.remove('ringing');void el.getBoundingClientRect();el.classList.add('ringing');}
+  var hero=document.querySelector('.hero');
+  hero.addEventListener('animationend',function(e){if(e.animationName==='ring'&&e.target.closest('.mark')){hero.classList.remove('ringing');if(++heroRings<2)setTimeout(function(){ring(hero);},300);}});
+  var heroRings=0;setTimeout(function(){ring(hero);},1200);
+  var mark=document.querySelector('.mark');
+  mark.addEventListener('mouseenter',function(){ring(hero);});
+  mark.addEventListener('click',function(e){if(location.pathname.replace(/index\.html$/,'').endsWith('/')&&!location.hash){e.preventDefault();ring(hero);}});
+  var fsec=document.querySelector('.final');
+  if('IntersectionObserver' in window){var fio=new IntersectionObserver(function(es){if(es[0].isIntersecting){ring(fsec);}},{threshold:.4});fio.observe(fsec);}
 
   // sticky download bar after the hero button scrolls away
   var dock=document.getElementById('dock'),heroCta=document.getElementById('heroCta'),finalSec=document.querySelector('.final');
