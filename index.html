@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&family=Prompt:wght@400;600;700&display=swap">
-<link rel="preload" as="image" href="img/v17/th-1.webp">
+<link rel="preload" as="image" href="img/v17/th-1-hero.webp">
 <style>
 :root{
   --green:#168E6A;--green-ink:#127A5B;--deep:#0B5E45;--deeper:#073D2D;
@@ -193,6 +193,21 @@ footer a{color:rgba(255,255,255,.86)}
 @keyframes waveR{0%,62%,100%{transform:none;opacity:.9}70%{transform:translateX(40px) scale(1.12);opacity:1}82%{transform:translateX(10px);opacity:.9}}
 .mark{cursor:pointer}
 
+
+/* the big bell on the first phone: lifted out of the store image so it swings with "rings" */
+.s1 .sb{position:absolute;height:auto;object-fit:fill}
+.s1 .sb-sw{position:absolute;inset:0;transform-origin:46.63% 5.57%}
+.s1 .sb-body{left:32.919%;top:5.378%;width:39.469%}
+.s1 .sb-cl{left:47.927%;top:23.036%;width:10.199%;transform-origin:-12.7% -372.4%}
+.s1 .sb-wl{left:25.788%;top:13.043%;width:6.385%}
+.s1 .sb-wr{left:67.579%;top:10.031%;width:6.385%}
+.ringing .sb-sw{animation:ring 3s var(--ease) 1}
+.ringing .sb-cl{animation:clap 3s var(--ease) 1}
+.ringing .sb-wl{animation:swL 3s var(--ease) 1}
+.ringing .sb-wr{animation:swR 3s var(--ease) 1}
+@keyframes swL{0%,62%,100%{transform:none}70%{transform:translateX(-55%) scale(1.1)}82%{transform:translateX(-15%)}}
+@keyframes swR{0%,62%,100%{transform:none}70%{transform:translateX(55%) scale(1.1)}82%{transform:translateX(15%)}}
+
 /* ---------- motion ---------- */
 @keyframes up{to{opacity:1;transform:none}}
 .js .copy>*{opacity:0;transform:translateY(18px);animation:up .9s var(--ease) forwards}
@@ -247,7 +262,7 @@ h1 em{display:inline-block;transform-origin:50% 10%}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .slide{animation:none}
-  .ringing .sw,.ringing .cl,.ringing .w,.ringing h1 em{animation:none}
+  .ringing .sw,.ringing .cl,.ringing .w,.ringing h1 em,.ringing .sb-sw,.ringing .sb-cl,.ringing .sb-wl,.ringing .sb-wr{animation:none}
   .ripple{display:none}
   .js .copy>*{opacity:1;transform:none;animation:none}
   .js .f svg{opacity:1;transform:none;transition:none}
@@ -288,7 +303,10 @@ h1 em{display:inline-block;transform-origin:50% 10%}
       <div class="ntf" id="ntf"><img src="img/icon-180.png" alt="" width="38" height="38"><div><b>Datebell<small id="ntfTime"></small></b><span id="ntfText"></span></div></div>
       <div class="slide s2"><img class="hs" data-n="2" src="img/v17/th-2.webp" alt="" width="600" height="1304"></div>
       <div class="slide s3"><img class="hs" data-n="5" src="img/v17/th-5.webp" alt="" width="600" height="1304"></div>
-      <div class="slide s1"><img class="hs" data-n="1" src="img/v17/th-1.webp" alt="" width="600" height="1304" fetchpriority="high"></div>
+      <div class="slide s1"><img class="hs" data-n="1-hero" src="img/v17/th-1-hero.webp" alt="" width="600" height="1304" fetchpriority="high">
+        <img class="sb sb-wl" src="img/v17/s1-wl.webp" alt="" width="77" height="255"><img class="sb sb-wr" src="img/v17/s1-wr.webp" alt="" width="77" height="255">
+        <div class="sb-sw"><img class="sb sb-cl" src="img/v17/s1-cl.webp" alt="" width="123" height="123"><img class="sb sb-body" src="img/v17/s1-body.webp" alt="" width="476" height="551"></div>
+      </div>
     </div>
   </div>
 </header>
