@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Datebell: เตือนก่อนตัดเงินและก่อนหมดอายุ</title>
+<title>Datebell: อะไรใกล้หมดเขต กระดิ่งดังก่อน</title>
 <meta name="description" content="Datebell เตือนก่อนหมดทดลองฟรี ก่อนตัดค่าสมาชิก และก่อนบัตร เอกสาร ประกันหมดอายุ ฟรีบน iPhone">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#0B5E45">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Datebell">
-<meta property="og:title" content="Datebell: รู้ก่อนวันตัดเงินและวันหมดอายุ">
+<meta property="og:title" content="Datebell: อะไรใกล้หมดเขต กระดิ่งดังก่อน">
 <meta property="og:description" content="เตือนก่อนหมดทดลองฟรี ก่อนตัดค่าสมาชิก และก่อนบัตร เอกสาร ประกันหมดอายุ ฟรีบน iPhone">
 <meta property="og:url" content="https://datebell.github.io/">
 <meta property="og:image" content="https://datebell.github.io/img/og.png">
@@ -17,224 +17,556 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="icon.png">
 <link rel="apple-touch-icon" href="img/icon-180.png">
-<link rel="preload" as="image" href="img/th-1.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&family=Prompt:wght@400;600;700&display=swap">
+<link rel="preload" as="image" href="img/v17/th-1.webp">
 <style>
-:root{--ink:#14211C;--muted:#5A6762;--bg:#FFFFFF;--soft:#F3F5F4;--green:#168E6A;--green-ink:#0F6E52;--line:#E3E8E6}
+:root{
+  --green:#168E6A;--green-ink:#127A5B;--deep:#0B5E45;--deeper:#073D2D;
+  --yellow:#FBB03B;--gold:#F0A12A;
+  --ink:#14211C;--muted:#56635E;--line:#E4E7E2;
+  --paper:#FBF8F1;--card:#FFFFFF;--mint:#E7F3EE;
+  --display:"Bricolage Grotesque","Prompt",system-ui,sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;
+  --body:Inter,"Sukhumvit Set","Prompt",-apple-system,system-ui,sans-serif;
+  --r:28px;--ease:cubic-bezier(.2,.8,.2,1);
+}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Sukhumvit Set","Noto Sans Thai","Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html[lang="th"] body{line-height:1.7}
+img{max-width:100%;height:auto;display:block}
 a{color:var(--green-ink)}
-.top{max-width:1040px;margin:0 auto;padding:14px 16px 0;display:flex;justify-content:flex-end}
-.lang{display:inline-flex;background:var(--soft);border-radius:999px;padding:3px}
-.lang button{font:inherit;font-size:14px;border:0;background:none;color:var(--muted);padding:6px 12px;border-radius:999px;cursor:pointer;min-height:32px}
-.lang button[aria-pressed="true"]{background:#fff;color:var(--ink);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
-main{max-width:1040px;margin:0 auto;padding:8px 16px 40px;display:grid;gap:36px;align-items:center}
-.hero{text-align:center}
-.brand{display:inline-flex;align-items:center;gap:12px;margin:8px 0 22px}
-.brand img{width:60px;height:60px;border-radius:14px;box-shadow:0 2px 10px rgba(22,142,106,.18)}
-.brand span{font-size:30px;font-weight:800;letter-spacing:-.02em}
-h1{font-size:clamp(30px,8.4vw,48px);line-height:1.18;letter-spacing:-.02em;margin:0 auto 14px;max-width:13em;font-weight:800}
-h1 em{font-style:normal;color:var(--green)}
-.sub{color:var(--muted);font-size:clamp(16px,4.3vw,19px);max-width:30em;margin:0 auto}
-.cta{margin:28px 0 0;display:flex;flex-direction:column;align-items:center;gap:10px}
-.cta a.badge{display:inline-block;padding:14px;line-height:0}
-.cta a.badge img{height:54px;width:auto;display:block}
-.cta small{color:var(--muted);font-size:14px}
-.demo{display:flex;flex-direction:column;align-items:center}
-.phone{position:relative;width:min(290px,74vw);aspect-ratio:600/1304;border-radius:46px;background:#0B0F0D;padding:10px;box-shadow:0 30px 60px -20px rgba(20,33,28,.35),0 0 0 1px #2A302D inset}
-.screen{position:relative;width:100%;height:100%;border-radius:37px;overflow:hidden;background:#fff}
-.screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:translateY(14px) scale(.985);transition:opacity .55s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
-.screen img.on{opacity:1;transform:none}
-.island{position:absolute;top:18px;left:50%;width:30%;height:22px;margin-left:-15%;background:#0B0F0D;border-radius:20px;z-index:2}
-.tap{position:absolute;inset:0;border:0;background:none;cursor:pointer;z-index:3;border-radius:46px}
-.step{margin:22px 0 0;min-height:3.2em;text-align:center;max-width:22em}
-.step b{display:block;color:var(--green);font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
-.step span{font-size:18px;font-weight:600;text-wrap:balance;display:block}
-.dots{display:flex;gap:4px;margin-top:10px}
-.dots button{width:28px;height:28px;border:0;background:none;padding:0;cursor:pointer;display:grid;place-items:center}
-.dots button i{display:block;width:8px;height:8px;border-radius:8px;background:var(--line);transition:width .3s,background .3s}
-.dots button[aria-current="true"] i{width:22px;background:var(--green)}
-footer{border-top:1px solid var(--line);margin-top:8px}
-footer div{max-width:1040px;margin:0 auto;padding:22px 16px calc(28px + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;color:var(--muted);font-size:14px}
-footer a{color:var(--muted)}
 [data-l]{display:none}
 html[lang="th"] [data-l="th"],html[lang="en"] [data-l="en"]{display:revert}
-/* device switch + iPhone Duo */
-.dev{display:inline-flex;background:var(--soft);border-radius:999px;padding:3px;margin:0 0 18px}
-.dev button{font:inherit;font-size:15px;border:0;background:none;color:var(--muted);padding:8px 16px;border-radius:999px;cursor:pointer;min-height:40px}
-.dev button[aria-pressed="true"]{background:var(--green);color:#fff;font-weight:600}
-.dev button:focus-visible,.lang button:focus-visible{outline:2px solid var(--green-ink);outline-offset:2px}
-.demo{--dw:min(420px,calc(100vw - 40px));--k:1.12}
-.duo-stage{width:var(--dw);height:calc(var(--dw) * var(--k));display:none;place-items:center}
-.demo.is-duo .phone{display:none}
-.demo.is-duo .duo-stage{display:grid}
-.duo{position:relative;border-radius:30px;background:#0B0F0D;padding:8px;box-shadow:0 30px 60px -20px rgba(20,33,28,.35),0 0 0 1px #2A302D inset;transition:width .6s cubic-bezier(.2,.8,.2,1),height .6s cubic-bezier(.2,.8,.2,1)}
-.duo.wide{width:var(--dw);height:calc((var(--dw) - 16px) / 1.4218 + 16px)}
-.duo.tall{height:calc(var(--dw) * var(--k));width:calc((var(--dw) * var(--k) - 16px) * .7038 + 16px)}
-.duo.fold{height:calc(var(--dw) * var(--k));width:calc((var(--dw) * var(--k) - 16px) * .687 + 16px)}
-.duo .screen{border-radius:22px}
-.duo .screen img{object-fit:cover;object-position:center top}
-.duo .crease{position:absolute;z-index:2;pointer-events:none;opacity:0;transition:opacity .4s}
-.duo.wide .crease{opacity:1;top:8px;bottom:8px;left:50%;width:2px;margin-left:-1px;background:linear-gradient(90deg,rgba(0,0,0,.05),rgba(255,255,255,.5),rgba(0,0,0,.05))}
-.duo.tall .crease{opacity:1;left:8px;right:8px;top:50%;height:2px;margin-top:-1px;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(255,255,255,.5),rgba(0,0,0,.05))}
-.duo .tap{border-radius:30px}
-@media (min-width:860px){
-  main{grid-template-columns:1.1fr .9fr;padding-top:24px;min-height:calc(100vh - 140px)}
-  .phone{width:min(300px,calc((100vh - 290px) * .46))}
-  .hero{text-align:left}
-  h1,.sub{margin-left:0}
-  .cta{align-items:flex-start}
-  .cta a.badge{margin-left:-14px}
-  .demo{--dw:min(460px,42vw,calc((100vh - 280px) / .95));--k:.95}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:3px;border-radius:8px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;color:#fff;background:radial-gradient(120% 80% at 75% 10%,#14936D 0%,var(--green-ink) 35%,var(--deep) 70%,var(--deeper) 100%);overflow:hidden;isolation:isolate}
+.rings{position:absolute;z-index:-1;width:1500px;height:1500px;left:50%;top:50%;transform:translate(-22%,-58%);pointer-events:none}
+.rings circle{fill:none;stroke:rgba(255,255,255,.075);stroke-width:2}
+.rings circle.y{stroke:rgba(251,176,59,.22)}
+.top{display:flex;align-items:center;justify-content:space-between;padding-top:calc(14px + env(safe-area-inset-top));padding-bottom:6px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font:800 22px/1 var(--display);letter-spacing:-.02em}
+.mark img{width:36px;height:36px;border-radius:9px}
+.lang{display:inline-flex;background:rgba(255,255,255,.12);border-radius:999px;padding:3px}
+.lang button{font:500 14px/1 var(--body);border:0;background:none;color:rgba(255,255,255,.82);padding:0 13px;min-height:36px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--deep);font-weight:600}
+.hero-grid{display:grid;gap:8px;padding-top:26px;padding-bottom:0}
+.copy{text-align:center}
+.pill{display:inline-flex;align-items:center;gap:8px;font:600 13px/1 var(--body);letter-spacing:.02em;background:rgba(255,255,255,.12);color:#fff;border-radius:999px;padding:8px 14px 8px 10px}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 4px rgba(251,176,59,.22)}
+h1{font:800 clamp(40px,11.5vw,76px)/.98 var(--display);letter-spacing:-.035em;margin:18px auto 16px;max-width:10.5em;text-wrap:balance}
+html[lang="th"] h1{font-family:"Prompt",var(--display);font-weight:700;letter-spacing:-.01em;line-height:1.18;font-size:clamp(36px,10.5vw,64px);max-width:9em}
+h1 em,h2 em{font:400 italic 1.08em/1 var(--serif);letter-spacing:-.01em}
+html[lang="th"] h1 em,html[lang="th"] h2 em{font:inherit;font-style:normal}
+h1 em,.final h2 em{color:var(--yellow)}
+.lede{font-size:clamp(17px,4.4vw,20px);color:rgba(255,255,255,.86);max-width:30em;margin:0 auto;text-wrap:pretty}
+.cta{display:flex;flex-direction:column;align-items:center;gap:12px;margin:28px 0 0}
+.badge{display:inline-block;line-height:0;border-radius:12px;transition:transform .2s var(--ease)}
+.badge:active{transform:scale(.97)}
+.badge img{height:56px;width:auto}
+.note{font-size:14px;color:rgba(255,255,255,.78)}
+.note b{color:#fff;font-weight:600}
+
+/* phone fan */
+.stage{position:relative;height:clamp(400px,118vw,560px);margin-top:34px}
+@keyframes ring{0%,62%,100%{transform:rotate(0)}66%{transform:rotate(14deg)}72%{transform:rotate(-11deg)}78%{transform:rotate(7deg)}84%{transform:rotate(-4deg)}90%{transform:rotate(2deg)}}
+.slide{position:absolute;left:50%;top:0;width:clamp(200px,56vw,270px);aspect-ratio:600/1304;border-radius:30px;overflow:hidden;background:var(--deep);box-shadow:0 40px 70px -24px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12) inset;transition:transform .9s var(--ease)}
+.slide img{width:100%;height:100%;object-fit:cover}
+.s1{z-index:3;transform:translateX(-50%)}
+.s2{z-index:2;transform:translateX(-112%) translateY(46px) rotate(-8deg) scale(.86)}
+.s3{z-index:1;transform:translateX(12%) translateY(46px) rotate(8deg) scale(.86)}
+.js .stage:not(.in) .s2{transform:translateX(-50%) translateY(30px) scale(.9)}
+.js .stage:not(.in) .s3{transform:translateX(-50%) translateY(30px) scale(.9)}
+
+/* ---------- facts strip ---------- */
+.facts{background:var(--deeper);color:#fff}
+.facts ul{list-style:none;margin:0 auto;padding-top:22px;padding-bottom:22px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px 14px}
+.facts li{display:flex;flex-direction:column;gap:2px}
+.facts b{font:800 30px/1.05 var(--display);letter-spacing:-.02em;color:var(--yellow);font-variant-numeric:tabular-nums}
+.facts li>span{font-size:14px;color:rgba(255,255,255,.8);line-height:1.4}
+
+/* ---------- sections ---------- */
+section.block{padding:72px 0}
+.kicker{display:inline-block;font:600 13px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--green-ink);margin-bottom:12px}
+html[lang="th"] .kicker{letter-spacing:0;text-transform:none;font-size:14px}
+h2{font:800 clamp(32px,8.6vw,54px)/1.02 var(--display);letter-spacing:-.03em;margin:0 0 14px;text-wrap:balance}
+html[lang="th"] h2{font-family:"Prompt",var(--display);font-weight:700;letter-spacing:0;line-height:1.25}
+h2 em{color:var(--green-ink)}
+.intro{color:var(--muted);font-size:18px;max-width:34em;margin:0;text-wrap:pretty}
+.head{margin-bottom:30px}
+
+/* gallery */
+.gal-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:22px}
+.seg{display:inline-flex;background:#EDEAE1;border-radius:999px;padding:4px}
+.seg button{font:500 15px/1 var(--body);border:0;background:none;color:var(--muted);min-height:40px;padding:0 16px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--green-ink);color:#fff;font-weight:600}
+.arrows{display:none;gap:8px}
+.arrows button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.arrows button:disabled{opacity:.35;cursor:default}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;--side:max(20px,calc((100vw - 1080px) / 2));padding:4px var(--side) 22px;scroll-padding-inline:var(--side);margin:0 calc(50% - 50vw);scrollbar-width:none;overscroll-behavior-x:contain}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{margin:0;flex:0 0 auto;scroll-snap-align:center;width:min(66vw,280px);aspect-ratio:600/1304;border-radius:24px;overflow:hidden;background:var(--green-ink);box-shadow:0 18px 40px -22px rgba(7,61,45,.55)}
+.rail.duo figure{width:min(86vw,560px);aspect-ratio:1200/844}
+.rail img{width:100%;height:100%;object-fit:cover}
+.dots{display:flex;justify-content:center;gap:2px}
+.dots button{width:24px;height:24px;border:0;background:none;padding:0;cursor:pointer;display:grid;place-items:center}
+.dots i{display:block;width:7px;height:7px;border-radius:7px;background:#D5D9D2;transition:width .3s var(--ease),background .3s}
+.dots button[aria-current="true"] i{width:20px;background:var(--green-ink)}
+
+/* worth it spotlight */
+.worth{background:var(--card)}
+.worth-grid{display:grid;gap:36px;align-items:center}
+.wcard{position:relative;max-width:420px;margin:0 auto;width:100%;border-radius:var(--r);padding:26px 24px 24px;color:#fff;background:linear-gradient(160deg,var(--green-ink),var(--deep));box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 30px 60px -28px rgba(11,94,69,.7)}
+.wcard .lbl{display:flex;justify-content:space-between;align-items:center;font-size:15px;color:rgba(255,255,255,.85)}
+.wcard .tag{font:600 12px/1 var(--body);background:var(--yellow);color:#3A2600;border-radius:999px;padding:6px 10px}
+.num{font:800 clamp(52px,15vw,72px)/1 var(--display);letter-spacing:-.03em;margin:14px 0 2px;display:flex;align-items:baseline;font-variant-numeric:tabular-nums}
+.num small{font:500 17px/1 var(--body);letter-spacing:0;margin-left:10px;color:rgba(255,255,255,.85)}
+.roll{display:inline-block;height:1em;overflow:hidden;vertical-align:top}
+.roll span{display:block;transition:transform 1.4s var(--ease)}
+.roll span i{display:block;height:1em;font-style:normal}
+.bars{display:flex;align-items:flex-end;gap:8px;height:74px;margin:20px 0 8px}
+.bars i{flex:1;border-radius:8px 8px 3px 3px;background:rgba(255,255,255,.92);transform-origin:bottom;transition:transform 1s var(--ease)}
+.bars i:nth-child(n+3){background:rgba(255,255,255,.28)}
+.js .worth:not(.in) .bars i{transform:scaleY(.08)}
+.months{display:flex;gap:8px;font-size:12px;color:rgba(255,255,255,.7)}.months span{flex:1;text-align:center}
+.choice{display:flex;gap:8px;margin-top:18px}
+.choice>span{flex:1;text-align:center;font:500 14px/1 var(--body);padding:12px 6px;border-radius:14px;background:rgba(255,255,255,.12)}
+.choice>span.on{background:#fff;color:var(--deep);font-weight:600}
+.save{position:absolute;right:-6px;bottom:-18px;transform:rotate(-4deg);background:var(--yellow);color:#2E1F00;font:700 15px/1.2 var(--body);padding:10px 14px;border-radius:14px;box-shadow:0 14px 26px -12px rgba(120,70,0,.6)}
+
+/* features */
+.feats{display:grid;gap:12px}
+.f{position:relative;background:var(--card);border-radius:22px;padding:22px 22px 20px}
+.f svg{width:30px;height:30px;stroke:var(--green-ink);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.f h3{font:700 19px/1.25 var(--display);letter-spacing:-.01em;margin:0 0 6px}
+html[lang="th"] .f h3{font-family:"Prompt",var(--display);font-weight:600;letter-spacing:0}
+.f p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}
+.new{position:absolute;top:20px;right:18px;font:600 12px/1 var(--body);color:#3A2600;background:#FDE3B5;border-radius:999px;padding:6px 9px}
+.f.hero-f{background:linear-gradient(160deg,var(--green-ink),var(--deep));color:#fff}
+.f.hero-f svg{stroke:var(--yellow)}
+.f.hero-f p{color:rgba(255,255,255,.86)}
+
+/* pricing */
+.price{background:var(--mint)}
+.plans{display:grid;gap:14px;margin-top:8px}
+.plan{background:#fff;border-radius:var(--r);padding:26px 24px}
+.plan h3{font:700 20px/1.2 var(--display);margin:0}
+html[lang="th"] .plan h3{font-family:"Prompt",var(--display);font-weight:600}
+.amt{font:800 54px/1 var(--display);letter-spacing:-.03em;margin:14px 0 4px}
+.amt small{font:500 16px/1 var(--body);letter-spacing:0;color:var(--muted);margin-left:6px}
+.plan ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+.plan li{display:flex;gap:10px;align-items:flex-start;font-size:16px}
+.plan li::before{content:"";flex:0 0 18px;height:18px;margin-top:3px;border-radius:50%;background:var(--green-ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.4l2.6 2.5L13 6.6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
+.plan.pro{background:linear-gradient(160deg,var(--green-ink),var(--deep));color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 30px 60px -30px rgba(11,94,69,.7)}
+.plan.pro .amt small,.plan.pro .fine{color:rgba(255,255,255,.8)}
+.plan.pro li::before{background-color:var(--yellow);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.4l2.6 2.5L13 6.6' fill='none' stroke='%233A2600' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.fine{font-size:13px;color:var(--muted);margin:16px 0 0}
+
+/* faq */
+.faq{max-width:760px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 0;font:600 18px/1.35 var(--body)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 26px/1 var(--body);color:var(--green-ink);transition:transform .25s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:0 0 20px;color:var(--muted)}
+
+/* final */
+.final{position:relative;overflow:hidden;isolation:isolate;text-align:center;color:#fff;background:radial-gradient(90% 90% at 50% 0%,var(--green-ink),var(--deep) 60%,var(--deeper));padding:84px 0 92px}
+.final .rings{transform:translate(-50%,-30%)}
+.final img.b{width:96px;margin:0 auto 18px;transform-origin:50% 6%;filter:drop-shadow(0 12px 16px rgba(0,0,0,.3));animation:ring 3.6s var(--ease) .6s infinite}
+.final h2{color:#fff}
+.final .lede{margin-bottom:6px}
+
+footer{background:var(--deeper);color:rgba(255,255,255,.72);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;padding-top:22px;padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+footer a{color:rgba(255,255,255,.86)}
+
+/* sticky mobile cta */
+.dock{position:fixed;z-index:20;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;padding:10px 10px 10px 12px;border-radius:20px;background:rgba(255,255,255,.92);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);box-shadow:0 18px 40px -14px rgba(7,61,45,.45),0 0 0 1px rgba(7,61,45,.06);transform:translateY(140%);transition:transform .45s var(--ease)}
+.dock.show{transform:none}
+.dock img{width:40px;height:40px;border-radius:10px}
+.dock div{flex:1;min-width:0;line-height:1.25}
+.dock b{display:block;font:700 16px/1.2 var(--display)}
+.dock div>span{font-size:13px;color:var(--muted)}
+.dock a.get{flex:0 0 auto;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--green-ink);color:#fff;text-decoration:none;font:600 15px/1 var(--body)}
+.dock a.get:active{background:#0F6E52}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .8s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (min-width:640px){
+  .facts ul{grid-template-columns:repeat(4,1fr)}
+  .feats{grid-template-columns:repeat(2,1fr)}
+  .plans{grid-template-columns:1fr 1fr}
+  .arrows{display:flex}
 }
-@media (prefers-reduced-motion:reduce){.screen img{transition:none;transform:none}.duo{transition:none}}
+@media (min-width:960px){
+  body{font-size:18px}
+  h1{font-size:64px}
+  html[lang="th"] h1{font-size:58px}
+  .hero-grid{grid-template-columns:1fr 1fr;align-items:center;padding-top:30px;min-height:min(780px,calc(100vh - 60px))}
+  .copy{text-align:left;padding-bottom:40px}
+  h1,.copy .lede{margin-left:0}
+  .cta{align-items:flex-start}
+  .stage{height:600px;margin-top:20px}
+  .slide{width:282px}
+  .s2{transform:translateX(-100%) translateY(60px) rotate(-7deg) scale(.86)}
+  .s3{transform:translateX(0%) translateY(60px) rotate(7deg) scale(.86)}
+  .worth-grid{grid-template-columns:1fr 1fr}
+  .feats{grid-template-columns:repeat(3,1fr)}
+  .f.wide{grid-column:span 2}
+  .dock{display:none}
+  footer .wrap{padding-bottom:28px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .final img.b{animation:none}
+  .js .rv,.js .stage:not(.in) .s2,.js .stage:not(.in) .s3{opacity:1;transition:none}
+  .js .stage:not(.in) .s2{transform:translateX(-112%) translateY(46px) rotate(-8deg) scale(.86)}
+  .js .stage:not(.in) .s3{transform:translateX(12%) translateY(46px) rotate(8deg) scale(.86)}
+  .js .rv{transform:none}
+  .js .worth:not(.in) .bars i{transform:none}
+  .slide,.roll span,.bars i,.dock{transition:none}
+}
 </style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<div class="top">
-  <div class="lang" role="group" aria-label="Language">
-    <button type="button" data-set="th" aria-pressed="true" lang="th">ไทย</button>
-    <button type="button" data-set="en" aria-pressed="false" lang="en">English</button>
+
+<header class="hero">
+  <svg class="rings" viewBox="0 0 1500 1500" aria-hidden="true"><circle cx="750" cy="750" r="150"/><circle class="y" cx="750" cy="750" r="250"/><circle cx="750" cy="750" r="370"/><circle cx="750" cy="750" r="500"/><circle class="y" cx="750" cy="750" r="620"/><circle cx="750" cy="750" r="740"/></svg>
+  <div class="wrap top">
+    <a class="mark" href="./"><img src="icon.png" alt="" width="36" height="36">Datebell</a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set="th" aria-pressed="true" lang="th">ไทย</button>
+      <button type="button" data-set="en" aria-pressed="false" lang="en">EN</button>
+    </div>
   </div>
-</div>
-<main>
-  <section class="hero">
-    <div class="brand"><img src="icon.png" alt="" width="60" height="60"><span>Datebell</span></div>
-    <h1><span data-l="th" lang="th">รู้ก่อน<em>วันตัดเงิน</em><br>และวันหมดอายุ</span><span data-l="en" lang="en">Know before it <em>renews</em> or&nbsp;expires</span></h1>
-    <p class="sub"><span data-l="th" lang="th">เตือนก่อนหมดทดลองฟรี ก่อนตัดค่าสมาชิก และก่อนบัตร เอกสาร ประกันหมดอายุ</span><span data-l="en" lang="en">Reminders before free trials end, subscriptions charge, and cards, documents and warranties expire.</span></p>
-    <div class="cta">
-      <a class="badge" id="store" href="https://apps.apple.com/app/id6821503223">
-        <img id="badge" src="img/badge-en.svg" alt="Download on the App Store" width="162" height="54">
-      </a>
-      <small><span data-l="th" lang="th">ฟรีบน iPhone</span><span data-l="en" lang="en">Free on iPhone</span></small>
-    </div>
-  </section>
-  <section class="demo" id="demo" aria-label="How Datebell works">
-    <div class="dev" role="group" id="devs" aria-label="Device">
-      <button type="button" data-dev="phone" aria-pressed="true">iPhone</button>
-      <button type="button" data-dev="duo" aria-pressed="false">iPhone Duo</button>
-    </div>
-    <div class="phone">
-      <div class="screen" id="screen"><div class="island"></div></div>
-      <button class="tap" type="button" id="next" aria-label="Next screen"></button>
-    </div>
-    <div class="duo-stage">
-      <div class="duo wide" id="duo">
-        <div class="screen" id="duoScreen"></div>
-        <div class="crease"></div>
-        <button class="tap" type="button" id="duoNext" aria-label="Next screen"></button>
+  <div class="wrap hero-grid">
+    <div class="copy">
+      <span class="pill"><i></i><span data-l="th" lang="th">ฟรีบน iPhone · ไทยและอังกฤษ</span><span data-l="en" lang="en">Free on iPhone · Thai &amp; English</span></span>
+      <h1><span data-l="th" lang="th">อะไรใกล้หมดเขต <em>กระดิ่ง</em>ดังก่อน</span><span data-l="en" lang="en">Everything that ends, <em>rings</em> first.</span></h1>
+      <p class="lede"><span data-l="th" lang="th">ทดลองฟรี ค่าสมาชิก พาสปอร์ต ประกัน และนัดหมาย Datebell เตือนก่อนเงินถูกตัด และก่อนเลยวันสำคัญ</span><span data-l="en" lang="en">Free trials, subscriptions, passports, warranties and appointments. Datebell reminds you before the money goes or the date passes.</span></p>
+      <div class="cta" id="heroCta">
+        <a class="badge store" href="https://apps.apple.com/app/id6821503223"><img class="badgeImg" src="img/badge-en.svg" alt="Download on the App Store" width="168" height="56"></a>
+        <span class="note"><span data-l="th" lang="th"><b>ฟรี 10 รายการ</b> · Pro ฿99 จ่ายครั้งเดียว</span><span data-l="en" lang="en"><b>Free for 10 items</b> · Pro ฿99, pay once</span></span>
       </div>
     </div>
-    <p class="step" aria-live="polite"><b id="stepN"></b><span id="stepT"></span></p>
-    <div class="dots" id="dots"></div>
+    <div class="stage" id="stage" aria-hidden="true">
+      <div class="slide s2"><img class="hs" data-n="2" src="img/v17/th-2.webp" alt="" width="600" height="1304"></div>
+      <div class="slide s3"><img class="hs" data-n="5" src="img/v17/th-5.webp" alt="" width="600" height="1304"></div>
+      <div class="slide s1"><img class="hs" data-n="1" src="img/v17/th-1.webp" alt="" width="600" height="1304" fetchpriority="high"></div>
+    </div>
+  </div>
+</header>
+
+<div class="facts">
+  <ul class="wrap">
+    <li><b><span data-l="th" lang="th">2 วัน</span><span data-l="en" lang="en">2 days</span></b><span><span data-l="th" lang="th">เตือนก่อนทดลองฟรีหมด</span><span data-l="en" lang="en">notice before a free trial charges</span></span></li>
+    <li><b>7 · 1 · 0</b><span><span data-l="th" lang="th">เตือนก่อน 7 วัน 1 วัน และวันจริง</span><span data-l="en" lang="en">days-before reminders, on every date</span></span></li>
+    <li><b>277</b><span><span data-l="th" lang="th">บริการพร้อมเพิ่มในแตะเดียว</span><span data-l="en" lang="en">services ready to add in one tap</span></span></li>
+    <li><b>฿0</b><span><span data-l="th" lang="th">ต่อเดือน ไม่มีค่าสมาชิก</span><span data-l="en" lang="en">a month. No subscription.</span></span></li>
+  </ul>
+</div>
+
+<main>
+  <section class="block" id="see" aria-labelledby="seeH">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="kicker"><span data-l="th" lang="th">ดูในแอป</span><span data-l="en" lang="en">Take a look</span></span>
+        <h2 id="seeH"><span data-l="th" lang="th">ทุกวันสำคัญ <em>อยู่ในที่เดียว</em></span><span data-l="en" lang="en">Every date, <em>one</em> place.</span></h2>
+      </div>
+      <div class="gal-bar">
+        <div class="seg" role="group" id="devs" aria-label="Device">
+          <button type="button" data-dev="phone" aria-pressed="true">iPhone</button>
+          <button type="button" data-dev="duo" aria-pressed="false">iPhone Duo</button>
+        </div>
+        <div class="arrows">
+          <button type="button" id="prev" aria-label="Previous"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3.5 5.5 9l5.5 5.5"/></svg></button>
+          <button type="button" id="nextB" aria-label="Next"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5 12.5 9 7 14.5"/></svg></button>
+        </div>
+      </div>
+      <div class="rail" id="rail" tabindex="0" aria-label="Screenshots"></div>
+      <div class="dots" id="dots"></div>
+    </div>
+  </section>
+
+  <section class="block worth" id="worth" aria-labelledby="worthH">
+    <div class="wrap worth-grid">
+      <div class="rv">
+        <span class="kicker"><span data-l="th" lang="th">ใหม่ · คุ้มไหม?</span><span data-l="en" lang="en">New · Worth it?</span></span>
+        <h2 id="worthH"><span data-l="th" lang="th">จ่ายทุกเดือน <em>แต่ไม่ได้ใช้?</em></span><span data-l="en" lang="en">Paying for it. <em>Not</em> using it?</span></h2>
+        <p class="intro"><span data-l="th" lang="th">เดือนละครั้ง แตะบอกว่าใช้บ่อย นิดหน่อย หรือไม่ได้ใช้ แล้ว Datebell บอกว่าถ้าเลิกจะประหยัดได้เท่าไรต่อปี</span><span data-l="en" lang="en">Once a month, tap A lot, A little or Not at all. Datebell shows what you would save in a year if you let it go.</span></p>
+      </div>
+      <div class="wcard rv" aria-hidden="true">
+        <div class="lbl"><span data-l="th" lang="th">คุ้มไหม?</span><span data-l="en" lang="en">Worth it?</span><span class="tag"><span data-l="th" lang="th">แทบไม่ได้ใช้</span><span data-l="en" lang="en">Barely used</span></span></div>
+        <div class="num"><span id="worthNum">฿2,148</span><small><span data-l="th" lang="th">ต่อปี</span><span data-l="en" lang="en">a year</span></small></div>
+        <div class="bars"><i style="height:100%"></i><i style="height:42%"></i><i style="height:12%"></i><i style="height:8%"></i></div>
+        <div class="months"></div>
+        <div class="choice"><span><span data-l="th" lang="th">บ่อย</span><span data-l="en" lang="en">A lot</span></span><span><span data-l="th" lang="th">นิดหน่อย</span><span data-l="en" lang="en">A little</span></span><span class="on"><span data-l="th" lang="th">ไม่ได้ใช้</span><span data-l="en" lang="en">Not at all</span></span></div>
+        <div class="save"><span data-l="th" lang="th">ประหยัดได้ ฿2,148 ต่อปี</span><span data-l="en" lang="en">Could save $168 a year</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="features" aria-labelledby="featH">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="kicker"><span data-l="th" lang="th">ทำอะไรได้บ้าง</span><span data-l="en" lang="en">What it does</span></span>
+        <h2 id="featH"><span data-l="th" lang="th">จำแทนคุณ <em>ทุกเรื่องที่มีวันหมด</em></span><span data-l="en" lang="en">It remembers, <em>so you don't</em> have to.</span></h2>
+      </div>
+      <div class="feats">
+        <article class="f hero-f rv">
+          <svg viewBox="0 0 30 30"><path d="M8 13a7 7 0 0 1 14 0v5l2 3H6l2-3z"/><path d="M12.5 24a2.5 2.5 0 0 0 5 0"/><path d="M4 9.5 6 8M26 9.5 24 8"/></svg>
+          <h3><span data-l="th" lang="th">เตือนก่อนทดลองฟรีหมด</span><span data-l="en" lang="en">Free trials, caught in time</span></h3>
+          <p><span data-l="th" lang="th">เตือนก่อนโดนตัดเงิน 2 วัน พร้อมวิธียกเลิก ถ้าไม่อยากใช้ต่อ</span><span data-l="en" lang="en">A reminder 2 days before the trial charges you, with the steps to cancel if you're not keeping it.</span></p>
+        </article>
+        <article class="f rv">
+          <svg viewBox="0 0 30 30"><path d="M23 11a8.5 8.5 0 0 0-15.5-2"/><path d="M7 5v4h4"/><path d="M7 19a8.5 8.5 0 0 0 15.5 2"/><path d="M23 25v-4h-4"/></svg>
+          <h3><span data-l="th" lang="th">ค่าสมาชิกและบิล</span><span data-l="en" lang="en">Subscriptions and bills</span></h3>
+          <p><span data-l="th" lang="th">รายเดือน รายปี หรือทุก N วัน เห็นยอดรวมต่อเดือน</span><span data-l="en" lang="en">Monthly, yearly or every few days. See what you pay each month.</span></p>
+        </article>
+        <article class="f rv">
+          <svg viewBox="0 0 30 30"><rect x="6" y="4" width="18" height="22" rx="3"/><circle cx="15" cy="13" r="3.5"/><path d="M10.5 21h9"/></svg>
+          <h3><span data-l="th" lang="th">บัตรและเอกสาร</span><span data-l="en" lang="en">Cards and documents</span></h3>
+          <p><span data-l="th" lang="th">พาสปอร์ต บัตรประชาชน ใบขับขี่ ภาษีรถ รู้ก่อนหมดอายุ</span><span data-l="en" lang="en">Passport, ID card, driving licence, car tax. Know before they expire.</span></p>
+        </article>
+        <article class="f rv">
+          <svg viewBox="0 0 30 30"><path d="M15 4 6 7.5v7c0 5.5 3.8 9.6 9 11.5 5.2-1.9 9-6 9-11.5v-7z"/><path d="m11 15 3 3 5-6"/></svg>
+          <h3><span data-l="th" lang="th">ประกันสินค้า</span><span data-l="en" lang="en">Warranties</span></h3>
+          <p><span data-l="th" lang="th">เก็บวันหมดประกัน แล้วเตือนก่อนหมด</span><span data-l="en" lang="en">Keep the end date and get a nudge before it runs out.</span></p>
+        </article>
+        <article class="f rv">
+          <span class="new"><span data-l="th" lang="th">ใหม่</span><span data-l="en" lang="en">New</span></span>
+          <svg viewBox="0 0 30 30"><rect x="4.5" y="6" width="21" height="19" rx="3"/><path d="M4.5 12h21M10 3.5v5M20 3.5v5"/><circle cx="19.5" cy="18.5" r="2"/></svg>
+          <h3><span data-l="th" lang="th">บิลกับวันหยุด ในปฏิทินเดียว</span><span data-l="en" lang="en">Bills and holidays, one calendar</span></h3>
+          <p><span data-l="th" lang="th">เห็นวันจ่ายเงินและวันหยุดของไทยในเดือนเดียวกัน</span><span data-l="en" lang="en">Payments and public holidays side by side, a whole month at a glance.</span></p>
+        </article>
+        <article class="f rv">
+          <span class="new"><span data-l="th" lang="th">ใหม่</span><span data-l="en" lang="en">New</span></span>
+          <svg viewBox="0 0 30 30"><rect x="4" y="4" width="10" height="10" rx="2.5"/><rect x="16" y="4" width="10" height="10" rx="2.5"/><rect x="4" y="16" width="22" height="10" rx="2.5"/></svg>
+          <h3><span data-l="th" lang="th">วิดเจ็ต</span><span data-l="en" lang="en">Widgets</span></h3>
+          <p><span data-l="th" lang="th">รายการถัดไปบนหน้าจอโฮมและหน้าจอล็อก</span><span data-l="en" lang="en">What's next, right on your Home Screen and Lock Screen.</span></p>
+        </article>
+        <article class="f rv">
+          <span class="new"><span data-l="th" lang="th">ใหม่</span><span data-l="en" lang="en">New</span></span>
+          <svg viewBox="0 0 30 30"><path d="M5 10V7a2 2 0 0 1 2-2h3M20 5h3a2 2 0 0 1 2 2v3M25 20v3a2 2 0 0 1-2 2h-3M10 25H7a2 2 0 0 1-2-2v-3"/><path d="M11 11.5v1.5M19 11.5v1.5M15 11.5v4.5h-1M11.5 19.5a5 5 0 0 0 7 0"/></svg>
+          <h3><span data-l="th" lang="th">ล็อกด้วย Face ID</span><span data-l="en" lang="en">Face ID lock</span></h3>
+          <p><span data-l="th" lang="th">เปิดได้แค่คุณ (ใน Pro)</span><span data-l="en" lang="en">For your eyes only. Part of Pro.</span></p>
+        </article>
+        <article class="f rv">
+          <span class="new"><span data-l="th" lang="th">ใหม่</span><span data-l="en" lang="en">New</span></span>
+          <svg viewBox="0 0 30 30"><path d="M24 18.5A10 10 0 0 1 11.5 6a10 10 0 1 0 12.5 12.5z"/></svg>
+          <h3><span data-l="th" lang="th">โหมดมืด</span><span data-l="en" lang="en">Dark mode</span></h3>
+          <p><span data-l="th" lang="th">อัตโนมัติ สว่าง หรือมืด เลือกเองได้</span><span data-l="en" lang="en">Auto, Light or Dark. Your call.</span></p>
+        </article>
+        <article class="f rv">
+          <span class="new"><span data-l="th" lang="th">ใหม่</span><span data-l="en" lang="en">New</span></span>
+          <svg viewBox="0 0 30 30"><circle cx="15" cy="15" r="10.5"/><path d="M4.5 15h21M15 4.5c3 3 4.2 6.5 4.2 10.5S18 22.5 15 25.5M15 4.5c-3 3-4.2 6.5-4.2 10.5S12 22.5 15 25.5"/></svg>
+          <h3><span data-l="th" lang="th">จ่ายหลายสกุลเงิน รวมยอดเดียว</span><span data-l="en" lang="en">Any currency, one total</span></h3>
+          <p><span data-l="th" lang="th">จ่ายเป็นดอลลาร์ ยูโร หรือปอนด์ ก็รวมเป็นบาทให้</span><span data-l="en" lang="en">Pounds, euros, dollars. Totals add up in your own currency.</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block price" id="pricing" aria-labelledby="priceH">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="kicker"><span data-l="th" lang="th">ราคา</span><span data-l="en" lang="en">Pricing</span></span>
+        <h2 id="priceH"><span data-l="th" lang="th">แอปเตือนค่าสมาชิก <em>ที่ไม่มีค่าสมาชิก</em></span><span data-l="en" lang="en">No subscription to track <em>your</em> subscriptions.</span></h2>
+      </div>
+      <div class="plans">
+        <div class="plan rv">
+          <h3><span data-l="th" lang="th">ฟรี</span><span data-l="en" lang="en">Free</span></h3>
+          <div class="amt">฿0</div>
+          <ul>
+            <li><span data-l="th" lang="th">เก็บได้ 10 รายการ</span><span data-l="en" lang="en">Up to 10 items</span></li>
+            <li><span data-l="th" lang="th">เตือนครบทุกแบบ</span><span data-l="en" lang="en">Every reminder</span></li>
+            <li><span data-l="th" lang="th">ปฏิทินและวิดเจ็ต</span><span data-l="en" lang="en">Calendar and widgets</span></li>
+          </ul>
+        </div>
+        <div class="plan pro rv">
+          <h3>Pro</h3>
+          <div class="amt">฿99<small><span data-l="th" lang="th">จ่ายครั้งเดียว</span><span data-l="en" lang="en">once</span></small></div>
+          <ul>
+            <li><span data-l="th" lang="th">ไม่จำกัดจำนวนรายการ</span><span data-l="en" lang="en">Unlimited items</span></li>
+            <li><span data-l="th" lang="th">ล็อกด้วย Face ID</span><span data-l="en" lang="en">Face ID lock</span></li>
+            <li><span data-l="th" lang="th">ไม่มีค่ารายเดือน ไม่ต่ออายุเอง</span><span data-l="en" lang="en">No monthly fee. Never renews.</span></li>
+            <li><span data-l="th" lang="th">เปลี่ยนเครื่อง กู้คืนด้วย Apple ID เดิม</span><span data-l="en" lang="en">New iPhone? Restore with the same Apple ID.</span></li>
+          </ul>
+          <p class="fine"><span data-l="th" lang="th">ซื้อในแอปผ่าน App Store</span><span data-l="en" lang="en">Bought in the app. The App Store shows the price in your currency.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="faq" aria-labelledby="faqH">
+    <div class="wrap faq">
+      <h2 id="faqH" class="rv"><span data-l="th" lang="th">คำถามที่พบบ่อย</span><span data-l="en" lang="en">Questions</span></h2>
+      <details><summary><span data-l="th" lang="th">ใช้ฟรีได้จริงไหม</span><span data-l="en" lang="en">Is it really free?</span></summary>
+        <p><span data-l="th" lang="th">ได้ รุ่นฟรีเก็บได้ 10 รายการ พร้อมการเตือนครบทุกแบบ ถ้าอยากเพิ่มมากกว่านั้น ซื้อ Pro ครั้งเดียว ฿99</span><span data-l="en" lang="en">Yes. The free version holds 10 items with every reminder. For more, Pro is a one-time ฿99 purchase.</span></p></details>
+      <details><summary><span data-l="th" lang="th">ต้องสมัครบัญชีไหม</span><span data-l="en" lang="en">Do I need an account?</span></summary>
+        <p><span data-l="th" lang="th">ไม่ต้อง เข้าสู่ระบบด้วย Apple, Google หรืออีเมล เฉพาะเมื่ออยากสำรองข้อมูลไว้ใช้ข้ามเครื่อง</span><span data-l="en" lang="en">No. Sign in with Apple, Google or email only if you want a backup that moves with you.</span></p></details>
+      <details><summary><span data-l="th" lang="th">Datebell ยกเลิกค่าสมาชิกให้ไหม</span><span data-l="en" lang="en">Does Datebell cancel things for me?</span></summary>
+        <p><span data-l="th" lang="th">ไม่ Datebell เตือนให้ทันเวลา และบอกขั้นตอนยกเลิกของแต่ละบริการ คุณกดยกเลิกเองได้ทันที</span><span data-l="en" lang="en">No. It reminds you in time and shows the steps to cancel each service, so you can do it in a minute.</span></p></details>
+      <details><summary><span data-l="th" lang="th">ใช้กับเครื่องไหนได้บ้าง</span><span data-l="en" lang="en">Which iPhones does it work on?</span></summary>
+        <p><span data-l="th" lang="th">iPhone ที่ใช้ iOS 16 ขึ้นไป มีทั้งภาษาไทยและอังกฤษ</span><span data-l="en" lang="en">Any iPhone on iOS 16 or later, in Thai or English.</span></p></details>
+    </div>
   </section>
 </main>
-<footer><div>
+
+<section class="final" aria-labelledby="finalH">
+  <svg class="rings" viewBox="0 0 1500 1500" aria-hidden="true"><circle cx="750" cy="750" r="150"/><circle class="y" cx="750" cy="750" r="250"/><circle cx="750" cy="750" r="370"/><circle cx="750" cy="750" r="500"/><circle class="y" cx="750" cy="750" r="620"/></svg>
+  <div class="wrap rv">
+    <img class="b" src="img/v17/bell.webp" alt="" width="320" height="324" loading="lazy">
+    <h2 id="finalH"><span data-l="th" lang="th">ให้กระดิ่ง <em>ช่วยจำ</em></span><span data-l="en" lang="en">Let the bell <em>remember.</em></span></h2>
+    <p class="lede"><span data-l="th" lang="th">ฟรีบน iPhone ตั้งค่าเสร็จในนาทีเดียว</span><span data-l="en" lang="en">Free on iPhone. Set up in a minute.</span></p>
+    <div class="cta" style="align-items:center">
+      <a class="badge store" href="https://apps.apple.com/app/id6821503223"><img class="badgeImg" src="img/badge-en.svg" alt="Download on the App Store" width="168" height="56" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
   <a href="support.html"><span data-l="th" lang="th">ช่วยเหลือและติดต่อ</span><span data-l="en" lang="en">Support</span></a>
   <a href="privacy.html"><span data-l="th" lang="th">นโยบายความเป็นส่วนตัว</span><span data-l="en" lang="en">Privacy Policy</span></a>
   <span>© 2026 Datebell</span>
 </div></footer>
+
+<div class="dock" id="dock" aria-hidden="true">
+  <img src="img/icon-180.png" alt="" width="40" height="40">
+  <div><b>Datebell</b><span><span data-l="th" lang="th">ฟรีบน iPhone</span><span data-l="en" lang="en">Free on iPhone</span></span></div>
+  <a class="get store" href="https://apps.apple.com/app/id6821503223" tabindex="-1"><span data-l="th" lang="th">ดาวน์โหลด</span><span data-l="en" lang="en">Get the app</span></a>
+</div>
+
 <script>
 (function(){
   var q=new URLSearchParams(location.search);
   var APP='6821503223',PT='129594804';
   var ct=(q.get('ct')||'').trim();
-  var a=document.getElementById('store');
   if(/^[A-Za-z0-9._-]{1,40}$/.test(ct)){
-    a.href='https://apps.apple.com/app/apple-store/id'+APP+'?pt='+PT+'&ct='+encodeURIComponent(ct)+'&mt=8';
+    var href='https://apps.apple.com/app/apple-store/id'+APP+'?pt='+PT+'&ct='+encodeURIComponent(ct)+'&mt=8';
+    document.querySelectorAll('a.store').forEach(function(a){a.href=href;});
   }
-
-  var STEPS={
-    th:['เปิดมาก็เจอแอปที่คุณใช้อยู่','แตะ Netflix ใส่ราคากับวันที่ แล้วบันทึก','ทุกวันสำคัญอยู่ในหน้าเดียว','Datebell เตือนก่อนทดลองฟรีหมด 2 วัน','ไม่ใช้ต่อ? มีวิธียกเลิกให้เลย','เห็นยอดค่าสมาชิกรวมต่อเดือน'],
-    en:['Open it and your apps are already there','Tap Netflix, add the price and date, save','Every date on one screen','Reminded 2 days before the trial ends','Not keeping it? The steps to cancel are right there','See what you pay each month']
-  };
-  var DUO_STEPS={
-    th:['กางจอ รายการอยู่ซ้าย รายละเอียดอยู่ขวา','เพิ่มของใหม่ทางขวา รายการเดิมก็ยังอยู่ทางซ้าย','ตั้งจอขึ้น ก็เห็นครบในหน้าเดียว','พับจอแล้ว ปุ่ม + ก็อยู่ใกล้นิ้วโป้ง','ติ๊กจ่ายแล้วได้ด้วยมือเดียว'],
-    en:['Unfold it: your list on the left, details on the right','Add something new on the right, your list stays put','Turn it upright and it all fits on one screen','Folded, the + button sits right by your thumb','Tick off payments with one hand']
-  };
-  var DUO_SHAPE=['wide','wide','tall','fold','fold'];
-  var DUO_SIZE={wide:[1200,844],tall:[720,1023],fold:[720,1048]};
-  var LABEL={th:'ขั้นที่ ',en:'Step '};
-  var DEV_LABEL={th:'ดูบนเครื่อง',en:'Device'};
-  var BADGE={th:'https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/th-th',en:'img/badge-en.svg'};
-  var BADGE_ALT={th:'ดาวน์โหลดบน App Store',en:'Download on the App Store'};
-  var N=6,i=0,lang,dev='phone',timer=null,imgs={};
-  var screen=document.getElementById('screen'),dots=document.getElementById('dots');
-  var duoScreen=document.getElementById('duoScreen'),duo=document.getElementById('duo'),demo=document.getElementById('demo');
-  function cur(){return dev==='duo'?duoScreen:screen;}
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function makeDots(){
-    dots.innerHTML='';
-    for(var k=0;k<N;k++){
-      var d=document.createElement('button');d.type='button';d.innerHTML='<i></i>';
-      d.setAttribute('aria-label',String(k+1));
-      d.onclick=(function(n){return function(){go(n);restart();}})(k);
-      dots.appendChild(d);
+  // screenshots (1.7.0 App Store set)
+  var ALT={
+    th:['Datebell อะไรใกล้หมดเขต กระดิ่งดังก่อน','คุ้มไหม? จ่ายทุกเดือนแต่ไม่ได้ใช้','วิดเจ็ต รายการถัดไปบนหน้าจอโฮม','บิลกับวันหยุดในปฏิทินเดียว','โหมดมืด','ล็อกด้วย Face ID','จ่ายหลายสกุลเงิน รวมเป็นบาท'],
+    en:['Datebell. Everything that ends, rings first.','Worth it? Paying for it, not using it?','Widgets: next up on your Home Screen','Bills and holidays, one calendar','Now in dark mode','Face ID lock: for your eyes only','Pounds, euros, dollars. One total.']
+  };
+  var DUO_ALT={
+    th:['Datebell บน iPhone Duo','คุ้มไหม? บน iPhone Duo','บิลกับวันหยุดในปฏิทินเดียว','โหมดมืดบน iPhone Duo','จ่ายหลายสกุลเงิน รวมยอดเดียว','พับหรือกางก็เห็นรายการถัดไป'],
+    en:['Everything that ends, rings first, on iPhone Duo','Worth it? on iPhone Duo','Bills and holidays, one calendar','Dark mode on iPhone Duo','Pounds, euros, dollars. One total.','Next up, folded or open']
+  };
+  var lang,dev='phone',rail=document.getElementById('rail'),dots=document.getElementById('dots');
+  function build(){
+    var duo=dev==='duo',alts=(duo?DUO_ALT:ALT)[lang],n=alts.length;
+    rail.className='rail'+(duo?' duo':'');rail.innerHTML='';dots.innerHTML='';
+    for(var k=0;k<n;k++){
+      var fig=document.createElement('figure'),im=new Image();
+      im.src='img/v17/'+(duo?'duo-':'')+lang+'-'+(k+1)+'.webp';
+      im.width=duo?1200:600;im.height=duo?844:1304;im.alt=alts[k];im.loading='lazy';im.decoding='async';
+      fig.appendChild(im);rail.appendChild(fig);
+      var d=document.createElement('button');d.type='button';d.innerHTML='<i></i>';d.setAttribute('aria-label',String(k+1));
+      d.onclick=(function(x){return function(){goTo(x);};})(k);dots.appendChild(d);
     }
+    rail.scrollLeft=0;sync();
   }
-  function load(l){
-    var key=dev+'-'+l;
-    if(imgs[key])return imgs[key];
-    imgs[key]=[];
-    for(var k=0;k<N;k++){
-      var im=new Image();im.alt='';im.decoding='async';
-      if(dev==='duo'){var sz=DUO_SIZE[DUO_SHAPE[k]];im.src='img/duo-'+l+'-'+(k+1)+'.webp';im.width=sz[0];im.height=sz[1];}
-      else{im.src='img/'+l+'-'+(k+1)+'.webp';im.width=600;im.height=1304;}
-      imgs[key].push(im);
-    }
-    return imgs[key];
+  function goTo(k){var f=rail.children[k];if(!f)return;rail.scrollTo({left:f.offsetLeft-(rail.clientWidth-f.clientWidth)/2,behavior:reduce?'auto':'smooth'});}
+  function current(){
+    var c=rail.scrollLeft+rail.clientWidth/2,best=0,bd=1e9;
+    for(var k=0;k<rail.children.length;k++){var f=rail.children[k],m=f.offsetLeft+f.clientWidth/2,dd=Math.abs(m-c);if(dd<bd){bd=dd;best=k;}}
+    return best;
   }
-  function show(){
-    var box=cur();
-    Array.prototype.forEach.call(screen.querySelectorAll('img'),function(im){im.remove();});
-    Array.prototype.forEach.call(duoScreen.querySelectorAll('img'),function(im){im.remove();});
-    load(lang).forEach(function(im){box.appendChild(im);});
-  }
-  function go(n){
-    i=(n+N)%N;
-    var list=imgs[dev+'-'+lang];
-    Array.prototype.forEach.call(cur().querySelectorAll('img'),function(im){im.classList.toggle('on',im===list[i]);});
-    if(dev==='duo')duo.className='duo '+DUO_SHAPE[i];
-    document.getElementById('stepN').textContent=LABEL[lang]+(i+1)+'/'+N;
-    document.getElementById('stepT').textContent=(dev==='duo'?DUO_STEPS:STEPS)[lang][i];
+  function sync(){
+    var i=current();
     Array.prototype.forEach.call(dots.children,function(d,k){d.setAttribute('aria-current',k===i?'true':'false');});
+    document.getElementById('prev').disabled=rail.scrollLeft<4;
+    document.getElementById('nextB').disabled=rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-4;
   }
-  function restart(){
-    clearInterval(timer);timer=null;
-    if(!reduce&&!document.hidden)timer=setInterval(function(){go(i+1);},2800);
+  var st;rail.addEventListener('scroll',function(){cancelAnimationFrame(st);st=requestAnimationFrame(sync);},{passive:true});
+  document.getElementById('prev').onclick=function(){goTo(Math.max(0,current()-1));};
+  document.getElementById('nextB').onclick=function(){goTo(Math.min(rail.children.length-1,current()+1));};
+  function setDev(d){
+    dev=d;
+    document.querySelectorAll('#devs button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.dev===d?'true':'false');});
+    if(lang)build();
   }
+  document.querySelectorAll('#devs button').forEach(function(b){b.onclick=function(){setDev(b.dataset.dev);};});
+  dev=/^duo$/i.test(q.get('device')||'')?'duo':'phone';setDev(dev);
+  if(dev==='duo'&&!location.hash)requestAnimationFrame(function(){document.getElementById('see').scrollIntoView();});
+
+  // Worth it number (rolling digits)
+  var WORTH={th:'฿2,148',en:'$168'};
+  var worthEl=document.getElementById('worthNum');
+  function paint(text,animate){
+    worthEl.innerHTML='';worthEl.setAttribute('aria-label',text);
+    text.split('').forEach(function(ch){
+      if(!/\d/.test(ch)){var s=document.createElement('span');s.textContent=ch;worthEl.appendChild(s);return;}
+      var r=document.createElement('span');r.className='roll';var col=document.createElement('span');
+      for(var d=0;d<=9;d++){var i=document.createElement('i');i.textContent=d;col.appendChild(i);}
+      r.appendChild(col);worthEl.appendChild(r);
+      var to='translateY(-'+(+ch)+'em)';
+      if(animate&&!reduce){col.style.transform='translateY(0)';requestAnimationFrame(function(){requestAnimationFrame(function(){col.style.transform=to;});});}
+      else col.style.transform=to;
+    });
+  }
+
+  // language
+  var BADGE={th:'https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/th-th',en:'img/badge-en.svg'};
+  var BADGE_ALT={th:'ดาวน์โหลดบน App Store',en:'Download on the App Store'};
+  var TITLE={th:'Datebell: อะไรใกล้หมดเขต กระดิ่งดังก่อน',en:'Datebell: Everything that ends, rings first'};
+  var worthDone=false,animOK=('IntersectionObserver' in window)&&!reduce;
   function setLang(l){
-    lang=l;document.documentElement.lang=l;
+    lang=l;document.documentElement.lang=l;document.title=TITLE[l];
     try{localStorage.setItem('db-lang',l);}catch(e){}
-    Array.prototype.forEach.call(document.querySelectorAll('.lang button'),function(b){b.setAttribute('aria-pressed',b.dataset.set===l?'true':'false');});
-    document.getElementById('devs').setAttribute('aria-label',DEV_LABEL[l]);
-    show();
-    var b=document.getElementById('badge');
-    b.onerror=function(){b.onerror=null;b.src=BADGE.en;};
-    b.src=BADGE[l];b.alt=BADGE_ALT[l];
-    go(i);restart();
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l?'true':'false');});
+    document.querySelectorAll('img.hs').forEach(function(im){im.src='img/v17/'+l+'-'+im.dataset.n+'.webp';});
+    document.querySelectorAll('img.badgeImg').forEach(function(b){b.onerror=function(){b.onerror=null;b.src=BADGE.en;};b.src=BADGE[l];b.alt=BADGE_ALT[l];});
+    document.getElementById('devs').setAttribute('aria-label',l==='th'?'อุปกรณ์':'Device');
+    document.querySelector('.months').innerHTML=(l==='th'?['ก.ค.','ส.ค.','ก.ย.','ต.ค.']:['Jul','Aug','Sep','Oct']).map(function(m){return '<span>'+m+'</span>';}).join('');
+    paint(worthDone||!animOK?WORTH[l]:WORTH[l].replace(/\d/g,'0'),false);
+    build();
   }
   document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){setLang(b.dataset.set);};});
-  document.getElementById('next').onclick=function(){go(i+1);restart();};
-  document.getElementById('duoNext').onclick=function(){go(i+1);restart();};
-  function setDev(d,keep){
-    if(d===dev&&keep)return;
-    dev=d;N=d==='duo'?5:6;i=0;
-    demo.classList.toggle('is-duo',d==='duo');
-    Array.prototype.forEach.call(document.querySelectorAll('.dev button'),function(b){b.setAttribute('aria-pressed',b.dataset.dev===d?'true':'false');});
-    makeDots();
-    if(lang){show();go(0);restart();}
-  }
-  document.querySelectorAll('.dev button').forEach(function(b){b.onclick=function(){setDev(b.dataset.dev,true);};});
-  setDev(/^duo$/i.test(q.get('device')||'')?'duo':'phone');
-  document.addEventListener('visibilitychange',restart);
-
   var saved=null;try{saved=localStorage.getItem('db-lang');}catch(e){}
   var start=q.get('lang')==='en'||q.get('lang')==='th'?q.get('lang')
     :/-th-|^th-|-th$/.test(ct)?'th'
     :saved||(/^th\b/i.test(navigator.language||'')?'th':(ct?'th':'en'));
   setLang(start);
+
+  // reveal on scroll
+  var stage=document.getElementById('stage'),worth=document.getElementById('worth');
+  if(animOK){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
+      if(e.target===worth){worthDone=true;paint(WORTH[lang],true);}
+    });},{rootMargin:'0px 0px -12% 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+    io.observe(worth);
+    requestAnimationFrame(function(){setTimeout(function(){stage.classList.add('in');},120);});
+  }else{
+    document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
+    stage.classList.add('in');worth.classList.add('in');
+  }
+
+  // sticky download bar after the hero button scrolls away
+  var dock=document.getElementById('dock'),heroCta=document.getElementById('heroCta'),finalSec=document.querySelector('.final');
+  if('IntersectionObserver' in window){
+    var heroGone=false,finalIn=false;
+    function upd(){var on=heroGone&&!finalIn;dock.classList.toggle('show',on);dock.setAttribute('aria-hidden',on?'false':'true');dock.querySelector('a').tabIndex=on?0:-1;}
+    new IntersectionObserver(function(es){heroGone=!es[0].isIntersecting&&es[0].boundingClientRect.top<0;upd();}).observe(heroCta);
+    new IntersectionObserver(function(es){finalIn=es[0].isIntersecting;upd();}).observe(finalSec);
+  }
 })();
 </script>
 </body>
