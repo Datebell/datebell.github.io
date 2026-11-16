@@ -120,9 +120,6 @@ h2 em{color:var(--green-ink)}
 .wcard .tag{font:600 12px/1 var(--body);background:var(--yellow);color:#3A2600;border-radius:999px;padding:6px 10px}
 .num{font:800 clamp(52px,15vw,72px)/1 var(--display);letter-spacing:-.03em;margin:14px 0 2px;display:flex;align-items:baseline;font-variant-numeric:tabular-nums}
 .num small{font:500 17px/1 var(--body);letter-spacing:0;margin-left:10px;color:rgba(255,255,255,.85)}
-.roll{display:inline-block;height:1em;overflow:hidden;vertical-align:top}
-.roll span{display:block;transition:transform 1.4s var(--ease)}
-.roll span i{display:block;height:1em;font-style:normal}
 .bars{display:flex;align-items:flex-end;gap:8px;height:74px;margin:20px 0 8px}
 .bars i{flex:1;border-radius:8px 8px 3px 3px;background:rgba(255,255,255,.92);transform-origin:bottom;transition:transform 1s var(--ease)}
 .bars i:nth-child(n+3){background:rgba(255,255,255,.28)}
@@ -157,7 +154,7 @@ html[lang="th"] .f h3{font-family:"Prompt",var(--display);font-weight:600;letter
 /* final */
 .final{position:relative;overflow:hidden;isolation:isolate;text-align:center;color:#fff;background:radial-gradient(90% 90% at 50% 0%,var(--green-ink),var(--deep) 60%,var(--deeper));padding:84px 0 92px}
 .final .rings{transform:translate(-50%,-30%)}
-.final img.b{width:96px;margin:0 auto 18px;transform-origin:50% 6%;filter:drop-shadow(0 12px 16px rgba(0,0,0,.3));animation:ring 3.6s var(--ease) .6s infinite}
+.final img.b{width:96px;margin:0 auto 18px;transform-origin:50% 6%;filter:drop-shadow(0 12px 16px rgba(0,0,0,.3));animation:ring 3.6s var(--ease) .6s 3}
 .final h2{color:#fff}
 .final .lede{margin-bottom:6px}
 
@@ -184,7 +181,7 @@ footer a{color:rgba(255,255,255,.86)}
 @keyframes up{to{opacity:1;transform:none}}
 .js .copy>*{opacity:0;transform:translateY(18px);animation:up .9s var(--ease) forwards}
 .js .copy>:nth-child(2){animation-delay:.08s}.js .copy>:nth-child(3){animation-delay:.18s}.js .copy>:nth-child(4){animation-delay:.28s}
-h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 4.2s var(--ease) 1.6s infinite}
+h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 3s var(--ease) 1.2s 2}
 .ripple{position:absolute;left:50%;top:46%;width:0;height:0;z-index:0;pointer-events:none}
 .ripple i{position:absolute;left:-250px;top:-250px;width:500px;height:500px;border-radius:50%;border:2px solid rgba(251,176,59,.4);opacity:0;animation:ripple 5.4s cubic-bezier(.15,.6,.3,1) infinite}
 .ripple i:nth-child(2){animation-delay:1.8s;border-color:rgba(255,255,255,.25)}
@@ -195,7 +192,8 @@ h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 4.2s var(--ea
 .slide{animation:float 6.5s ease-in-out infinite}
 .s2{animation-delay:-2.2s}.s3{animation-delay:-4.4s}
 .ntf{position:absolute;z-index:5;left:50%;top:-30px;width:min(330px,84vw);display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:20px;background:rgba(248,248,246,.9);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);color:var(--ink);box-shadow:0 22px 44px -16px rgba(0,0,0,.5);opacity:0;transform:translate(-50%,-18px) scale(.95);transition:opacity .45s var(--ease),transform .7s var(--ease)}
-.ntf.on{opacity:1;transform:translate(-50%,0)}
+.ntf{transition-duration:.2s,.25s}
+.ntf.on{opacity:1;transform:translate(-50%,0);transition-duration:.45s,.7s}
 .ntf img{width:38px;height:38px;border-radius:9px;flex:0 0 auto}
 .ntf div{flex:1;min-width:0;line-height:1.3}
 .ntf b{display:flex;justify-content:space-between;gap:8px;font:600 14px/1.3 var(--body)}
@@ -241,7 +239,7 @@ h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 4.2s var(--ea
   .js .stage:not(.in) .s3{transform:translateX(12%) translateY(46px) rotate(8deg) scale(.86)}
   .js .rv{transform:none}
   .js .worth:not(.in) .bars i{transform:none}
-  .slide,.roll span,.bars i,.dock{transition:none}
+  .slide,.bars i,.dock{transition:none}
 }
 </style>
 <script>document.documentElement.classList.add('js')</script>
@@ -307,7 +305,7 @@ h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 4.2s var(--ea
       </div>
       <div class="wcard rv" aria-hidden="true">
         <div class="lbl"><span data-l="th" lang="th">คุ้มไหม?</span><span data-l="en" lang="en">Worth it?</span><span class="tag"><span data-l="th" lang="th">แทบไม่ได้ใช้</span><span data-l="en" lang="en">Barely used</span></span></div>
-        <div class="num"><span id="worthNum">฿2,148</span><small><span data-l="th" lang="th">ต่อปี</span><span data-l="en" lang="en">a year</span></small></div>
+        <div class="num"><number-flow id="worthNum" role="img">฿2,148</number-flow><small><span data-l="th" lang="th">ต่อปี</span><span data-l="en" lang="en">a year</span></small></div>
         <div class="bars"><i style="height:100%"></i><i style="height:42%"></i><i style="height:12%"></i><i style="height:8%"></i></div>
         <div class="months"></div>
         <div class="choice"><span><span data-l="th" lang="th">บ่อย</span><span data-l="en" lang="en">A lot</span></span><span><span data-l="th" lang="th">นิดหน่อย</span><span data-l="en" lang="en">A little</span></span><span class="on"><span data-l="th" lang="th">ไม่ได้ใช้</span><span data-l="en" lang="en">Not at all</span></span></div>
@@ -415,6 +413,7 @@ h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 4.2s var(--ea
   <a class="get store" href="https://apps.apple.com/app/id6821503223" tabindex="-1"><span data-l="th" lang="th">ดาวน์โหลด</span><span data-l="en" lang="en">Get the app</span></a>
 </div>
 
+<script src="js/number-flow-0.6.2.min.js"></script>
 <script>
 (function(){
   var q=new URLSearchParams(location.search);
@@ -473,20 +472,16 @@ h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 4.2s var(--ea
   dev=/^duo$/i.test(q.get('device')||'')?'duo':'phone';setDev(dev);
   if(dev==='duo'&&!location.hash)requestAnimationFrame(function(){document.getElementById('see').scrollIntoView();});
 
-  // Worth it number (rolling digits)
-  var WORTH={th:'฿2,148',en:'$168'};
+  // Worth it number (NumberFlow)
+  var WORTH={th:[2148,'THB','th-TH'],en:[168,'USD','en-US']};
   var worthEl=document.getElementById('worthNum');
-  function paint(text,animate){
-    worthEl.innerHTML='';worthEl.setAttribute('aria-label',text);
-    text.split('').forEach(function(ch){
-      if(!/\d/.test(ch)){var s=document.createElement('span');s.textContent=ch;worthEl.appendChild(s);return;}
-      var r=document.createElement('span');r.className='roll';var col=document.createElement('span');
-      for(var d=0;d<=9;d++){var i=document.createElement('i');i.textContent=d;col.appendChild(i);}
-      r.appendChild(col);worthEl.appendChild(r);
-      var to='translateY(-'+(+ch)+'em)';
-      if(animate&&!reduce){col.style.transform='translateY(0)';requestAnimationFrame(function(){requestAnimationFrame(function(){col.style.transform=to;});});}
-      else col.style.transform=to;
-    });
+  var hasNF=!!(window.customElements&&customElements.get('number-flow'));
+  function paint(l,show){
+    var w=WORTH[l],fmt={style:'currency',currency:w[1],maximumFractionDigits:0};
+    var txt=new Intl.NumberFormat(w[2],fmt).format(w[0]);
+    worthEl.setAttribute('aria-label',txt);
+    if(!hasNF){worthEl.textContent=txt;return;}
+    worthEl.locales=w[2];worthEl.format=fmt;worthEl.update(show?w[0]:0);
   }
 
   // language
@@ -502,7 +497,7 @@ h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 4.2s var(--ea
     document.querySelectorAll('img.badgeImg').forEach(function(b){b.onerror=function(){b.onerror=null;b.src=BADGE.en;};b.src=BADGE[l];b.alt=BADGE_ALT[l];});
     document.getElementById('devs').setAttribute('aria-label',l==='th'?'อุปกรณ์':'Device');
     document.querySelector('.months').innerHTML=(l==='th'?['ก.ค.','ส.ค.','ก.ย.','ต.ค.']:['Jul','Aug','Sep','Oct']).map(function(m){return '<span>'+m+'</span>';}).join('');
-    paint(worthDone||!animOK?WORTH[l]:WORTH[l].replace(/\d/g,'0'),false);
+    paint(l,worthDone||!animOK);
     build();
   }
   document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){setLang(b.dataset.set);};});
@@ -517,7 +512,7 @@ h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 4.2s var(--ea
   if(animOK){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){
       if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
-      if(e.target===worth){worthDone=true;paint(WORTH[lang],true);}
+      if(e.target===worth){worthDone=true;setTimeout(function(){paint(lang,true);},250);}
     });},{rootMargin:'0px 0px -12% 0px'});
     document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
     io.observe(worth);
@@ -546,7 +541,7 @@ h1 em{display:inline-block;transform-origin:50% 10%;animation:ring 4.2s var(--ea
   document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',ntfSet);});
 
   // stagger feature cards
-  document.querySelectorAll('.feats .f').forEach(function(f,k){f.style.transitionDelay=(k%3)*90+'ms';});
+  document.querySelectorAll('.feats .f').forEach(function(f,k){f.style.transitionDelay=(k%3)*70+'ms';});
 
   // carousel autoplay until the visitor touches it
   var auto=!reduce,seen=false;
