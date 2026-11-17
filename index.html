@@ -112,23 +112,51 @@ h2 em{color:var(--green-ink)}
 .dots i{display:block;width:7px;height:7px;border-radius:7px;background:#D5D9D2;transition:width .3s var(--ease),background .3s}
 .dots button[aria-current="true"] i{width:20px;background:var(--green-ink)}
 
-/* worth it spotlight */
-.worth{background:var(--card)}
-.worth-grid{display:grid;gap:36px;align-items:center}
-.wcard{position:relative;max-width:420px;margin:0 auto;width:100%;border-radius:var(--r);padding:26px 24px 24px;color:#fff;background:linear-gradient(160deg,var(--green-ink),var(--deep));box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 30px 60px -28px rgba(11,94,69,.7)}
-.wcard .lbl{display:flex;justify-content:space-between;align-items:center;font-size:15px;color:rgba(255,255,255,.85)}
-.wcard .tag{font:600 12px/1 var(--body);background:var(--yellow);color:#3A2600;border-radius:999px;padding:6px 10px}
-.num{font:800 clamp(52px,15vw,72px)/1 var(--display);letter-spacing:-.03em;margin:14px 0 2px;display:flex;align-items:baseline;font-variant-numeric:tabular-nums}
-.num small{font:500 17px/1 var(--body);letter-spacing:0;margin-left:10px;color:rgba(255,255,255,.85)}
-.bars{display:flex;align-items:flex-end;gap:8px;height:74px;margin:20px 0 8px}
-.bars i{flex:1;border-radius:8px 8px 3px 3px;background:rgba(255,255,255,.92);transform-origin:bottom;transition:transform 1s var(--ease)}
-.bars i:nth-child(n+3){background:rgba(255,255,255,.28)}
-.js .worth:not(.in) .bars i{transform:scaleY(.08)}
-.months{display:flex;gap:8px;font-size:12px;color:rgba(255,255,255,.7)}.months span{flex:1;text-align:center}
-.choice{display:flex;gap:8px;margin-top:18px}
-.choice>span{flex:1;text-align:center;font:500 14px/1 var(--body);padding:12px 6px;border-radius:14px;background:rgba(255,255,255,.12)}
-.choice>span.on{background:#fff;color:var(--deep);font-weight:600}
-.save{position:absolute;right:-6px;bottom:-18px;transform:rotate(-4deg);background:var(--yellow);color:#2E1F00;font:700 15px/1.2 var(--body);padding:10px 14px;border-radius:14px;box-shadow:0 14px 26px -12px rgba(120,70,0,.6)}
+/* subscription story (follows the reel: pain, one list, Worth it?, cancel yourself) */
+.story{background:var(--card)}
+.beat{display:grid;gap:30px;align-items:center}
+.beat+.beat{margin-top:76px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:420px;margin:0 auto;width:100%}
+.tiles .grp{grid-column:1/-1;font:600 12px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+html[lang="th"] .tiles .grp{letter-spacing:0;text-transform:none;font-size:13px}
+.tile{background:var(--paper);border-radius:20px;padding:14px 8px 12px;text-align:center;box-shadow:inset 0 0 0 1px var(--line)}
+.tile img{width:52px;height:52px;border-radius:13px;margin:0 auto 8px;box-shadow:0 6px 14px -8px rgba(0,0,0,.4)}
+.tile b{display:block;font:600 13px/1.2 var(--body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile span{font:500 14px/1.3 var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
+.js .beat:not(.in) .tile{opacity:0;transform:translateY(16px) scale(.92)}
+.tile{transition:opacity .5s var(--ease),transform .7s var(--ease)}
+.total{grid-column:1/-1;margin-top:8px;border-radius:22px;padding:18px 20px;color:#fff;background:linear-gradient(160deg,var(--green-ink),var(--deep));box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 26px 50px -28px rgba(11,94,69,.7)}
+.total small{display:block;font:500 13px/1 var(--body);color:rgba(255,255,255,.85)}
+.total .big{font:800 clamp(40px,11vw,52px)/1.05 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin:6px 0 2px;display:block}
+.total .yr{font:500 15px/1.3 var(--body);color:rgba(255,255,255,.88)}
+.eg{grid-column:1/-1;text-align:center;font-size:13px;color:var(--muted);margin:2px 0 0}
+/* app sheets, drawn from the real check-in and Rarely used sheets */
+.sheet{max-width:420px;margin:0 auto;width:100%;background:#fff;border-radius:var(--r);padding:12px 18px 20px;color:#16181B;box-shadow:0 0 0 1px var(--line),0 36px 70px -34px rgba(7,61,45,.5)}
+.sheet::before{content:"";display:block;width:38px;height:5px;border-radius:5px;background:#D5D9D6;margin:0 auto 14px}
+.sheet h3{font:800 22px/1.2 var(--display);letter-spacing:-.02em;margin:0 0 2px}
+html[lang="th"] .sheet h3{font-family:"Prompt",var(--display);font-weight:700;letter-spacing:0}
+.sheet .sm{font-size:14px;line-height:1.4;color:#4B5157;margin:0 0 14px}
+.urow{border-radius:18px;padding:12px 12px 10px;background:#fff;box-shadow:0 0 0 1px #E4E6E5,0 8px 18px -12px rgba(22,24,27,.3);margin-top:10px}
+.urow .who{display:flex;align-items:center;gap:10px;font:600 16px/1.2 var(--body);margin-bottom:10px}
+.urow .who img,.rrow img{width:36px;height:36px;border-radius:9px;flex:0 0 auto}
+.urow .who span{margin-left:auto;font-weight:400;font-size:14px;color:#4B5157}
+.pick{display:flex;gap:6px}
+.pick i{flex:1;font:600 14px/1 var(--body);font-style:normal;text-align:center;padding:12px 4px;border-radius:22px;box-shadow:inset 0 0 0 1px #868B90;transition:background .35s var(--ease),color .35s,box-shadow .35s}
+.beat.in .pick i.on,html:not(.js) .pick i.on{background:#127A5B;color:#fff;box-shadow:none;font-weight:700}
+.urow:nth-of-type(2) .pick i{transition-delay:.45s}.urow:nth-of-type(3) .pick i{transition-delay:.9s}
+.sheet .tagr{display:inline-block;font:700 13px/1 var(--body);color:#8A4B00;background:#FEF3C7;border-radius:8px;padding:5px 8px;margin-bottom:10px}
+.sheet .save-n{font:800 clamp(24px,7vw,30px)/1.15 var(--display);letter-spacing:-.02em;margin:0 0 2px;font-variant-numeric:tabular-nums}
+html[lang="th"] .sheet .save-n{font-family:"Prompt",var(--display);font-weight:700;letter-spacing:0}
+.rlist{border-radius:16px;box-shadow:0 0 0 1px #E4E6E5,0 8px 18px -12px rgba(22,24,27,.3);padding:0 12px;margin:14px 0 12px}
+.rrow{display:flex;align-items:center;gap:10px;padding:10px 0}
+.rrow+.rrow{border-top:1px solid #E4E6E5}
+.rrow div{flex:1;min-width:0;line-height:1.3}
+.rrow b{display:block;font:600 16px/1.3 var(--body)}
+.rrow div span{font-size:13px;color:#4B5157}
+.rrow>span{font:700 15px/1 var(--body);font-variant-numeric:tabular-nums}
+.sheet .sm:last-child{margin:0}
+.self{display:flex;gap:10px;align-items:flex-start;margin-top:18px;font-size:16px;color:var(--ink);max-width:34em}
+.self svg{flex:0 0 auto;width:22px;height:22px;margin-top:2px;stroke:var(--green-ink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
 /* features */
 .feats{display:grid;gap:12px}
@@ -229,7 +257,7 @@ h1 em{display:inline-block;transform-origin:50% 10%}
 .ntf img{width:38px;height:38px;border-radius:9px;flex:0 0 auto}
 .ntf div{flex:1;min-width:0;line-height:1.3}
 .ntf b{display:flex;justify-content:space-between;gap:8px;font:600 14px/1.3 var(--body)}
-.ntf b small{font-weight:400;color:#5F6A65;font-size:12px}
+.ntf b small{white-space:nowrap;font-weight:400;color:#5F6A65;font-size:12px}
 .ntf div>span{display:block;font-size:14px}
 .js .f svg{opacity:0;transform:scale(.5) rotate(-18deg);transition:opacity .5s var(--ease) .25s,transform .8s var(--ease) .25s}
 .js .f.in svg{opacity:1;transform:none}
@@ -253,7 +281,8 @@ h1 em{display:inline-block;transform-origin:50% 10%}
   .slide{width:282px}
   .s2{transform:translateX(-100%) translateY(60px) rotate(-7deg) scale(.86)}
   .s3{transform:translateX(0%) translateY(60px) rotate(7deg) scale(.86)}
-  .worth-grid{grid-template-columns:1fr 1fr}
+  .beat{grid-template-columns:1fr 1fr;gap:56px}
+  .beat.flip>:first-child{order:2}
   .feats{grid-template-columns:repeat(3,1fr)}
   .f.wide{grid-column:span 2}
   .dock{display:none}
@@ -271,8 +300,9 @@ h1 em{display:inline-block;transform-origin:50% 10%}
   .js .stage:not(.in) .s2{transform:translateX(-112%) translateY(46px) rotate(-8deg) scale(.86)}
   .js .stage:not(.in) .s3{transform:translateX(12%) translateY(46px) rotate(8deg) scale(.86)}
   .js .rv{transform:none}
-  .js .worth:not(.in) .bars i{transform:none}
-  .slide,.bars i,.dock{transition:none}
+  .js .beat:not(.in) .tile{opacity:1;transform:none}
+  .tile,.pick i{transition:none}
+  .slide,.dock{transition:none}
 }
 </style>
 <script>document.documentElement.classList.add('js')</script>
@@ -293,14 +323,14 @@ h1 em{display:inline-block;transform-origin:50% 10%}
     <div class="copy">
       <span class="pill"><i></i><span data-l="th" lang="th">ฟรีบน iPhone</span><span data-l="en" lang="en">Free on iPhone</span></span>
       <h1><span data-l="th" lang="th">อะไรใกล้หมดเขต <em>กระดิ่ง</em>ดังก่อน</span><span data-l="en" lang="en">Everything that ends, <em>rings</em> first.</span></h1>
-      <p class="lede"><span data-l="th" lang="th">ทดลองฟรี ค่าสมาชิก พาสปอร์ต ประกัน และนัดหมาย Datebell เตือนก่อนเงินถูกตัด และก่อนเลยวันสำคัญ</span><span data-l="en" lang="en">Free trials, subscriptions, passports, warranties and appointments. Datebell reminds you before the money goes or the date passes.</span></p>
+      <p class="lede"><span data-l="th" lang="th">ทดลองฟรี ค่าสมาชิก พาสปอร์ต ประกัน และนัดหมาย Datebell เตือนก่อนเงินถูกตัด และก่อนเลยวันสำคัญ</span><span data-l="en" lang="en">Subscriptions, free trials, bills and passports in one list. Datebell reminds you before the money goes or the date passes.</span></p>
       <div class="cta" id="heroCta">
         <a class="badge store" href="https://apps.apple.com/app/id6821503223"><img class="badgeImg" src="img/badge-en.svg" alt="Download on the App Store" width="168" height="56"></a>
       </div>
     </div>
     <div class="stage" id="stage" aria-hidden="true">
       <div class="ripple"><i></i><i></i><i></i></div>
-      <div class="ntf" id="ntf"><img src="img/icon-180.png" alt="" width="38" height="38"><div><b>Datebell<small id="ntfTime"></small></b><span id="ntfText"></span></div></div>
+      <div class="ntf" id="ntf"><img src="img/icon-180.png" alt="" width="38" height="38"><div><b><span id="ntfTitle">Datebell</span><small id="ntfTime"></small></b><span id="ntfText"></span></div></div>
       <div class="slide s2"><img class="hs" data-n="2" src="img/v17/th-2.webp" alt="" width="600" height="1304"></div>
       <div class="slide s3"><img class="hs" data-n="5" src="img/v17/th-5.webp" alt="" width="600" height="1304"></div>
       <div class="slide s1"><img class="hs" data-n="1-hero" src="img/v17/th-1-hero.webp" alt="" width="600" height="1304" fetchpriority="high">
@@ -312,6 +342,55 @@ h1 em{display:inline-block;transform-origin:50% 10%}
 </header>
 
 <main>
+  <section class="block story" id="worth" aria-labelledby="painH">
+    <div class="wrap">
+      <div class="beat">
+        <div class="rv">
+          <span class="kicker"><span data-l="th" lang="th">คุ้นไหม</span><span data-l="en" lang="en">Sound familiar?</span></span>
+          <h2 id="painH"><span data-l="th" lang="th">จ่ายแอปดูหนัง 3 แอป <em>แอปฟังเพลงอีก 3</em></span><span data-l="en" lang="en">You pay for 3 video apps and 3 <em>music</em> apps.</span></h2>
+          <p class="intro"><span data-l="th" lang="th">ทีละรายการดูไม่เยอะ Datebell รวมไว้ในรายการเดียว เห็นยอดรวมต่อเดือนและต่อปี และเตือนก่อนถึงวันตัดเงิน</span><span data-l="en" lang="en">Each one looks small on its own. Datebell puts them all in one list, shows the total for the month and the year, and reminds you before each one renews.</span></p>
+        </div>
+        <div class="tiles" role="img" aria-label="Netflix $19.99, Amazon Prime $14.99, Disney+ $18.99, Spotify $12.99, Apple Music $11.99, Tidal $11.99. $90.94 a month, $1,091 a year. Example US prices.">
+          <span class="grp"><span data-l="th" lang="th">ดูหนัง</span><span data-l="en" lang="en">Video</span></span>
+          <div class="tile"><img src="img/logos/netflix.webp" alt="" width="52" height="52" loading="lazy"><b>Netflix</b><span>$19.99</span></div><div class="tile"><img src="img/logos/amazon-prime.webp" alt="" width="52" height="52" loading="lazy"><b>Amazon Prime</b><span>$14.99</span></div><div class="tile"><img src="img/logos/disney-plus.webp" alt="" width="52" height="52" loading="lazy"><b>Disney+</b><span>$18.99</span></div>
+          <span class="grp"><span data-l="th" lang="th">ฟังเพลง · 3 แอป</span><span data-l="en" lang="en">Music · 3 apps</span></span>
+          <div class="tile"><img src="img/logos/spotify.webp" alt="" width="52" height="52" loading="lazy"><b>Spotify</b><span>$12.99</span></div><div class="tile"><img src="img/logos/apple-music.webp" alt="" width="52" height="52" loading="lazy"><b>Apple Music</b><span>$11.99</span></div><div class="tile"><img src="img/logos/tidal.webp" alt="" width="52" height="52" loading="lazy"><b>Tidal</b><span>$11.99</span></div>
+          <div class="total"><small><span data-l="th" lang="th">ต่อเดือน</span><span data-l="en" lang="en">Per month</span></small><number-flow class="big" id="totalNum">$90.94</number-flow><span class="yr"><span data-l="th" lang="th">$1,091 ต่อปี</span><span data-l="en" lang="en">$1,091 a year</span></span></div>
+          <p class="eg"><span data-l="th" lang="th">ราคาตัวอย่างในสหรัฐฯ</span><span data-l="en" lang="en">Example US prices</span></p>
+        </div>
+      </div>
+
+      <div class="beat flip">
+        <div class="rv">
+          <span class="kicker"><span data-l="th" lang="th">ใหม่ · คุ้มไหม?</span><span data-l="en" lang="en">New · Worth it?</span></span>
+          <h2><span data-l="th" lang="th">Datebell เตือนให้เช็กว่า <em>ได้ใช้ไหม</em></span><span data-l="en" lang="en">Datebell reminds you to check what you <em>use</em>.</span></h2>
+          <p class="intro"><span data-l="th" lang="th">เดือนละครั้ง แตะบอกว่าใช้บ่อย นิดหน่อย หรือไม่ได้ใช้ ใช้แค่ 10 วินาที และเห็นแค่คุณ</span><span data-l="en" lang="en">Once a month, tap A lot, A little or Not at all for each subscription. It takes 10 seconds, and only you see it.</span></p>
+        </div>
+        <div class="sheet rv" aria-hidden="true">
+          <h3 id="askT"></h3>
+          <p class="sm"><span data-l="th" lang="th">ใช้แค่ 10 วินาที เห็นแค่คุณ</span><span data-l="en" lang="en">Takes 10 seconds. Only you see it.</span></p>
+          <div class="urow"><div class="who"><img src="img/logos/spotify.webp" alt="" width="36" height="36" loading="lazy">Spotify<span>$12.99</span></div><div class="pick"><i class="on"><span data-l="th" lang="th">บ่อย</span><span data-l="en" lang="en">A lot</span></i><i><span data-l="th" lang="th">นิดหน่อย</span><span data-l="en" lang="en">A little</span></i><i><span data-l="th" lang="th">ไม่ได้ใช้</span><span data-l="en" lang="en">Not at all</span></i></div></div><div class="urow"><div class="who"><img src="img/logos/apple-music.webp" alt="" width="36" height="36" loading="lazy">Apple Music<span>$11.99</span></div><div class="pick"><i><span data-l="th" lang="th">บ่อย</span><span data-l="en" lang="en">A lot</span></i><i><span data-l="th" lang="th">นิดหน่อย</span><span data-l="en" lang="en">A little</span></i><i class="on"><span data-l="th" lang="th">ไม่ได้ใช้</span><span data-l="en" lang="en">Not at all</span></i></div></div><div class="urow"><div class="who"><img src="img/logos/tidal.webp" alt="" width="36" height="36" loading="lazy">Tidal<span>$11.99</span></div><div class="pick"><i><span data-l="th" lang="th">บ่อย</span><span data-l="en" lang="en">A lot</span></i><i><span data-l="th" lang="th">นิดหน่อย</span><span data-l="en" lang="en">A little</span></i><i class="on"><span data-l="th" lang="th">ไม่ได้ใช้</span><span data-l="en" lang="en">Not at all</span></i></div></div>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="rv">
+          <span class="kicker"><span data-l="th" lang="th">แทบไม่ได้ใช้</span><span data-l="en" lang="en">Rarely used</span></span>
+          <h2><span data-l="th" lang="th">รู้แล้วว่า <em>สองแอปไหน</em> ควรเลิก</span><span data-l="en" lang="en">Now you know which <em>two</em> to cancel.</span></h2>
+          <p class="intro"><span data-l="th" lang="th">ตอบว่าไม่ได้ใช้ 2 เดือนติดกัน Datebell จะขึ้นป้ายแทบไม่ได้ใช้ และบอกว่าถ้าเลิกจะประหยัดได้เท่าไรต่อปี</span><span data-l="en" lang="en">Answer Not at all two months in a row and Datebell marks it Rarely used, with what you could save in a year.</span></p>
+          <p class="self"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg><span><span data-l="th" lang="th">คุณยกเลิกเองกับผู้ให้บริการ Datebell บอกขั้นตอนและลิงก์ทางการ แต่ไม่ยกเลิกแทนคุณ</span><span data-l="en" lang="en">Cancel them yourself, with each service. Datebell shows the steps and official links. It never cancels anything for you.</span></span></p>
+        </div>
+        <div class="sheet rv" aria-hidden="true">
+          <span class="tagr"><span data-l="th" lang="th">แทบไม่ได้ใช้</span><span data-l="en" lang="en">Rarely used</span></span>
+          <p class="save-n"><span data-l="th" lang="th">ประหยัดได้ <number-flow class="worthNum">$288</number-flow> ต่อปี</span><span data-l="en" lang="en">Could save <number-flow class="worthNum">$288</number-flow> a year</span></p>
+          <p class="sm"><span data-l="th" lang="th">2 รายการที่แทบไม่ได้ใช้ช่วงนี้</span><span data-l="en" lang="en">2 subscriptions you barely used lately</span></p>
+          <div class="rlist"><div class="rrow"><img src="img/logos/apple-music.webp" alt="" width="36" height="36" loading="lazy"><div><b>Apple Music</b><span><span data-l="th" lang="th">ไม่ได้ใช้ 2 เดือน</span><span data-l="en" lang="en">Not at all for 2 months</span></span></div><span><span data-l="th" lang="th">$144/ปี</span><span data-l="en" lang="en">$144/yr</span></span></div><div class="rrow"><img src="img/logos/tidal.webp" alt="" width="36" height="36" loading="lazy"><div><b>Tidal</b><span><span data-l="th" lang="th">ไม่ได้ใช้ 2 เดือน</span><span data-l="en" lang="en">Not at all for 2 months</span></span></div><span><span data-l="th" lang="th">$144/ปี</span><span data-l="en" lang="en">$144/yr</span></span></div></div>
+          <p class="sm"><span data-l="th" lang="th">จากคำตอบของคุณเอง Datebell ไม่อ่านว่าคุณดูหรือฟังอะไร</span><span data-l="en" lang="en">From your own answers. Datebell never sees what you watch or play.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="see" aria-labelledby="seeH">
     <div class="wrap">
       <div class="head rv">
@@ -330,24 +409,6 @@ h1 em{display:inline-block;transform-origin:50% 10%}
       </div>
       <div class="rail" id="rail" tabindex="0" aria-label="Screenshots"></div>
       <div class="dots" id="dots"></div>
-    </div>
-  </section>
-
-  <section class="block worth" id="worth" aria-labelledby="worthH">
-    <div class="wrap worth-grid">
-      <div class="rv">
-        <span class="kicker"><span data-l="th" lang="th">ใหม่ · คุ้มไหม?</span><span data-l="en" lang="en">New · Worth it?</span></span>
-        <h2 id="worthH"><span data-l="th" lang="th">จ่ายทุกเดือน <em>แต่ไม่ได้ใช้?</em></span><span data-l="en" lang="en">Paying for it. <em>Not</em> using it?</span></h2>
-        <p class="intro"><span data-l="th" lang="th">เดือนละครั้ง แตะบอกว่าใช้บ่อย นิดหน่อย หรือไม่ได้ใช้ แล้ว Datebell บอกว่าถ้าเลิกจะประหยัดได้เท่าไรต่อปี</span><span data-l="en" lang="en">Once a month, tap A lot, A little or Not at all. Datebell shows what you would save in a year if you let it go.</span></p>
-      </div>
-      <div class="wcard rv" aria-hidden="true">
-        <div class="lbl"><span data-l="th" lang="th">คุ้มไหม?</span><span data-l="en" lang="en">Worth it?</span><span class="tag"><span data-l="th" lang="th">แทบไม่ได้ใช้</span><span data-l="en" lang="en">Barely used</span></span></div>
-        <div class="num"><number-flow id="worthNum" role="img">฿2,148</number-flow><small><span data-l="th" lang="th">ต่อปี</span><span data-l="en" lang="en">a year</span></small></div>
-        <div class="bars"><i style="height:100%"></i><i style="height:42%"></i><i style="height:12%"></i><i style="height:8%"></i></div>
-        <div class="months"></div>
-        <div class="choice"><span><span data-l="th" lang="th">บ่อย</span><span data-l="en" lang="en">A lot</span></span><span><span data-l="th" lang="th">นิดหน่อย</span><span data-l="en" lang="en">A little</span></span><span class="on"><span data-l="th" lang="th">ไม่ได้ใช้</span><span data-l="en" lang="en">Not at all</span></span></div>
-        <div class="save"><span data-l="th" lang="th">ประหยัดได้ ฿2,148 ต่อปี</span><span data-l="en" lang="en">Could save $168 a year</span></div>
-      </div>
     </div>
   </section>
 
@@ -418,7 +479,7 @@ h1 em{display:inline-block;transform-origin:50% 10%}
       <details><summary><span data-l="th" lang="th">ต้องสมัครบัญชีไหม</span><span data-l="en" lang="en">Do I need an account?</span></summary>
         <p><span data-l="th" lang="th">ไม่ต้อง เข้าสู่ระบบด้วย Apple, Google หรืออีเมล เฉพาะเมื่ออยากสำรองข้อมูลไว้ใช้ข้ามเครื่อง</span><span data-l="en" lang="en">No. Sign in with Apple, Google or email only if you want a backup that moves with you.</span></p></details>
       <details><summary><span data-l="th" lang="th">Datebell ยกเลิกค่าสมาชิกให้ไหม</span><span data-l="en" lang="en">Does Datebell cancel things for me?</span></summary>
-        <p><span data-l="th" lang="th">ไม่ Datebell เตือนให้ทันเวลา และบอกขั้นตอนยกเลิกของแต่ละบริการ คุณกดยกเลิกเองได้ทันที</span><span data-l="en" lang="en">No. It reminds you in time and shows the steps to cancel each service, so you can do it in a minute.</span></p></details>
+        <p><span data-l="th" lang="th">ไม่ Datebell เตือนให้ทันเวลา และบอกขั้นตอนยกเลิกของแต่ละบริการ คุณกดยกเลิกเองได้ทันที</span><span data-l="en" lang="en">No. It reminds you in time and shows the steps and official links for each service. You cancel it yourself, with the service.</span></p></details>
       <details><summary><span data-l="th" lang="th">ใช้กับเครื่องไหนได้บ้าง</span><span data-l="en" lang="en">Which iPhones does it work on?</span></summary>
         <p><span data-l="th" lang="th">iPhone ที่ใช้ iOS 16 ขึ้นไป</span><span data-l="en" lang="en">Any iPhone on iOS 16 or later.</span></p></details>
     </div>
@@ -430,7 +491,7 @@ h1 em{display:inline-block;transform-origin:50% 10%}
   <div class="ripple"><i></i><i></i><i></i></div>
   <div class="wrap rv">
     <svg class="dbell fb" viewBox="72 72 880 880" width="120" height="120" aria-hidden="true"><g class="w wl"><path d="M140 400 Q110 500 150 590" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round"/></g><g class="w wr"><path d="M880 460 Q912 560 872 650" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round"/></g><g class="sw"><g transform="translate(500 530) rotate(-14) scale(1.04) translate(-512 -500)"><circle cx="512" cy="232" r="44" fill="#F7A21F"/><path d="M512 270 C392 270 322 360 322 480 L322 610 L262 690 Q250 712 276 712 L748 712 Q774 712 762 690 L702 610 L702 480 C702 360 632 270 512 270 Z" fill="url(#dbG)"/><g clip-path="url(#dbBc)"><rect x="600" y="250" width="240" height="480" fill="#F59E0B"/></g><path d="M262 690 Q250 712 276 712 L748 712 Q774 712 762 690 Z" fill="#F59E0B"/><path d="M464.486328125 602.9296875C509.0419921875 602.9296875 539.193359375 579.8583984375 539.193359375 548.73046875C539.193359375 527.001953125 524.544921875 507.71484375 497.201171875 504.9072265625V504.541015625C517.8310546875 502.099609375 533.578125 487.939453125 533.578125 465.72265625C533.578125 436.0595703125 505.2578125 415.185546875 464.974609375 415.185546875C420.541015625 415.185546875 394.173828125 440.6982421875 394.173828125 474.0234375H441.537109375C441.537109375 460.9619140625 451.546875 451.806640625 464.974609375 451.806640625C477.7919921875 451.806640625 487.0693359375 460.2294921875 487.0693359375 471.826171875C487.0693359375 483.6669921875 477.42578125 490.625 461.068359375 490.625H443.490234375V524.8046875H461.068359375C478.0361328125 524.8046875 488.900390625 532.7392578125 488.900390625 544.9462890625C488.900390625 556.787109375 478.7685546875 565.087890625 464.2421875 565.087890625C448.12890625 565.087890625 438.36328125 554.7119140625 438.36328125 537.5H390.755859375C390.755859375 571.435546875 412.484375 602.9296875 464.486328125 602.9296875Z M629.58203125 418.115234375H584.66015625L539.982421875 445.458984375V487.451171875L580.509765625 462.6708984375H580.75390625V600.0H629.58203125Z" fill="#16181B"/></g><g class="cl"><g transform="translate(500 530) rotate(-14) scale(1.04) translate(-512 -500)"><path d="M446 742 A66 66 0 0 0 578 742 Z" fill="#E08E14"/></g></g></g></svg>
-    <h2 id="finalH"><span data-l="th" lang="th">ให้กระดิ่ง <em>ช่วยจำ</em></span><span data-l="en" lang="en">Let the bell <em>remember.</em></span></h2>
+    <h2 id="finalH"><span data-l="th" lang="th">ให้กระดิ่ง <em>ช่วยจำ</em></span><span data-l="en" lang="en">Pay only for what you <em>use.</em></span></h2>
     <p class="lede"><span data-l="th" lang="th">ฟรีบน iPhone ตั้งค่าเสร็จในนาทีเดียว</span><span data-l="en" lang="en">Free on iPhone. Set up in a minute.</span></p>
     <div class="cta" style="align-items:center">
       <a class="badge store" href="https://apps.apple.com/app/id6821503223"><img class="badgeImg" src="img/badge-en.svg" alt="Download on the App Store" width="168" height="56" loading="lazy"></a>
@@ -509,23 +570,31 @@ h1 em{display:inline-block;transform-origin:50% 10%}
   dev=/^duo$/i.test(q.get('device')||'')?'duo':'phone';setDev(dev);
   if(dev==='duo'&&!location.hash)requestAnimationFrame(function(){document.getElementById('see').scrollIntoView();});
 
-  // Worth it number (NumberFlow)
-  var WORTH={th:[2148,'THB','th-TH'],en:[168,'USD','en-US']};
-  var worthEl=document.getElementById('worthNum');
+  // rolling numbers in the subscription story (NumberFlow); example prices are US dollars in both languages
   var hasNF=!!(window.customElements&&customElements.get('number-flow'));
-  function paint(l,show){
-    var w=WORTH[l],fmt={style:'currency',currency:w[1],maximumFractionDigits:0};
-    var txt=new Intl.NumberFormat(w[2],fmt).format(w[0]);
-    worthEl.setAttribute('aria-label',txt);
-    if(!hasNF){worthEl.textContent=txt;return;}
-    worthEl.locales=w[2];worthEl.format=fmt;worthEl.update(show?w[0]:0);
+  var NUMS=[[document.getElementById('totalNum'),90.94,2]];
+  document.querySelectorAll('.worthNum').forEach(function(el){NUMS.push([el,288,0]);});
+  function paint(){
+    NUMS.forEach(function(n){
+      var show=!animOK||n[0].closest('.beat').classList.contains('in');
+      var fmt={style:'currency',currency:'USD',minimumFractionDigits:n[2],maximumFractionDigits:n[2]};
+      var txt=new Intl.NumberFormat('en-US',fmt).format(n[1]);
+      if(!hasNF){n[0].textContent=txt;return;}
+      n[0].locales='en-US';n[0].format=fmt;n[0].update(show?n[1]:0);
+    });
+  }
+  // the check-in asks about last month, like the app
+  function askTitle(l){
+    var d=new Date();d.setDate(1);d.setMonth(d.getMonth()-1);
+    var m=new Intl.DateTimeFormat(l==='th'?'th-TH':'en-US',{month:'long'}).format(d);
+    document.getElementById('askT').textContent=l==='th'?'เดือน'+m+'ได้ใช้ไหม?':'Did you use these in '+m+'?';
   }
 
   // language
   var BADGE={th:'https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/th-th',en:'img/badge-en.svg'};
   var BADGE_ALT={th:'ดาวน์โหลดบน App Store',en:'Download on the App Store'};
   var TITLE={th:'Datebell: อะไรใกล้หมดเขต กระดิ่งดังก่อน',en:'Datebell: Everything that ends, rings first'};
-  var worthDone=false,animOK=('IntersectionObserver' in window)&&!reduce;
+  var animOK=('IntersectionObserver' in window)&&!reduce;
   function setLang(l){
     lang=l;document.documentElement.lang=l;document.title=TITLE[l];
     try{localStorage.setItem('db-lang',l);}catch(e){}
@@ -533,38 +602,41 @@ h1 em{display:inline-block;transform-origin:50% 10%}
     document.querySelectorAll('img.hs').forEach(function(im){im.src='img/v17/'+l+'-'+im.dataset.n+'.webp';});
     document.querySelectorAll('img.badgeImg').forEach(function(b){b.onerror=function(){b.onerror=null;b.src=BADGE.en;};b.src=BADGE[l];b.alt=BADGE_ALT[l];});
     document.getElementById('devs').setAttribute('aria-label',l==='th'?'อุปกรณ์':'Device');
-    document.querySelector('.months').innerHTML=(l==='th'?['ก.ค.','ส.ค.','ก.ย.','ต.ค.']:['Jul','Aug','Sep','Oct']).map(function(m){return '<span>'+m+'</span>';}).join('');
-    paint(l,worthDone||!animOK);
+    askTitle(l);paint();
     build();
   }
   document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){setLang(b.dataset.set);};});
   var saved=null;try{saved=localStorage.getItem('db-lang');}catch(e){}
   var start=q.get('lang')==='en'||q.get('lang')==='th'?q.get('lang')
     :/-th-|^th-|-th$/.test(ct)?'th'
+    :/-(gl|en)-|-(gl|en)$/.test(ct)?'en'
     :saved||(/^th\b/i.test(navigator.language||'')?'th':(ct?'th':'en'));
   setLang(start);
 
   // reveal on scroll
-  var stage=document.getElementById('stage'),worth=document.getElementById('worth');
+  var stage=document.getElementById('stage'),beats=document.querySelectorAll('.beat');
   if(animOK){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){
       if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
-      if(e.target===worth){worthDone=true;setTimeout(function(){paint(lang,true);},250);}
+      if(e.target.classList.contains('beat'))setTimeout(paint,250);
     });},{rootMargin:'0px 0px -12% 0px'});
     document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
-    io.observe(worth);
+    beats.forEach(function(b){io.observe(b);});
     requestAnimationFrame(function(){setTimeout(function(){stage.classList.add('in');},120);});
   }else{
     document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
-    stage.classList.add('in');worth.classList.add('in');
+    stage.classList.add('in');beats.forEach(function(b){b.classList.add('in');});
   }
 
 
   // hero notifications
-  var NTF={th:['Netflix ทดลองฟรีหมดในอีก 2 วัน','Spotify จะตัดเงินพรุ่งนี้ ฿129','พาสปอร์ตจะหมดอายุในอีก 7 วัน'],en:['Netflix free trial ends in 2 days','Spotify renews tomorrow · $11.99','Your passport expires in 7 days']};
+  function dfmt(l,days,year){var d=new Date();d.setDate(d.getDate()+days);var o={day:'numeric',month:'short'};if(year)o.year='numeric';return new Intl.DateTimeFormat(l==='th'?'th-TH':'en-US',o).format(d);}
+  function ntfList(l){return l==='th'
+    ?[['ทดลองใช้ฟรีหมดในอีก 2 วัน','ทดลองใช้ฟรี Disney+ หมด '+dfmt(l,2)+' ถ้าไม่ใช้ต่อ ยกเลิกล่วงหน้าอย่างน้อย 1 วัน'],['ใกล้ถึงกำหนด','Spotify · ตัดเงินพรุ่งนี้ '+dfmt(l,1)],['ใกล้ถึงกำหนด','พาสปอร์ต · หมดอายุ '+dfmt(l,180,1)]]
+    :[['Free trial ends in 2 days','Your Disney+ free trial ends '+dfmt(l,2)+'. Cancel at least a day before if you don’t want to pay.'],['Due soon','Spotify · Payment tomorrow, '+dfmt(l,1)],['Due soon','Passport · Expires '+dfmt(l,180,1)]];}
   var NOW={th:'ตอนนี้',en:'now'};
   var ntf=document.getElementById('ntf'),nk=0;
-  function ntfSet(){document.getElementById('ntfText').textContent=NTF[lang][nk%3];document.getElementById('ntfTime').textContent=NOW[lang];}
+  function ntfSet(){var n=ntfList(lang)[nk%3];document.getElementById('ntfTitle').textContent='Datebell · '+n[0];document.getElementById('ntfText').textContent=n[1];document.getElementById('ntfTime').textContent=NOW[lang];}
   ntfSet();
   if(reduce){ntf.classList.add('on');}
   else{
@@ -577,6 +649,7 @@ h1 em{display:inline-block;transform-origin:50% 10%}
   }
   document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',ntfSet);});
 
+  document.querySelectorAll('.tiles .tile').forEach(function(f,k){f.style.transitionDelay=k*90+'ms';});
   // stagger feature cards
   document.querySelectorAll('.feats .f').forEach(function(f,k){f.style.transitionDelay=(k%3)*70+'ms';});
 
