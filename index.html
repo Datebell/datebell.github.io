@@ -20,7 +20,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&family=Prompt:wght@400;600;700&display=swap">
-<link rel="preload" as="image" href="img/v17/th-1-hero.webp">
 <style>
 :root{
   --green:#168E6A;--green-ink:#127A5B;--deep:#0B5E45;--deeper:#073D2D;
@@ -73,10 +72,10 @@ h1 em,.final h2 em{color:var(--yellow)}
 .note b{color:#fff;font-weight:600}
 
 /* phone fan */
-.stage{position:relative;height:clamp(400px,118vw,560px);margin-top:34px}
+.stage{position:relative;height:clamp(440px,128vw,600px);margin-top:34px}
 @keyframes ring{0%,62%,100%{transform:rotate(0)}66%{transform:rotate(14deg)}72%{transform:rotate(-11deg)}78%{transform:rotate(7deg)}84%{transform:rotate(-4deg)}90%{transform:rotate(2deg)}}
-.slide{position:absolute;left:50%;top:0;width:clamp(200px,56vw,270px);aspect-ratio:600/1304;border-radius:30px;overflow:hidden;background:var(--deep);box-shadow:0 40px 70px -24px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12) inset;transition:transform .9s var(--ease)}
-.slide img{width:100%;height:100%;object-fit:cover}
+.slide{position:absolute;left:50%;top:62px;width:clamp(200px,56vw,270px);aspect-ratio:600/1304;border-radius:13% / 6%;padding:2.6%;background:#0C1310;box-shadow:0 40px 70px -24px rgba(0,0,0,.6),inset 0 0 0 1.5px rgba(255,255,255,.22),inset 0 0 0 3px #1E2925;transition:transform .9s var(--ease)}
+.slide img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:10.6% / 4.9%}
 .s1{z-index:3;transform:translateX(-50%)}
 .s2{z-index:2;transform:translateX(-112%) translateY(46px) rotate(-8deg) scale(.86)}
 .s3{z-index:1;transform:translateX(12%) translateY(46px) rotate(8deg) scale(.86)}
@@ -222,20 +221,6 @@ footer a{color:rgba(255,255,255,.86)}
 .mark{cursor:pointer}
 
 
-/* the big bell on the first phone: lifted out of the store image so it swings with "rings" */
-.s1 .sb{position:absolute;height:auto;object-fit:fill}
-.s1 .sb-sw{position:absolute;inset:0;transform-origin:46.63% 5.57%}
-.s1 .sb-body{left:32.919%;top:5.378%;width:39.469%}
-.s1 .sb-cl{left:47.927%;top:23.036%;width:10.199%;transform-origin:-12.7% -372.4%}
-.s1 .sb-wl{left:25.788%;top:13.043%;width:6.385%}
-.s1 .sb-wr{left:67.579%;top:10.031%;width:6.385%}
-.ringing .sb-sw{animation:ring 3s var(--ease) 1}
-.ringing .sb-cl{animation:clap 3s var(--ease) 1}
-.ringing .sb-wl{animation:swL 3s var(--ease) 1}
-.ringing .sb-wr{animation:swR 3s var(--ease) 1}
-@keyframes swL{0%,62%,100%{transform:none}70%{transform:translateX(-55%) scale(1.1)}82%{transform:translateX(-15%)}}
-@keyframes swR{0%,62%,100%{transform:none}70%{transform:translateX(55%) scale(1.1)}82%{transform:translateX(15%)}}
-
 /* ---------- motion ---------- */
 @keyframes up{to{opacity:1;transform:none}}
 .js .copy>*{opacity:0;transform:translateY(18px);animation:up .9s var(--ease) forwards}
@@ -276,7 +261,7 @@ h1 em{display:inline-block;transform-origin:50% 10%}
   .copy{text-align:left;padding-bottom:40px}
   h1,.copy .lede{margin-left:0}
   .cta{align-items:flex-start}
-  .stage{height:600px;margin-top:20px}
+  .stage{height:640px;margin-top:20px}
   .ntf{top:-40px}
   .slide{width:282px}
   .s2{transform:translateX(-100%) translateY(60px) rotate(-7deg) scale(.86)}
@@ -291,7 +276,7 @@ h1 em{display:inline-block;transform-origin:50% 10%}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .slide{animation:none}
-  .ringing .sw,.ringing .cl,.ringing .w,.ringing h1 em,.ringing .sb-sw,.ringing .sb-cl,.ringing .sb-wl,.ringing .sb-wr{animation:none}
+  .ringing .sw,.ringing .cl,.ringing .w,.ringing h1 em{animation:none}
   .ripple{display:none}
   .js .copy>*{opacity:1;transform:none;animation:none}
   .js .f svg{opacity:1;transform:none;transition:none}
@@ -331,12 +316,9 @@ h1 em{display:inline-block;transform-origin:50% 10%}
     <div class="stage" id="stage" aria-hidden="true">
       <div class="ripple"><i></i><i></i><i></i></div>
       <div class="ntf" id="ntf"><img src="img/icon-180.png" alt="" width="38" height="38"><div><b><span id="ntfTitle">Datebell</span><small id="ntfTime"></small></b><span id="ntfText"></span></div></div>
-      <div class="slide s2"><img class="hs" data-n="2" src="img/v17/th-2.webp" alt="" width="600" height="1304"></div>
-      <div class="slide s3"><img class="hs" data-n="5" src="img/v17/th-5.webp" alt="" width="600" height="1304"></div>
-      <div class="slide s1"><img class="hs" data-n="1-hero" src="img/v17/th-1-hero.webp" alt="" width="600" height="1304" fetchpriority="high">
-        <img class="sb sb-wl" src="img/v17/s1-wl.webp" alt="" width="77" height="255"><img class="sb sb-wr" src="img/v17/s1-wr.webp" alt="" width="77" height="255">
-        <div class="sb-sw"><img class="sb sb-cl" src="img/v17/s1-cl.webp" alt="" width="123" height="123"><img class="sb sb-body" src="img/v17/s1-body.webp" alt="" width="476" height="551"></div>
-      </div>
+      <div class="slide s2"><img class="hs" data-n="calendar" src="img/hero/th-calendar.webp" alt="" width="603" height="1311"></div>
+      <div class="slide s3"><img class="hs" data-n="dark" src="img/hero/th-dark.webp" alt="" width="603" height="1311"></div>
+      <div class="slide s1"><img class="hs" data-n="home" src="img/hero/th-home.webp" alt="" width="603" height="1311" fetchpriority="high"></div>
     </div>
   </div>
 </header>
@@ -599,7 +581,7 @@ h1 em{display:inline-block;transform-origin:50% 10%}
     lang=l;document.documentElement.lang=l;document.title=TITLE[l];
     try{localStorage.setItem('db-lang',l);}catch(e){}
     document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l?'true':'false');});
-    document.querySelectorAll('img.hs').forEach(function(im){im.src='img/v17/'+l+'-'+im.dataset.n+'.webp';});
+    document.querySelectorAll('img.hs').forEach(function(im){im.src='img/hero/'+l+'-'+im.dataset.n+'.webp';});
     document.querySelectorAll('img.badgeImg').forEach(function(b){b.onerror=function(){b.onerror=null;b.src=BADGE.en;};b.src=BADGE[l];b.alt=BADGE_ALT[l];});
     document.getElementById('devs').setAttribute('aria-label',l==='th'?'อุปกรณ์':'Device');
     askTitle(l);paint();
@@ -632,7 +614,7 @@ h1 em{display:inline-block;transform-origin:50% 10%}
   // hero notifications
   function dfmt(l,days,year){var d=new Date();d.setDate(d.getDate()+days);var o={day:'numeric',month:'short'};if(year)o.year='numeric';return new Intl.DateTimeFormat(l==='th'?'th-TH':'en-US',o).format(d);}
   function ntfList(l){return l==='th'
-    ?[['ทดลองใช้ฟรีหมดในอีก 2 วัน','ทดลองใช้ฟรี Disney+ หมด '+dfmt(l,2)+' ถ้าไม่ใช้ต่อ ยกเลิกล่วงหน้าอย่างน้อย 1 วัน'],['ใกล้ถึงกำหนด','Spotify · ตัดเงินพรุ่งนี้ '+dfmt(l,1)],['ใกล้ถึงกำหนด','พาสปอร์ต · หมดอายุ '+dfmt(l,180,1)]]
+    ?[['ทดลองใช้ฟรีหมดในอีก 2 วัน','ทดลองใช้ฟรี YouTube Premium หมด '+dfmt(l,2)+' ถ้าไม่ใช้ต่อ ยกเลิกล่วงหน้าอย่างน้อย 1 วัน'],['ใกล้ถึงกำหนด','Spotify · ตัดเงินพรุ่งนี้ '+dfmt(l,1)],['ใกล้ถึงกำหนด','พาสปอร์ต · หมดอายุ '+dfmt(l,180,1)]]
     :[['Free trial ends in 2 days','Your Disney+ free trial ends '+dfmt(l,2)+'. Cancel at least a day before if you don’t want to pay.'],['Due soon','Spotify · Payment tomorrow, '+dfmt(l,1)],['Due soon','Passport · Expires '+dfmt(l,180,1)]];}
   var NOW={th:'ตอนนี้',en:'now'};
   var ntf=document.getElementById('ntf'),nk=0;
