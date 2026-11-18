@@ -1,0 +1,335 @@
+{
+ "verifiedOn": "2026-11-18",
+ "country": "AU",
+ "currency": "AUD",
+ "services": [
+  {
+   "serviceId": "netflix",
+   "status": "verified",
+   "reason": "Official Australia price page.",
+   "plans": [
+    {
+     "id": "au-netflix-standard-ads",
+     "label": "Standard with ads",
+     "amountMinor": 999,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Netflix website, Australia",
+     "sourceUrl": "https://help.netflix.com/en/node/24926/au",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-netflix-standard",
+     "label": "Standard",
+     "amountMinor": 2099,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Netflix website, Australia",
+     "sourceUrl": "https://help.netflix.com/en/node/24926/au",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-netflix-premium",
+     "label": "Premium",
+     "amountMinor": 2899,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Netflix website, Australia",
+     "sourceUrl": "https://help.netflix.com/en/node/24926/au",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Australia page. You can change it to the amount on your receipt."
+    }
+   ]
+  },
+  {
+   "serviceId": "icloud-plus",
+   "status": "verified",
+   "reason": "Official Australia price page.",
+   "plans": [
+    {
+     "id": "au-icloud-plus-50gb",
+     "label": "50 GB",
+     "amountMinor": 149,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+, Australia",
+     "sourceUrl": "https://support.apple.com/en-us/108047",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-icloud-plus-200gb",
+     "label": "200 GB",
+     "amountMinor": 449,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+, Australia",
+     "sourceUrl": "https://support.apple.com/en-us/108047",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-icloud-plus-2tb",
+     "label": "2 TB",
+     "amountMinor": 1499,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+, Australia",
+     "sourceUrl": "https://support.apple.com/en-us/108047",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-icloud-plus-6tb",
+     "label": "6 TB",
+     "amountMinor": 4499,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+, Australia",
+     "sourceUrl": "https://support.apple.com/en-us/108047",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-icloud-plus-12tb",
+     "label": "12 TB",
+     "amountMinor": 8999,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+, Australia",
+     "sourceUrl": "https://support.apple.com/en-us/108047",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Australia page. You can change it to the amount on your receipt."
+    }
+   ]
+  },
+  {
+   "serviceId": "spotify",
+   "status": "verified",
+   "reason": "Official Australia price page.",
+   "plans": [
+    {
+     "id": "au-spotify-individual",
+     "label": "Premium Individual",
+     "amountMinor": 1599,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Spotify website, Australia",
+     "sourceUrl": "https://www.spotify.com/au/premium/",
+     "verifiedOn": "2026-11-18",
+     "note": "Regular price after the introductory offer. Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-spotify-student",
+     "label": "Premium Student",
+     "amountMinor": 799,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Spotify website, Australia",
+     "sourceUrl": "https://www.spotify.com/au/premium/",
+     "verifiedOn": "2026-11-18",
+     "note": "For verified higher-education students. Regular price after the introductory offer. Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-spotify-duo",
+     "label": "Premium Duo",
+     "amountMinor": 2299,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Spotify website, Australia",
+     "sourceUrl": "https://www.spotify.com/au/premium/",
+     "verifiedOn": "2026-11-18",
+     "note": "For two people living at the same address. Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-spotify-family",
+     "label": "Premium Family",
+     "amountMinor": 2799,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Spotify website, Australia",
+     "sourceUrl": "https://www.spotify.com/au/premium/",
+     "verifiedOn": "2026-11-18",
+     "note": "Up to six members living at the same address. Price from the official Australia page. You can change it to the amount on your receipt."
+    }
+   ]
+  },
+  {
+   "serviceId": "apple-music",
+   "status": "verified",
+   "reason": "Official Australia price page.",
+   "plans": [
+    {
+     "id": "au-apple-music-individual",
+     "label": "Individual",
+     "amountMinor": 1499,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Apple Music, subscribed with Apple, Australia",
+     "sourceUrl": "https://www.apple.com/au/apple-music/",
+     "verifiedOn": "2026-11-18",
+     "note": "Regular price after the free trial. Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-apple-music-family",
+     "label": "Family",
+     "amountMinor": 2399,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Apple Music, subscribed with Apple, Australia",
+     "sourceUrl": "https://www.apple.com/au/apple-music/",
+     "verifiedOn": "2026-11-18",
+     "note": "Up to six people with Family Sharing. Regular price after the free trial. Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-apple-music-student",
+     "label": "Student",
+     "amountMinor": 799,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Apple Music, subscribed with Apple, Australia",
+     "sourceUrl": "https://www.apple.com/au/apple-music/",
+     "verifiedOn": "2026-11-18",
+     "note": "For verified students. Regular price after the free trial. Price from the official Australia page. You can change it to the amount on your receipt."
+    }
+   ]
+  },
+  {
+   "serviceId": "disney-plus",
+   "status": "verified",
+   "reason": "Official Australia price page.",
+   "plans": [
+    {
+     "id": "au-disney-plus-standard-ads",
+     "label": "Standard With Ads",
+     "amountMinor": 999,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Disney+ website, Australia",
+     "sourceUrl": "https://www.disneyplus.com/en-au/explore/what-is-disneyplus",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-disney-plus-standard-monthly",
+     "label": "Standard — Monthly",
+     "amountMinor": 1799,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Disney+ website, Australia",
+     "sourceUrl": "https://www.disneyplus.com/en-au/explore/what-is-disneyplus",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-disney-plus-standard-yearly",
+     "label": "Standard — Yearly",
+     "amountMinor": 17999,
+     "currency": "AUD",
+     "cycle": "yearly",
+     "channel": "Disney+ website, Australia",
+     "sourceUrl": "https://www.disneyplus.com/en-au/explore/what-is-disneyplus",
+     "verifiedOn": "2026-11-18",
+     "note": "Full annual charge, not a monthly average. Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-disney-plus-premium-monthly",
+     "label": "Premium — Monthly",
+     "amountMinor": 2499,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Disney+ website, Australia",
+     "sourceUrl": "https://www.disneyplus.com/en-au/explore/what-is-disneyplus",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-disney-plus-premium-yearly",
+     "label": "Premium — Yearly",
+     "amountMinor": 24999,
+     "currency": "AUD",
+     "cycle": "yearly",
+     "channel": "Disney+ website, Australia",
+     "sourceUrl": "https://www.disneyplus.com/en-au/explore/what-is-disneyplus",
+     "verifiedOn": "2026-11-18",
+     "note": "Full annual charge, not a monthly average. Price from the official Australia page. You can change it to the amount on your receipt."
+    }
+   ]
+  },
+  {
+   "serviceId": "microsoft-365",
+   "status": "verified",
+   "reason": "Official Australia price page.",
+   "plans": [
+    {
+     "id": "au-microsoft-365-personal-monthly",
+     "label": "Personal — Monthly",
+     "amountMinor": 1600,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Microsoft Store website, Australia",
+     "sourceUrl": "https://www.microsoft.com/en-au/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-11-18",
+     "note": "For one person. Regular price after any first-month offer. Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-microsoft-365-personal-yearly",
+     "label": "Personal — Yearly",
+     "amountMinor": 15900,
+     "currency": "AUD",
+     "cycle": "yearly",
+     "channel": "Microsoft Store website, Australia",
+     "sourceUrl": "https://www.microsoft.com/en-au/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-11-18",
+     "note": "For one person. Full annual charge after any first-year offer. Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-microsoft-365-family-monthly",
+     "label": "Family — Monthly",
+     "amountMinor": 1800,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Microsoft Store website, Australia",
+     "sourceUrl": "https://www.microsoft.com/en-au/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-11-18",
+     "note": "For up to six people. Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-microsoft-365-family-yearly",
+     "label": "Family — Yearly",
+     "amountMinor": 17900,
+     "currency": "AUD",
+     "cycle": "yearly",
+     "channel": "Microsoft Store website, Australia",
+     "sourceUrl": "https://www.microsoft.com/en-au/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-11-18",
+     "note": "For up to six people. Full annual charge. Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-microsoft-365-premium-monthly",
+     "label": "Premium — Monthly",
+     "amountMinor": 3300,
+     "currency": "AUD",
+     "cycle": "monthly",
+     "channel": "Microsoft Store website, Australia",
+     "sourceUrl": "https://www.microsoft.com/en-au/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-11-18",
+     "note": "Regular price after any first-month offer. Price from the official Australia page. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "au-microsoft-365-premium-yearly",
+     "label": "Premium — Yearly",
+     "amountMinor": 32900,
+     "currency": "AUD",
+     "cycle": "yearly",
+     "channel": "Microsoft Store website, Australia",
+     "sourceUrl": "https://www.microsoft.com/en-au/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-11-18",
+     "note": "Full annual charge after any first-year offer. Price from the official Australia page. You can change it to the amount on your receipt."
+    }
+   ]
+  }
+ ]
+}
