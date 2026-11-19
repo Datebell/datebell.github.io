@@ -1,0 +1,335 @@
+{
+ "verifiedOn": "2026-11-18",
+ "country": "CA",
+ "currency": "CAD",
+ "services": [
+  {
+   "serviceId": "netflix",
+   "status": "verified",
+   "reason": "Official Canada price page.",
+   "plans": [
+    {
+     "id": "ca-netflix-standard-ads",
+     "label": "Standard with ads",
+     "amountMinor": 799,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Netflix website, Canada",
+     "sourceUrl": "https://help.netflix.com/en/node/24926/ca",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-netflix-standard",
+     "label": "Standard",
+     "amountMinor": 1899,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Netflix website, Canada",
+     "sourceUrl": "https://help.netflix.com/en/node/24926/ca",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-netflix-premium",
+     "label": "Premium",
+     "amountMinor": 2399,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Netflix website, Canada",
+     "sourceUrl": "https://help.netflix.com/en/node/24926/ca",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    }
+   ]
+  },
+  {
+   "serviceId": "icloud-plus",
+   "status": "verified",
+   "reason": "Official Canada price page.",
+   "plans": [
+    {
+     "id": "ca-icloud-plus-50gb",
+     "label": "50 GB",
+     "amountMinor": 129,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+, Canada",
+     "sourceUrl": "https://support.apple.com/en-us/108047",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-icloud-plus-200gb",
+     "label": "200 GB",
+     "amountMinor": 399,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+, Canada",
+     "sourceUrl": "https://support.apple.com/en-us/108047",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-icloud-plus-2tb",
+     "label": "2 TB",
+     "amountMinor": 1299,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+, Canada",
+     "sourceUrl": "https://support.apple.com/en-us/108047",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-icloud-plus-6tb",
+     "label": "6 TB",
+     "amountMinor": 3999,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+, Canada",
+     "sourceUrl": "https://support.apple.com/en-us/108047",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-icloud-plus-12tb",
+     "label": "12 TB",
+     "amountMinor": 7999,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+, Canada",
+     "sourceUrl": "https://support.apple.com/en-us/108047",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    }
+   ]
+  },
+  {
+   "serviceId": "spotify",
+   "status": "verified",
+   "reason": "Official Canada price page.",
+   "plans": [
+    {
+     "id": "ca-spotify-individual",
+     "label": "Premium Individual",
+     "amountMinor": 1399,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Spotify website, Canada",
+     "sourceUrl": "https://www.spotify.com/ca-en/premium/",
+     "verifiedOn": "2026-11-18",
+     "note": "Regular price after the introductory offer. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-spotify-student",
+     "label": "Premium Student",
+     "amountMinor": 639,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Spotify website, Canada",
+     "sourceUrl": "https://www.spotify.com/ca-en/premium/",
+     "verifiedOn": "2026-11-18",
+     "note": "For verified higher-education students. Regular price after the introductory offer. Not available in Quebec. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-spotify-duo",
+     "label": "Premium Duo",
+     "amountMinor": 1999,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Spotify website, Canada",
+     "sourceUrl": "https://www.spotify.com/ca-en/premium/",
+     "verifiedOn": "2026-11-18",
+     "note": "For two people living at the same address. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-spotify-family",
+     "label": "Premium Family",
+     "amountMinor": 2399,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Spotify website, Canada",
+     "sourceUrl": "https://www.spotify.com/ca-en/premium/",
+     "verifiedOn": "2026-11-18",
+     "note": "Up to six members living at the same address. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    }
+   ]
+  },
+  {
+   "serviceId": "apple-music",
+   "status": "verified",
+   "reason": "Official Canada price page.",
+   "plans": [
+    {
+     "id": "ca-apple-music-individual",
+     "label": "Individual",
+     "amountMinor": 1199,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Apple Music, subscribed with Apple, Canada",
+     "sourceUrl": "https://www.apple.com/ca/apple-music/",
+     "verifiedOn": "2026-11-18",
+     "note": "Regular price after the free trial. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-apple-music-family",
+     "label": "Family",
+     "amountMinor": 1999,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Apple Music, subscribed with Apple, Canada",
+     "sourceUrl": "https://www.apple.com/ca/apple-music/",
+     "verifiedOn": "2026-11-18",
+     "note": "Up to six people with Family Sharing. Regular price after the free trial. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-apple-music-student",
+     "label": "Student",
+     "amountMinor": 599,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Apple Music, subscribed with Apple, Canada",
+     "sourceUrl": "https://www.apple.com/ca/apple-music/",
+     "verifiedOn": "2026-11-18",
+     "note": "For verified students. Regular price after the free trial. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    }
+   ]
+  },
+  {
+   "serviceId": "disney-plus",
+   "status": "verified",
+   "reason": "Official Canada price page.",
+   "plans": [
+    {
+     "id": "ca-disney-plus-standard-ads",
+     "label": "Standard With Ads",
+     "amountMinor": 899,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Disney+ website, Canada",
+     "sourceUrl": "https://www.disneyplus.com/en-ca/welcome/hulu-on-disneyplus",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-disney-plus-standard-monthly",
+     "label": "Standard — Monthly",
+     "amountMinor": 1599,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Disney+ website, Canada",
+     "sourceUrl": "https://www.disneyplus.com/en-ca/welcome/hulu-on-disneyplus",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-disney-plus-standard-yearly",
+     "label": "Standard — Yearly",
+     "amountMinor": 15999,
+     "currency": "CAD",
+     "cycle": "yearly",
+     "channel": "Disney+ website, Canada",
+     "sourceUrl": "https://www.disneyplus.com/en-ca/welcome/hulu-on-disneyplus",
+     "verifiedOn": "2026-11-18",
+     "note": "Full annual charge, not a monthly average. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-disney-plus-premium-monthly",
+     "label": "Premium — Monthly",
+     "amountMinor": 1699,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Disney+ website, Canada",
+     "sourceUrl": "https://www.disneyplus.com/en-ca/welcome/hulu-on-disneyplus",
+     "verifiedOn": "2026-11-18",
+     "note": "Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-disney-plus-premium-yearly",
+     "label": "Premium — Yearly",
+     "amountMinor": 16999,
+     "currency": "CAD",
+     "cycle": "yearly",
+     "channel": "Disney+ website, Canada",
+     "sourceUrl": "https://www.disneyplus.com/en-ca/welcome/hulu-on-disneyplus",
+     "verifiedOn": "2026-11-18",
+     "note": "Full annual charge, not a monthly average. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    }
+   ]
+  },
+  {
+   "serviceId": "microsoft-365",
+   "status": "verified",
+   "reason": "Official Canada price page.",
+   "plans": [
+    {
+     "id": "ca-microsoft-365-personal-monthly",
+     "label": "Personal — Monthly",
+     "amountMinor": 1150,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Microsoft Store website, Canada",
+     "sourceUrl": "https://www.microsoft.com/en-ca/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-11-18",
+     "note": "For one person. Regular price after any first-month offer. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-microsoft-365-personal-yearly",
+     "label": "Personal — Yearly",
+     "amountMinor": 11500,
+     "currency": "CAD",
+     "cycle": "yearly",
+     "channel": "Microsoft Store website, Canada",
+     "sourceUrl": "https://www.microsoft.com/en-ca/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-11-18",
+     "note": "For one person. Full annual charge after any first-year offer. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-microsoft-365-family-monthly",
+     "label": "Family — Monthly",
+     "amountMinor": 1450,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Microsoft Store website, Canada",
+     "sourceUrl": "https://www.microsoft.com/en-ca/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-11-18",
+     "note": "For up to six people. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-microsoft-365-family-yearly",
+     "label": "Family — Yearly",
+     "amountMinor": 14500,
+     "currency": "CAD",
+     "cycle": "yearly",
+     "channel": "Microsoft Store website, Canada",
+     "sourceUrl": "https://www.microsoft.com/en-ca/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-11-18",
+     "note": "For up to six people. Full annual charge. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-microsoft-365-premium-monthly",
+     "label": "Premium — Monthly",
+     "amountMinor": 2700,
+     "currency": "CAD",
+     "cycle": "monthly",
+     "channel": "Microsoft Store website, Canada",
+     "sourceUrl": "https://www.microsoft.com/en-ca/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-11-18",
+     "note": "Regular price after any first-month offer. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    },
+    {
+     "id": "ca-microsoft-365-premium-yearly",
+     "label": "Premium — Yearly",
+     "amountMinor": 27000,
+     "currency": "CAD",
+     "cycle": "yearly",
+     "channel": "Microsoft Store website, Canada",
+     "sourceUrl": "https://www.microsoft.com/en-ca/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-11-18",
+     "note": "Full annual charge after any first-year offer. Price from the official Canada page. Sales tax may be added depending on your province. You can change it to the amount on your receipt."
+    }
+   ]
+  }
+ ]
+}
