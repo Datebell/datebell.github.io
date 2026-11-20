@@ -300,6 +300,23 @@ h1 em{display:inline-block;transform-origin:50% 10%}
   .tile,.pick i{transition:none}
   .slide,.dock{transition:none}
 }
+/* Currencies (20 Nov 2026) */
+#currencies{padding-top:0}
+.cur{background:var(--card);border-radius:var(--r);padding:30px 22px 24px;display:grid;gap:26px}
+.cur-t p{margin:0;color:var(--muted);max-width:30em}
+.cur h2{margin-bottom:12px}
+.flags{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.flags li{display:flex;align-items:center;gap:10px;background:var(--paper);border-radius:16px;padding:10px 11px;min-width:0}
+.flags img{width:32px;height:32px;border-radius:50%;flex:none;box-shadow:0 0 0 1px rgba(20,33,28,.1)}
+.flags li>span{display:flex;flex-direction:column;min-width:0;line-height:1.2}
+.flags b{font:700 16px/1.15 var(--display);letter-spacing:.01em}
+.flags small{color:var(--muted);font-size:13px;line-height:1.25;margin-top:2px}
+.js .cur .flags li{opacity:0;transform:translateY(10px) scale(.96);transition:opacity .45s var(--ease),transform .55s var(--ease);transition-delay:calc(var(--i)*35ms + .15s)}
+.js .cur.in .flags li{opacity:1;transform:none}
+.flags li:last-child{grid-column:1/-1}
+@media (min-width:640px){.flags{grid-template-columns:repeat(3,minmax(0,1fr))}.flags li:last-child{grid-column:auto}}
+@media (min-width:960px){.cur{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center;gap:40px;padding:44px 44px 40px}}
+@media (prefers-reduced-motion:reduce){.js .cur .flags li{opacity:1;transform:none;transition:none}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -463,6 +480,35 @@ h1 em{display:inline-block;transform-origin:50% 10%}
           <h3><span data-l="th" lang="th">จ่ายหลายสกุลเงิน รวมยอดเดียว</span><span data-l="en" lang="en">Any currency, one total</span></h3>
           <p><span data-l="th" lang="th">จ่ายเป็นดอลลาร์ ยูโร หรือปอนด์ ก็รวมเป็นบาทให้</span><span data-l="en" lang="en">Pounds, euros, dollars. Totals add up in your own currency.</span></p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="currencies" aria-labelledby="curH">
+    <div class="wrap">
+      <div class="cur rv">
+        <div class="cur-t">
+          <span class="kicker"><span data-l="th" lang="th">สกุลเงิน</span><span data-l="en" lang="en">Currencies</span></span>
+          <h2 id="curH"><span data-l="th" lang="th">รองรับ <em>15 สกุลเงิน</em></span><span data-l="en" lang="en">Pay in <em>15 currencies.</em></span></h2>
+          <p><span data-l="th" lang="th">ใส่แต่ละบิลเป็นสกุลเงินที่จ่ายจริง แอปเลือกสกุลเงินตามภูมิภาคใน iPhone ให้ก่อน เปลี่ยนเองได้ตลอด</span><span data-l="en" lang="en">Add each bill in the money you actually pay. Datebell starts with your iPhone's region, and you can switch any time.</span></p>
+        </div>
+        <ul class="flags" aria-label="Supported currencies">
+          <li style="--i:0"><img src="img/flags/th.svg" alt="" width="34" height="34" loading="lazy"><span><b>THB</b><small><span data-l="th" lang="th">บาท</span><span data-l="en" lang="en">Thai baht</span></small></span></li>
+          <li style="--i:1"><img src="img/flags/us.svg" alt="" width="34" height="34" loading="lazy"><span><b>USD</b><small><span data-l="th" lang="th">ดอลลาร์สหรัฐ</span><span data-l="en" lang="en">US dollar</span></small></span></li>
+          <li style="--i:2"><img src="img/flags/eu.svg" alt="" width="34" height="34" loading="lazy"><span><b>EUR</b><small><span data-l="th" lang="th">ยูโร</span><span data-l="en" lang="en">Euro</span></small></span></li>
+          <li style="--i:3"><img src="img/flags/gb.svg" alt="" width="34" height="34" loading="lazy"><span><b>GBP</b><small><span data-l="th" lang="th">ปอนด์สเตอร์ลิง</span><span data-l="en" lang="en">British pound</span></small></span></li>
+          <li style="--i:4"><img src="img/flags/ca.svg" alt="" width="34" height="34" loading="lazy"><span><b>CAD</b><small><span data-l="th" lang="th">ดอลลาร์แคนาดา</span><span data-l="en" lang="en">Canadian dollar</span></small></span></li>
+          <li style="--i:5"><img src="img/flags/au.svg" alt="" width="34" height="34" loading="lazy"><span><b>AUD</b><small><span data-l="th" lang="th">ดอลลาร์ออสเตรเลีย</span><span data-l="en" lang="en">Australian dollar</span></small></span></li>
+          <li style="--i:6"><img src="img/flags/sg.svg" alt="" width="34" height="34" loading="lazy"><span><b>SGD</b><small><span data-l="th" lang="th">ดอลลาร์สิงคโปร์</span><span data-l="en" lang="en">Singapore dollar</span></small></span></li>
+          <li style="--i:7"><img src="img/flags/my.svg" alt="" width="34" height="34" loading="lazy"><span><b>MYR</b><small><span data-l="th" lang="th">ริงกิตมาเลเซีย</span><span data-l="en" lang="en">Malaysian ringgit</span></small></span></li>
+          <li style="--i:8"><img src="img/flags/ph.svg" alt="" width="34" height="34" loading="lazy"><span><b>PHP</b><small><span data-l="th" lang="th">เปโซฟิลิปปินส์</span><span data-l="en" lang="en">Philippine peso</span></small></span></li>
+          <li style="--i:9"><img src="img/flags/id.svg" alt="" width="34" height="34" loading="lazy"><span><b>IDR</b><small><span data-l="th" lang="th">รูเปียห์อินโดนีเซีย</span><span data-l="en" lang="en">Indonesian rupiah</span></small></span></li>
+          <li style="--i:10"><img src="img/flags/vn.svg" alt="" width="34" height="34" loading="lazy"><span><b>VND</b><small><span data-l="th" lang="th">ดองเวียดนาม</span><span data-l="en" lang="en">Vietnamese dong</span></small></span></li>
+          <li style="--i:11"><img src="img/flags/jp.svg" alt="" width="34" height="34" loading="lazy"><span><b>JPY</b><small><span data-l="th" lang="th">เยนญี่ปุ่น</span><span data-l="en" lang="en">Japanese yen</span></small></span></li>
+          <li style="--i:12"><img src="img/flags/kr.svg" alt="" width="34" height="34" loading="lazy"><span><b>KRW</b><small><span data-l="th" lang="th">วอนเกาหลีใต้</span><span data-l="en" lang="en">South Korean won</span></small></span></li>
+          <li style="--i:13"><img src="img/flags/cn.svg" alt="" width="34" height="34" loading="lazy"><span><b>CNY</b><small><span data-l="th" lang="th">หยวนจีน</span><span data-l="en" lang="en">Chinese yuan</span></small></span></li>
+          <li style="--i:14"><img src="img/flags/hk.svg" alt="" width="34" height="34" loading="lazy"><span><b>HKD</b><small><span data-l="th" lang="th">ดอลลาร์ฮ่องกง</span><span data-l="en" lang="en">Hong Kong dollar</span></small></span></li>
+        </ul>
       </div>
     </div>
   </section>
