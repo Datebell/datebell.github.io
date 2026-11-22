@@ -1,0 +1,401 @@
+{
+ "verifiedOn": "2026-10-08",
+ "country": "TH",
+ "currency": "THB",
+ "services": [
+  {
+   "serviceId": "netflix",
+   "status": "verified",
+   "reason": "หน้าทางการ Netflix Thailand ระบุชื่อแพ็กเกจและราคาปกติต่อเดือนครบ; ใช้ราคาเว็บไซต์ ไม่เหมาราคาแพ็กเกจผ่านผู้ให้บริการอื่น",
+   "plans": [
+    {
+     "id": "netflix-mobile-web-monthly",
+     "label": "Mobile",
+     "amountMinor": 9900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Netflix เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.netflix.com/th-en/browse/genre/107570",
+     "verifiedOn": "2026-10-08",
+     "note": "สำหรับโทรศัพท์หรือแท็บเล็ต; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "netflix-basic-web-monthly",
+     "label": "Basic",
+     "amountMinor": 16900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Netflix เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.netflix.com/th-en/browse/genre/107570",
+     "verifiedOn": "2026-10-08",
+     "note": "ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "netflix-standard-web-monthly",
+     "label": "Standard",
+     "amountMinor": 34900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Netflix เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.netflix.com/th-en/browse/genre/107570",
+     "verifiedOn": "2026-10-08",
+     "note": "ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "netflix-premium-web-monthly",
+     "label": "Premium",
+     "amountMinor": 41900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Netflix เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.netflix.com/th-en/browse/genre/107570",
+     "verifiedOn": "2026-10-08",
+     "note": "ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    }
+   ]
+  },
+  {
+   "serviceId": "icloud-plus",
+   "status": "verified",
+   "reason": "Apple ประเทศไทยแสดงราคาปกติรายเดือนตามขนาดพื้นที่; ไม่รวม Apple One หรือราคาแพ็กเกจบุคคลอื่น",
+   "plans": [
+    {
+     "id": "icloud-plus-50gb-apple-monthly",
+     "label": "50 GB",
+     "amountMinor": 3500,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+ ประเทศไทย",
+     "sourceUrl": "https://www.apple.com/th/icloud/",
+     "verifiedOn": "2026-10-08",
+     "note": "ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "icloud-plus-200gb-apple-monthly",
+     "label": "200 GB",
+     "amountMinor": 9900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+ ประเทศไทย",
+     "sourceUrl": "https://www.apple.com/th/icloud/",
+     "verifiedOn": "2026-10-08",
+     "note": "ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "icloud-plus-2tb-apple-monthly",
+     "label": "2 TB",
+     "amountMinor": 39900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+ ประเทศไทย",
+     "sourceUrl": "https://www.apple.com/th/icloud/",
+     "verifiedOn": "2026-10-08",
+     "note": "ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "icloud-plus-6tb-apple-monthly",
+     "label": "6 TB",
+     "amountMinor": 119000,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+ ประเทศไทย",
+     "sourceUrl": "https://www.apple.com/th/icloud/",
+     "verifiedOn": "2026-10-08",
+     "note": "ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "icloud-plus-12tb-apple-monthly",
+     "label": "12 TB",
+     "amountMinor": 239000,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Apple iCloud+ ประเทศไทย",
+     "sourceUrl": "https://www.apple.com/th/icloud/",
+     "verifiedOn": "2026-10-08",
+     "note": "ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    }
+   ]
+  },
+  {
+   "serviceId": "spotify",
+   "status": "verified",
+   "reason": "ยืนยันใหม่จาก Spotify Thailand: ใช้ราคาต่อเดือนหลังข้อเสนอแนะนำเท่านั้น ไม่ใช้ราคาสองเดือนแรกและไม่หารราคาโปรโมชัน",
+   "plans": [
+    {
+     "id": "spotify-individual-web-monthly",
+     "label": "Premium Individual",
+     "amountMinor": 14900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Spotify เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.spotify.com/th-en/premium/",
+     "verifiedOn": "2026-10-08",
+     "note": "ราคาปกติหลังข้อเสนอแนะนำ; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "spotify-student-web-monthly",
+     "label": "Premium Student — นักศึกษา",
+     "amountMinor": 7900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Spotify เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.spotify.com/th-en/premium/",
+     "verifiedOn": "2026-10-08",
+     "note": "ต้องเป็นนักศึกษาสถาบันอุดมศึกษาที่เข้าเกณฑ์และผ่านการตรวจสิทธิ์; ใช้ราคาปกติหลังข้อเสนอแนะนำ; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "spotify-duo-web-monthly",
+     "label": "Premium Duo",
+     "amountMinor": 20900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Spotify เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.spotify.com/th-en/premium/",
+     "verifiedOn": "2026-10-08",
+     "note": "สำหรับสองคนที่อาศัยอยู่ที่อยู่เดียวกัน; ใช้ราคาปกติหลังข้อเสนอแนะนำ; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "spotify-family-web-monthly",
+     "label": "Premium Family",
+     "amountMinor": 24900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Spotify เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.spotify.com/th-en/premium/",
+     "verifiedOn": "2026-10-08",
+     "note": "สูงสุดหกสมาชิกที่อาศัยอยู่ที่อยู่เดียวกัน; ใช้ราคาปกติหลังข้อเสนอแนะนำ; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    }
+   ]
+  },
+  {
+   "serviceId": "youtube-premium",
+   "status": "manual",
+   "reason": "หน้า Premium ไม่แสดงตารางราคาไทยผ่านการตรวจครั้งนี้; หน้าระบุประเทศยืนยันบริการในไทยแต่ไม่ยืนยันจำนวนเงินรายเดือนหรือรายปี จึงไม่ใช้ราคาเดิมหรือราคาจากแหล่งรอง",
+   "plans": []
+  },
+  {
+   "serviceId": "apple-music",
+   "status": "verified",
+   "reason": "ยืนยันใหม่จาก Apple ประเทศไทย: บุคคล149 ครอบครัว249 นักศึกษา79 บาทต่อเดือนหลังช่วงทดลองใช้ฟรี; ไม่ใช้แพ็กเกจ Apple One",
+   "plans": [
+    {
+     "id": "apple-music-individual-apple-monthly",
+     "label": "บุคคล",
+     "amountMinor": 14900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Apple Music ประเทศไทย — สมัครกับ Apple",
+     "sourceUrl": "https://www.apple.com/th/apple-music/",
+     "verifiedOn": "2026-10-08",
+     "note": "ราคาสมาชิกปกติหลังทดลองใช้ฟรี ไม่ใช่ราคาโปร; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "apple-music-family-apple-monthly",
+     "label": "ครอบครัว",
+     "amountMinor": 24900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Apple Music ประเทศไทย — สมัครกับ Apple",
+     "sourceUrl": "https://www.apple.com/th/apple-music/",
+     "verifiedOn": "2026-10-08",
+     "note": "แบ่งใช้ได้รวมสูงสุดหกคนตามเงื่อนไข Family Sharing; ราคาปกติหลังทดลองใช้ฟรี; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "apple-music-student-apple-monthly",
+     "label": "นักศึกษา",
+     "amountMinor": 7900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Apple Music ประเทศไทย — สมัครกับ Apple",
+     "sourceUrl": "https://www.apple.com/th/apple-music/",
+     "verifiedOn": "2026-10-08",
+     "note": "ต้องตรวจสิทธิ์นักศึกษาตามเงื่อนไข Apple; ราคาปกติหลังทดลองใช้ฟรี; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    }
+   ]
+  },
+  {
+   "serviceId": "disney-plus",
+   "status": "verified",
+   "reason": "หน้า Disney+ ประเทศไทยระบุราคาปกติรายเดือนและยอดเต็มปีของ Standard/Premium พร้อมยืนยันรวม VAT; ไม่หารยอดรายปีเป็นรายเดือน",
+   "plans": [
+    {
+     "id": "disney-plus-standard-web-monthly",
+     "label": "Standard — รายเดือน",
+     "amountMinor": 19900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Disney+ เว็บหรือเบราว์เซอร์มือถือประเทศไทย",
+     "sourceUrl": "https://www.disneyplus.com/en-th",
+     "verifiedOn": "2026-10-08",
+     "note": "หน้าทางการระบุราคารวม VAT; ช่องทางเว็บ/เบราว์เซอร์มือถือ รับบัตรหรือ TrueMoney; ไม่เหมาราคาแพ็กเกจผ่านค่ายมือถือ"
+    },
+    {
+     "id": "disney-plus-standard-web-yearly",
+     "label": "Standard — รายปี",
+     "amountMinor": 159000,
+     "currency": "THB",
+     "cycle": "yearly",
+     "channel": "Disney+ เว็บหรือเบราว์เซอร์มือถือประเทศไทย",
+     "sourceUrl": "https://www.disneyplus.com/en-th",
+     "verifiedOn": "2026-10-08",
+     "note": "ยอดเต็มปี 1590 บาท ไม่ใช่ราคาเฉลี่ยต่อเดือน; หน้าทางการระบุราคารวม VAT; ช่องทางเว็บ/เบราว์เซอร์มือถือ รับบัตรหรือ TrueMoney; ไม่เหมาราคาแพ็กเกจผ่านค่ายมือถือ"
+    },
+    {
+     "id": "disney-plus-premium-web-monthly",
+     "label": "Premium — รายเดือน",
+     "amountMinor": 28900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Disney+ เว็บหรือเบราว์เซอร์มือถือประเทศไทย",
+     "sourceUrl": "https://www.disneyplus.com/en-th",
+     "verifiedOn": "2026-10-08",
+     "note": "หน้าทางการระบุราคารวม VAT; ช่องทางเว็บ/เบราว์เซอร์มือถือ รับบัตรหรือ TrueMoney; ไม่เหมาราคาแพ็กเกจผ่านค่ายมือถือ"
+    },
+    {
+     "id": "disney-plus-premium-web-yearly",
+     "label": "Premium — รายปี",
+     "amountMinor": 229000,
+     "currency": "THB",
+     "cycle": "yearly",
+     "channel": "Disney+ เว็บหรือเบราว์เซอร์มือถือประเทศไทย",
+     "sourceUrl": "https://www.disneyplus.com/en-th",
+     "verifiedOn": "2026-10-08",
+     "note": "ยอดเต็มปี 2290 บาท ไม่ใช่ราคาเฉลี่ยต่อเดือน; หน้าทางการระบุราคารวม VAT; ช่องทางเว็บ/เบราว์เซอร์มือถือ รับบัตรหรือ TrueMoney; ไม่เหมาราคาแพ็กเกจผ่านค่ายมือถือ"
+    }
+   ]
+  },
+  {
+   "serviceId": "hbo-max",
+   "status": "manual",
+   "reason": "ศูนย์ช่วยเหลือไทยยืนยันประเภทแพ็กเกจและช่องทางชำระ แต่ไม่แสดงจำนวนเงินปกติ; หน้าเว็บไซต์ไทยไม่เปิดผ่านเครื่องมือตรวจนี้ จึงไม่ใช้ราคาเปิดตัวเก่าหรืออนุมานจากผู้ให้บริการอื่น",
+   "plans": []
+  },
+  {
+   "serviceId": "viu",
+   "status": "manual",
+   "reason": "พบเฉพาะราคา279บาทต่อเดือนของชุด HBO Max x Viu ที่ระบุเป็นราคาพิเศษ และหน้าไทยถูกส่งไปต่างประเทศ; ยังไม่ยืนยันราคาปกติของ Viu เดี่ยว จึงไม่ใช้ราคาชุดหรือโปรเป็นค่าแนะนำ",
+   "plans": []
+  },
+  {
+   "serviceId": "wetv",
+   "status": "manual",
+   "reason": "หน้าราคา VIP และข้อกำหนดสมัครสมาชิกที่ตรวจครั้งนี้โหลดไม่สำเร็จ; ยังไม่ยืนยันราคา THB ปกติพร้อมช่องทางและงวดเรียกเก็บ จึงไม่ใช้ราคาจากครั้งก่อนหรือคาดเดา",
+   "plans": []
+  },
+  {
+   "serviceId": "iqiyi",
+   "status": "manual",
+   "reason": "หน้า VIP ไทยแสดงสิทธิประโยชน์แต่ไม่แสดงตารางราคา THB ปกติ; ศูนย์ช่วยเหลือระบุว่าราคาและโปรโมชั่นต่างกันตามแพลตฟอร์ม จึงให้กรอกตามช่องทางและใบเสร็จจริง",
+   "plans": []
+  },
+  {
+   "serviceId": "canva",
+   "status": "manual",
+   "reason": "พบราคา Pro แสดง230บาทต่อเดือนในหน้าราคาไทยที่มีตัวเลือกรายเดือน/รายปี แต่การดึงข้อความไม่ยืนยันตัวเลือกงวดที่ใช้งานและยอดเรียกเก็บเต็มงวด; ไม่ตรึง230เป็นยอดรายเดือนจากการอนุมาน และไม่ใช้โปร99บาทที่สิ้นสุดแล้ว",
+   "plans": []
+  },
+  {
+   "serviceId": "microsoft-365",
+   "status": "verified",
+   "reason": "Microsoft Store ประเทศไทยระบุราคาปกติและการเรียกเก็บรายเดือน/รายปี; ใช้ Personal/Family/Premium เท่านั้น ไม่ใช้ Office ซื้อครั้งเดียว บัตรเติมสิทธิ์หรือราคาจากตัวแทน",
+   "plans": [
+    {
+     "id": "microsoft-365-personal-web-monthly",
+     "label": "Personal — รายเดือน",
+     "amountMinor": 29900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Microsoft Store เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.microsoft.com/th-th/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-10-08",
+     "note": "สำหรับหนึ่งคน; ตั้งต่ออายุอัตโนมัติตามงวดที่เลือก; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "microsoft-365-personal-web-yearly",
+     "label": "Personal — รายปี",
+     "amountMinor": 299900,
+     "currency": "THB",
+     "cycle": "yearly",
+     "channel": "Microsoft Store เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.microsoft.com/th-th/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-10-08",
+     "note": "สำหรับหนึ่งคน; ยอดเต็มปี2999บาท ไม่ใช่ราคาเฉลี่ยต่อเดือน; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "microsoft-365-family-web-monthly",
+     "label": "Family — รายเดือน",
+     "amountMinor": 36900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Microsoft Store เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.microsoft.com/th-th/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-10-08",
+     "note": "สำหรับหนึ่งถึงหกคนตามเงื่อนไข Microsoft; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "microsoft-365-family-web-yearly",
+     "label": "Family — รายปี",
+     "amountMinor": 369900,
+     "currency": "THB",
+     "cycle": "yearly",
+     "channel": "Microsoft Store เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.microsoft.com/th-th/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-10-08",
+     "note": "สำหรับหนึ่งถึงหกคน; ยอดเต็มปี3699บาท ไม่ใช่ราคาเฉลี่ยต่อเดือน; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "microsoft-365-premium-web-monthly",
+     "label": "Premium — รายเดือน",
+     "amountMinor": 74900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "Microsoft Store เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.microsoft.com/th-th/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-10-08",
+     "note": "ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    },
+    {
+     "id": "microsoft-365-premium-web-yearly",
+     "label": "Premium — รายปี",
+     "amountMinor": 749900,
+     "currency": "THB",
+     "cycle": "yearly",
+     "channel": "Microsoft Store เว็บไซต์ประเทศไทย",
+     "sourceUrl": "https://www.microsoft.com/th-th/microsoft-365/buy/compare-all-microsoft-365-products",
+     "verifiedOn": "2026-10-08",
+     "note": "ยอดเต็มปี7499บาท ไม่ใช่ราคาเฉลี่ยต่อเดือน; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    }
+   ]
+  },
+  {
+   "serviceId": "ais-mobile",
+   "status": "manual",
+   "reason": "หน้ารวมรายเดือนและหน้ารายละเอียดที่ติดตามยังไม่แสดงราคาแพ็กเกจปกติพร้อมยอดภาษีและเงื่อนไขเรียกเก็บครบผ่านเครื่องมือตรวจนี้; ไม่ใช้ราคาเริ่มต้น ภาพโฆษณา หรือสิทธิ์ย้ายค่ายเป็นค่าบิลปกติ",
+   "plans": []
+  },
+  {
+   "serviceId": "true-mobile",
+   "status": "manual",
+   "reason": "หน้าที่พบระบุแพ็กเกจส่งเสริมการขายสำหรับช่วงสมัครเฉพาะ พร้อมค่าบริการขั้นต่ำที่ไม่รวม VAT; ยังไม่ยืนยันราคาปกติรวมภาษีและเงื่อนไขนอกแคมเปญ จึงไม่ตรึงราคาขั้นต่ำหรือเพิ่มภาษีโดยสมมติ",
+   "plans": []
+  },
+  {
+   "serviceId": "line-premium",
+   "status": "verified",
+   "reason": "ศูนย์ช่วยเหลือ LINE ภาษาไทยระบุค่าบริการ169บาทต่อเดือนและการตัดรายเดือนผ่าน App Store หรือ Google Play; ชุดแนะนำนี้ผูกกับช่องทาง App Store สำหรับ iOS",
+   "plans": [
+    {
+     "id": "line-premium-app-store-monthly",
+     "label": "LINE Premium — รายเดือน",
+     "amountMinor": 16900,
+     "currency": "THB",
+     "cycle": "monthly",
+     "channel": "LINE ในแอป — App Store (ตามศูนย์ช่วยเหลือ LINE)",
+     "sourceUrl": "https://help.line.me/line/smartphone?contentId=20027124&lang=th",
+     "verifiedOn": "2026-10-08",
+     "note": "หนึ่งบัญชี LINE ใช้กับอุปกรณ์หลักหนึ่งเครื่อง; การเปลี่ยนประเทศของบัญชีมีผลต่อสิทธิ์; ราคาตามหน้าทางการไทย; แหล่งนี้ไม่แจกแจงภาษีในส่วนราคา จึงไม่บวกภาษีเอง; แก้ตามใบเสร็จจริงได้"
+    }
+   ]
+  }
+ ]
+}
