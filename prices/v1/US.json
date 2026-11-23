@@ -1,5 +1,5 @@
 {
- "verifiedOn": "2026-11-18",
+ "verifiedOn": "2026-11-23",
  "country": "US",
  "currency": "USD",
  "services": [
@@ -16,7 +16,7 @@
      "cycle": "monthly",
      "channel": "Netflix website, United States",
      "sourceUrl": "https://help.netflix.com/en/node/24926/us",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -27,7 +27,7 @@
      "cycle": "monthly",
      "channel": "Netflix website, United States",
      "sourceUrl": "https://help.netflix.com/en/node/24926/us",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -38,7 +38,7 @@
      "cycle": "monthly",
      "channel": "Netflix website, United States",
      "sourceUrl": "https://help.netflix.com/en/node/24926/us",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     }
    ]
@@ -56,7 +56,7 @@
      "cycle": "monthly",
      "channel": "Apple iCloud+, United States",
      "sourceUrl": "https://support.apple.com/en-us/108047",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -67,7 +67,7 @@
      "cycle": "monthly",
      "channel": "Apple iCloud+, United States",
      "sourceUrl": "https://support.apple.com/en-us/108047",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -78,7 +78,7 @@
      "cycle": "monthly",
      "channel": "Apple iCloud+, United States",
      "sourceUrl": "https://support.apple.com/en-us/108047",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -89,7 +89,7 @@
      "cycle": "monthly",
      "channel": "Apple iCloud+, United States",
      "sourceUrl": "https://support.apple.com/en-us/108047",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -100,7 +100,7 @@
      "cycle": "monthly",
      "channel": "Apple iCloud+, United States",
      "sourceUrl": "https://support.apple.com/en-us/108047",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     }
    ]
@@ -118,7 +118,7 @@
      "cycle": "monthly",
      "channel": "Spotify website, United States",
      "sourceUrl": "https://www.spotify.com/us/premium/",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Regular price after the introductory offer. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -129,7 +129,7 @@
      "cycle": "monthly",
      "channel": "Spotify website, United States",
      "sourceUrl": "https://www.spotify.com/us/premium/",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "For verified higher-education students. Regular price after the introductory offer. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -140,7 +140,7 @@
      "cycle": "monthly",
      "channel": "Spotify website, United States",
      "sourceUrl": "https://www.spotify.com/us/premium/",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "For two people living at the same address. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -151,7 +151,7 @@
      "cycle": "monthly",
      "channel": "Spotify website, United States",
      "sourceUrl": "https://www.spotify.com/us/premium/",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Up to six members living at the same address. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     }
    ]
@@ -169,7 +169,7 @@
      "cycle": "monthly",
      "channel": "Apple Music, subscribed with Apple, United States",
      "sourceUrl": "https://www.apple.com/apple-music/",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Regular price after the free trial. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -180,7 +180,7 @@
      "cycle": "monthly",
      "channel": "Apple Music, subscribed with Apple, United States",
      "sourceUrl": "https://www.apple.com/apple-music/",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Up to six people with Family Sharing. Regular price after the free trial. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -191,7 +191,7 @@
      "cycle": "monthly",
      "channel": "Apple Music, subscribed with Apple, United States",
      "sourceUrl": "https://www.apple.com/apple-music/",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "For verified students. Regular price after the free trial. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     }
    ]
@@ -209,7 +209,7 @@
      "cycle": "monthly",
      "channel": "Disney+ website, United States",
      "sourceUrl": "https://www.disneyplus.com/en-us",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -220,7 +220,7 @@
      "cycle": "monthly",
      "channel": "Disney+ website, United States",
      "sourceUrl": "https://www.disneyplus.com/en-us",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -231,7 +231,7 @@
      "cycle": "yearly",
      "channel": "Disney+ website, United States",
      "sourceUrl": "https://www.disneyplus.com/en-us",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Full annual charge, not a monthly average. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     }
    ]
@@ -249,7 +249,7 @@
      "cycle": "monthly",
      "channel": "Microsoft Store website, United States",
      "sourceUrl": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "For one person. Regular price after any first-month offer. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -260,7 +260,7 @@
      "cycle": "yearly",
      "channel": "Microsoft Store website, United States",
      "sourceUrl": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "For one person. Full annual charge after any first-year offer. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -271,7 +271,7 @@
      "cycle": "monthly",
      "channel": "Microsoft Store website, United States",
      "sourceUrl": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "For up to six people. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -282,7 +282,7 @@
      "cycle": "yearly",
      "channel": "Microsoft Store website, United States",
      "sourceUrl": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "For up to six people. Full annual charge. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -293,7 +293,7 @@
      "cycle": "monthly",
      "channel": "Microsoft Store website, United States",
      "sourceUrl": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Regular price after any first-month offer. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     },
     {
@@ -304,7 +304,7 @@
      "cycle": "yearly",
      "channel": "Microsoft Store website, United States",
      "sourceUrl": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
-     "verifiedOn": "2026-11-18",
+     "verifiedOn": "2026-11-23",
      "note": "Full annual charge after any first-year offer. Price from the official United States page. US prices do not include sales tax, which some states add. You can change it to the amount on your receipt."
     }
    ]
