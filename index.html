@@ -317,6 +317,119 @@ h1 em{display:inline-block;transform-origin:50% 10%}
 @media (min-width:640px){.flags{grid-template-columns:repeat(3,minmax(0,1fr))}.flags li:last-child{grid-column:auto}}
 @media (min-width:960px){.cur{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center;gap:40px;padding:44px 44px 40px}}
 @media (prefers-reduced-motion:reduce){.js .cur .flags li{opacity:1;transform:none;transition:none}}
+/* ---------- New in Datebell (1.8 / 1.9) ---------- */
+.newb{position:relative;overflow:hidden;isolation:isolate;color:#fff;background:radial-gradient(110% 70% at 85% 0%,#14936D 0%,var(--green-ink) 30%,var(--deep) 62%,var(--deeper) 100%);padding:80px 0 88px}
+.newb .rings{transform:translate(-8%,-62%)}
+.newb .kicker{display:inline-flex;align-items:center;gap:8px;color:#fff;background:rgba(255,255,255,.12);border-radius:999px;padding:8px 14px 8px 10px}
+.newb .kicker i{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 4px rgba(251,176,59,.22);animation:blink 2.4s var(--ease) infinite}
+@keyframes blink{50%{box-shadow:0 0 0 8px rgba(251,176,59,0)}}
+.newb h2{color:#fff}
+.newb h2 em{color:var(--yellow)}
+.newb .intro{color:rgba(255,255,255,.84)}
+.nx{display:grid;gap:14px}
+.nc{position:relative;overflow:hidden;border-radius:var(--r);padding:26px 22px 0;display:grid;gap:22px;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.nc .ntag{display:inline-block;font:700 13px/1 var(--body);color:#3A2600;background:var(--yellow);border-radius:999px;padding:7px 11px;margin-bottom:14px}
+.nc h3{font:800 clamp(26px,7vw,34px)/1.08 var(--display);letter-spacing:-.025em;margin:0 0 10px;text-wrap:balance}
+html[lang="th"] .nc h3{font-family:"Prompt",var(--display);font-weight:700;letter-spacing:0;line-height:1.28}
+.nc h3 em{font:400 italic 1.08em/1 var(--serif);color:var(--yellow)}
+html[lang="th"] .nc h3 em{font:inherit;font-style:normal}
+.nc p{margin:0;color:rgba(255,255,255,.84);font-size:16px;line-height:1.55;max-width:30em}
+.nv{position:relative;min-height:300px;display:flex;justify-content:center;align-items:flex-end}
+/* phone (bottom cropped, like it rises out of the card) */
+.ph{position:relative;width:min(240px,62vw);aspect-ratio:600/1300;border-radius:36px 36px 0 0;padding:8px 8px 0;background:#0C1310;box-shadow:0 -20px 60px -24px rgba(0,0,0,.55),inset 0 0 0 1.5px rgba(255,255,255,.22),inset 0 0 0 3px #1E2925;margin-bottom:-38%;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:29px 29px 0 0}
+.js .nc .ph{transform:translateY(40px);opacity:0;transition:transform 1s var(--ease) .1s,opacity .6s var(--ease) .1s}
+.js .nc.in .ph{transform:none;opacity:1}
+/* photos: two phones */
+.duo2{height:340px;min-height:0;display:block}
+.duo2 .ph{position:absolute;margin:0}
+.duo2 .back{left:50%;top:44px;width:min(200px,50vw);transform-origin:bottom center}
+.js .nc-photo .back{transform:translate(-92%,30px) rotate(-9deg);opacity:0}
+.js .nc-photo.in .back,html:not(.js) .nc-photo .back{transform:translate(-92%,0) rotate(-9deg);opacity:1}
+.duo2 .front{z-index:1;left:50%;top:0;width:min(220px,58vw);margin-left:calc(min(220px,58vw) * -.3)}
+.pop{position:absolute;z-index:2;right:max(4%,calc(50% - 200px));bottom:22%;font:700 15px/1 var(--display);color:#14211C;background:var(--yellow);border-radius:14px;padding:12px 14px;box-shadow:0 16px 30px -12px rgba(0,0,0,.5);transform:rotate(-4deg) scale(.6);opacity:0;transition:transform .6s cubic-bezier(.3,1.6,.5,1) .9s,opacity .3s .9s}
+html[lang="th"] .pop{font-family:"Prompt",var(--display);font-weight:600}
+.nc.in .pop,html:not(.js) .pop{transform:rotate(-4deg);opacity:1}
+/* price-rise card, drawn from the app's item card */
+.nc-price .nv{flex-direction:column;align-items:center;justify-content:center;gap:12px;padding-bottom:28px;min-height:0}
+.pn,.pc{width:100%;max-width:360px}
+.pn{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:18px;background:rgba(248,248,246,.94);color:var(--ink);box-shadow:0 18px 36px -16px rgba(0,0,0,.5)}
+.pn img{width:34px;height:34px;border-radius:8px;flex:none}
+.pn div{flex:1;min-width:0;line-height:1.3}
+.pn b{display:flex;justify-content:space-between;font:600 14px/1.3 var(--body)}
+.pn b small{font-weight:400;font-size:12px;color:#5F6A65}
+.pn div>span{display:block;font-size:14px}
+.pc{background:#fff;color:#16181B;border-radius:22px;padding:16px 16px 14px;box-shadow:0 30px 60px -28px rgba(0,0,0,.6)}
+.pc-h{display:flex;gap:12px;align-items:center}
+.pc-h .up{flex:none;width:36px;height:36px;border-radius:10px;background:#FEF3C7;display:grid;place-items:center}
+.pc-h .up svg{width:20px;height:20px;fill:none;stroke:#B45309;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pc-h b{display:block;font:700 17px/1.25 var(--body)}
+.pc-h small{display:block;font-size:14px;color:#4B5157;line-height:1.35}
+.pc-n{display:flex;align-items:baseline;gap:10px;margin:14px 0 14px;font-variant-numeric:tabular-nums}
+.pc-n .old{position:relative;font:600 18px/1 var(--body);color:#6B7176}
+.pc-n .old::after{content:"";position:absolute;left:-2px;right:-2px;top:52%;height:2px;background:#B91C1C;transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease) .7s}
+.pc-n .nw{font:800 30px/1 var(--display);letter-spacing:-.02em;display:inline-block;transform:translateY(10px);opacity:0;transition:transform .6s var(--ease) 1s,opacity .4s 1s}
+.pc-n .yr{margin-left:auto;font:700 13px/1 var(--body);color:#8A4B00;background:#FEF3C7;border-radius:8px;padding:6px 8px;transform:scale(.7);opacity:0;transition:transform .5s cubic-bezier(.3,1.6,.5,1) 1.4s,opacity .3s 1.4s}
+.nc.in .pc-n .old::after,html:not(.js) .pc-n .old::after{transform:none}
+.nc.in .pc-n .nw,.nc.in .pc-n .yr,html:not(.js) .pc-n .nw,html:not(.js) .pc-n .yr{transform:none;opacity:1}
+.pc-b{display:flex;gap:8px}
+.pc-b i{flex:1;text-align:center;font:600 15px/1 var(--body);font-style:normal;padding:13px 6px;border-radius:999px;box-shadow:inset 0 0 0 1.5px #127A5B;color:#127A5B}
+.pc-b i.pri{background:#127A5B;color:#fff}
+.eg2{font-size:12px;color:rgba(255,255,255,.6)}
+.js .nc-price .pn{transform:translateY(-14px);opacity:0;transition:transform .7s var(--ease) .2s,opacity .5s .2s}
+.js .nc-price.in .pn{transform:none;opacity:1}
+/* themes: the card takes the theme's colour */
+.nc-theme{transition:background .6s var(--ease),color .6s var(--ease)}
+.nc-theme[data-t="lemon"]{background:#FFF7DA;color:#14211C}
+.nc-theme[data-t="cloud"]{background:linear-gradient(160deg,#3B5F6B,#264550)}
+.nc-theme[data-t="cocoa"]{background:linear-gradient(160deg,#4A3C38,#2A2322)}
+.nc-theme[data-t="lemon"] p{color:#46524D}
+.nc-theme[data-t="lemon"] h3 em{color:#127A5B}
+.nc-theme p,.nc-theme h3 em{transition:color .6s var(--ease)}
+.sw{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.sw button{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px 0 8px;border-radius:999px;border:0;cursor:pointer;font:600 15px/1 var(--body);color:inherit;background:rgba(255,255,255,.12);transition:background .3s,box-shadow .3s}
+.nc-theme[data-t="lemon"] .sw button{background:rgba(20,33,28,.07)}
+.sw i{width:26px;height:26px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 2px rgba(255,255,255,.75),0 2px 6px rgba(0,0,0,.25)}
+.sw button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--yellow)}
+.nc-theme[data-t="lemon"] .sw button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #127A5B}
+.stack img{position:absolute;inset:8px 8px 0;width:calc(100% - 16px);height:calc(100% - 8px);opacity:0;transition:opacity .55s var(--ease)}
+.stack img.on{opacity:1}
+/* Face ID */
+.fid{position:absolute;z-index:2;width:76px;height:76px;left:50%;top:14%;margin-left:-38px;fill:none;stroke:#fff;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+.fid .ok{stroke:var(--yellow);stroke-width:4.5;stroke-dasharray:40;stroke-dashoffset:40;opacity:0}
+.nc.in .fid .br{animation:scan 4.2s var(--ease) infinite 1s;transform-origin:center;transform-box:fill-box}
+.nc.in .fid .fc{animation:fcOut 4.2s var(--ease) infinite 1s}
+.nc.in .fid .ok{animation:okIn 4.2s var(--ease) infinite 1s}
+@keyframes scan{0%,100%{transform:scale(1)}15%{transform:scale(.86)}30%{transform:scale(1)}45%{transform:scale(.86)}55%,90%{transform:scale(1)}}
+@keyframes fcOut{0%,50%{opacity:1}56%,92%{opacity:0}100%{opacity:1}}
+@keyframes okIn{0%,52%{opacity:0;stroke-dashoffset:40}62%,90%{opacity:1;stroke-dashoffset:0}100%{opacity:0;stroke-dashoffset:40}}
+/* hero link to the new section */
+.newl{display:inline-flex;align-items:center;gap:8px;margin-top:18px;color:#fff;text-decoration:none;font:600 14px/1.3 var(--body);background:rgba(0,0,0,.18);border-radius:999px;padding:8px 14px 8px 8px;transition:background .2s}
+.newl b{font:700 12px/1 var(--body);color:#3A2600;background:var(--yellow);border-radius:999px;padding:5px 8px}
+.newl svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (hover:hover){.newl:hover{background:rgba(0,0,0,.3)}.sw button:hover{background:rgba(255,255,255,.2)}}
+@media (min-width:960px){
+  .nx{grid-template-columns:repeat(12,minmax(0,1fr));gap:18px}
+  .nc{padding:36px 36px 0}
+  .nc-photo{grid-column:span 7}
+  .nc-price{grid-column:span 5}
+  .nc-theme{grid-column:span 7;grid-template-columns:1fr 1fr;align-items:end}
+  .nc-theme .nt{align-self:center;padding-bottom:36px}
+  .nc-face{grid-column:span 5}
+  .nc-photo .nv{height:400px}
+  .nc-photo .front{width:250px;margin-left:-60px}
+  .nc-photo .back{width:220px}
+  .nc-theme .ph{width:250px}
+}
+@media (prefers-reduced-motion:reduce){
+  .newb .kicker i{animation:none}
+  .js .nc .ph,.js .nc-photo .back,.pop,.pc-n .old::after,.pc-n .nw,.pc-n .yr,.js .nc-price .pn,.nc-theme,.stack img{transition:none}
+  .js .nc .ph,.js .nc-price .pn{transform:none;opacity:1}
+  .js .nc-photo .back{transform:translate(-92%,0) rotate(-9deg);opacity:1}
+  .pop{transform:rotate(-4deg);opacity:1}
+  .pc-n .old::after{transform:none}.pc-n .nw,.pc-n .yr{transform:none;opacity:1}
+  .nc.in .fid .br,.nc.in .fid .fc,.nc.in .fid .ok{animation:none}
+}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -341,6 +454,7 @@ h1 em{display:inline-block;transform-origin:50% 10%}
         <a class="badge store" href="https://apps.apple.com/app/id6821503223"><img class="badgeImg" src="img/badge-en.svg" alt="Download on the App Store" width="168" height="56"></a>
         <a class="igb" href="https://www.instagram.com/datebell.app/" target="_blank" rel="noopener"><span class="logo"><img src="img/instagram-glyph.webp" alt="" width="52" height="52"></span><span class="t"><small><span data-l="th" lang="th">ติดตามเราบน Instagram</span><span data-l="en" lang="en">Follow us on Instagram</span></small><b>@datebell.app</b></span></a>
       </div>
+      <a class="newl" href="#new"><b><span data-l="th" lang="th">ใหม่</span><span data-l="en" lang="en">New</span></b><span data-l="th" lang="th">รูปและ PDF · เตือนขึ้นราคา · ธีมสี</span><span data-l="en" lang="en">Photos, price-rise alerts, themes</span><svg viewBox="0 0 14 14"><path d="M5 2.5 9.5 7 5 11.5"/></svg></a>
     </div>
     <div class="stage" id="stage" aria-hidden="true">
       <div class="ripple"><i></i><i></i><i></i></div>
@@ -402,6 +516,87 @@ h1 em{display:inline-block;transform-origin:50% 10%}
     </div>
   </section>
 
+  <section class="newb" id="new" aria-labelledby="newH">
+    <svg class="rings" viewBox="0 0 1500 1500" aria-hidden="true"><circle cx="750" cy="750" r="150"/><circle class="y" cx="750" cy="750" r="250"/><circle cx="750" cy="750" r="370"/><circle cx="750" cy="750" r="500"/><circle class="y" cx="750" cy="750" r="620"/><circle cx="750" cy="750" r="740"/></svg>
+    <div class="wrap">
+      <div class="head rv">
+        <span class="kicker"><i></i><span data-l="th" lang="th">ใหม่ใน Datebell</span><span data-l="en" lang="en">New in Datebell</span></span>
+        <h2 id="newH"><span data-l="th" lang="th">ของใหม่ <em>ที่ช่วยได้จริง</em></span><span data-l="en" lang="en">New tricks, <em>real help.</em></span></h2>
+        <p class="intro"><span data-l="th" lang="th">เก็บใบเสร็จไว้กับของ รู้ทันเมื่อแอปขึ้นราคา ล็อกด้วยหน้าคุณ และเลือกสีที่ชอบ</span><span data-l="en" lang="en">Keep the receipt with the thing you bought, catch price rises, lock it with your face and pick your colours.</span></p>
+      </div>
+
+      <div class="nx">
+        <!-- 1. Photos & PDFs -->
+        <article class="nc nc-photo rv">
+          <div class="nt">
+            <span class="ntag"><span data-l="th" lang="th">รูปและ PDF</span><span data-l="en" lang="en">Photos &amp; PDFs</span></span>
+            <h3><span data-l="th" lang="th">ใบเสร็จ อยู่กับของชิ้นนั้น</span><span data-l="en" lang="en">The receipt lives with the item.</span></h3>
+            <p><span data-l="th" lang="th">ถ่ายใบเสร็จ ใบรับประกัน หรือคู่มือ แนบไว้ในรายการ ถึงวันเคลมก็เปิดดูได้ทันที</span><span data-l="en" lang="en">Snap the receipt, the warranty card or the manual and keep it on the item. When it's time to claim, it's right there.</span></p>
+          </div>
+          <div class="nv duo2" aria-hidden="true">
+            <div class="ph back"><img class="nl" data-n="photos-viewer" src="img/new/photos-viewer-th.webp" alt="" width="600" height="1304" loading="lazy" decoding="async"></div>
+            <div class="ph front"><img class="nl" data-n="photos-item" src="img/new/photos-item-th.webp" alt="" width="600" height="1304" loading="lazy" decoding="async"></div>
+            <span class="pop"><span data-l="th" lang="th">ถึงวันเคลม เปิดดูได้เลย</span><span data-l="en" lang="en">Ready when you claim</span></span>
+          </div>
+        </article>
+
+        <!-- 2. Price-rise alert -->
+        <article class="nc nc-price rv">
+          <div class="nt">
+            <span class="ntag"><span data-l="th" lang="th">เตือนขึ้นราคา</span><span data-l="en" lang="en">Price-rise alert</span></span>
+            <h3><span data-l="th" lang="th">รู้ก่อน <em>ว่าแอปขึ้นราคา</em></span><span data-l="en" lang="en">Know about a price rise <em>before you pay it.</em></span></h3>
+            <p><span data-l="th" lang="th">ถ้าแพ็กเกจที่เลือกจากรายการขึ้นราคา Datebell บอกในการแจ้งเตือนก่อนวันจ่าย แล้วให้เลือกว่าจะใช้ราคาใหม่หรือคงราคาเดิม</span><span data-l="en" lang="en">When a plan you picked from the list goes up, the reminder before your payment tells you. Then you choose: use the new price or keep yours.</span></p>
+          </div>
+          <div class="nv" aria-hidden="true">
+            <div class="pn"><img src="img/icon-180.png" alt="" width="34" height="34"><div><b>Datebell<small><span data-l="th" lang="th">อีก 7 วัน</span><span data-l="en" lang="en">in 7 days</span></small></b><span><span data-l="th" lang="th">แอปดูหนัง · ราคาใหม่ ฿389 (เดิม ฿349)</span><span data-l="en" lang="en">Video app · Now ฿389, was ฿349</span></span></div></div>
+            <div class="pc">
+              <div class="pc-h"><span class="up"><svg viewBox="0 0 20 20"><path d="M3 14l5-5 3 3 6-6M12 6h5v5"/></svg></span><div><b><span data-l="th" lang="th">แอปดูหนัง ขึ้นราคา</span><span data-l="en" lang="en">Video app went up</span></b><small><span data-l="th" lang="th">Standard ตอนนี้ ฿389 ต่อเดือน</span><span data-l="en" lang="en">Standard is now ฿389 a month</span></small></div></div>
+              <div class="pc-n"><span class="old">฿349</span><span class="nw">฿389</span><span class="yr"><span data-l="th" lang="th">+฿480 ต่อปี</span><span data-l="en" lang="en">+฿480 a year</span></span></div>
+              <div class="pc-b"><i class="pri"><span data-l="th" lang="th">ใช้ ฿389</span><span data-l="en" lang="en">Use ฿389</span></i><i><span data-l="th" lang="th">คง ฿349</span><span data-l="en" lang="en">Keep ฿349</span></i></div>
+            </div>
+            <span class="eg2"><span data-l="th" lang="th">ตัวอย่าง</span><span data-l="en" lang="en">Example</span></span>
+          </div>
+        </article>
+
+        <!-- 3. Colour themes -->
+        <article class="nc nc-theme rv" id="themeCard" data-t="auto">
+          <div class="nt">
+            <span class="ntag"><span data-l="th" lang="th">ธีมสี</span><span data-l="en" lang="en">Colour themes</span></span>
+            <h3><span data-l="th" lang="th">4 สี <em>เลือกที่ใช่</em></span><span data-l="en" lang="en">Four looks. <em>Pick yours.</em></span></h3>
+            <p><span data-l="th" lang="th">เขียว เลมอน เมฆ หรือโกโก้ วิดเจ็ตบนหน้าจอโฮมก็เปลี่ยนสีตามด้วย</span><span data-l="en" lang="en">Green, Lemon, Cloud or Cocoa. Your Home Screen widgets switch colour with it.</span></p>
+            <div class="sw" role="group" aria-label="Theme" id="themeSw">
+              <button type="button" data-t="auto" aria-pressed="true"><i style="--c:#127A5B"></i><span data-l="th" lang="th">เขียว</span><span data-l="en" lang="en">Green</span></button>
+              <button type="button" data-t="lemon" aria-pressed="false"><i style="--c:#F6E199"></i><span data-l="th" lang="th">เลมอน</span><span data-l="en" lang="en">Lemon</span></button>
+              <button type="button" data-t="cloud" aria-pressed="false"><i style="--c:#3B5F6B"></i><span data-l="th" lang="th">เมฆ</span><span data-l="en" lang="en">Cloud</span></button>
+              <button type="button" data-t="cocoa" aria-pressed="false"><i style="--c:#4A3C38"></i><span data-l="th" lang="th">โกโก้</span><span data-l="en" lang="en">Cocoa</span></button>
+            </div>
+          </div>
+          <div class="nv" aria-hidden="true">
+            <div class="ph stack">
+              <img class="nl on" data-n="theme-auto" data-t="auto" src="img/new/theme-auto-th.webp" alt="" width="600" height="1298" loading="lazy" decoding="async">
+              <img class="nl" data-n="theme-lemon" data-t="lemon" src="img/new/theme-lemon-th.webp" alt="" width="600" height="1298" loading="lazy" decoding="async">
+              <img class="nl" data-n="theme-cloud" data-t="cloud" src="img/new/theme-cloud-th.webp" alt="" width="600" height="1298" loading="lazy" decoding="async">
+              <img class="nl" data-n="theme-cocoa" data-t="cocoa" src="img/new/theme-cocoa-th.webp" alt="" width="600" height="1298" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Face ID -->
+        <article class="nc nc-face rv">
+          <div class="nt">
+            <span class="ntag"><span data-l="th" lang="th">ล็อกด้วย Face ID</span><span data-l="en" lang="en">Face ID lock</span></span>
+            <h3><span data-l="th" lang="th">เปิดได้ <em>แค่คุณ</em></span><span data-l="en" lang="en">Opens for <em>you only.</em></span></h3>
+            <p><span data-l="th" lang="th">บัตร เอกสาร และค่าใช้จ่ายของคุณ ถูกล็อกไว้ ใช้หน้าคุณเปิด หรือใช้รหัส iPhone แทนก็ได้</span><span data-l="en" lang="en">Your cards, documents and bills stay locked. Open with a glance, or use your iPhone passcode.</span></p>
+          </div>
+          <div class="nv" aria-hidden="true">
+            <div class="ph"><img class="nl" data-n="faceid" src="img/new/faceid-th.webp" alt="" width="600" height="1298" loading="lazy" decoding="async"></div>
+            <svg class="fid" viewBox="0 0 64 64"><g class="br"><path d="M6 20V12a6 6 0 0 1 6-6h8M44 6h8a6 6 0 0 1 6 6v8M58 44v8a6 6 0 0 1-6 6h-8M20 58h-8a6 6 0 0 1-6-6v-8"/></g><g class="fc"><path d="M23 25v4M41 25v4M32 25v12h-3M24 44a12 12 0 0 0 16 0"/></g><path class="ok" d="M20 33l8 8 16-17"/></svg>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="see" aria-labelledby="seeH">
     <div class="wrap">
       <div class="head rv">
@@ -451,31 +646,26 @@ h1 em{display:inline-block;transform-origin:50% 10%}
           <p><span data-l="th" lang="th">เก็บวันหมดประกัน แล้วเตือนก่อนหมด</span><span data-l="en" lang="en">Keep the end date and get a nudge before it runs out.</span></p>
         </article>
         <article class="f rv">
-          <span class="new"><span data-l="th" lang="th">ใหม่</span><span data-l="en" lang="en">New</span></span>
           <svg viewBox="0 0 30 30"><rect x="4.5" y="6" width="21" height="19" rx="3"/><path d="M4.5 12h21M10 3.5v5M20 3.5v5"/><circle cx="19.5" cy="18.5" r="2"/></svg>
           <h3><span data-l="th" lang="th">บิลกับวันหยุด ในปฏิทินเดียว</span><span data-l="en" lang="en">Bills and holidays, one calendar</span></h3>
           <p><span data-l="th" lang="th">เห็นวันจ่ายเงินและวันหยุดของไทยในเดือนเดียวกัน</span><span data-l="en" lang="en">Payments and public holidays side by side, a whole month at a glance.</span></p>
         </article>
         <article class="f rv">
-          <span class="new"><span data-l="th" lang="th">ใหม่</span><span data-l="en" lang="en">New</span></span>
           <svg viewBox="0 0 30 30"><rect x="4" y="4" width="10" height="10" rx="2.5"/><rect x="16" y="4" width="10" height="10" rx="2.5"/><rect x="4" y="16" width="22" height="10" rx="2.5"/></svg>
           <h3><span data-l="th" lang="th">วิดเจ็ต</span><span data-l="en" lang="en">Widgets</span></h3>
           <p><span data-l="th" lang="th">รายการถัดไปบนหน้าจอโฮมและหน้าจอล็อก</span><span data-l="en" lang="en">What's next, right on your Home Screen and Lock Screen.</span></p>
         </article>
         <article class="f rv">
-          <span class="new"><span data-l="th" lang="th">ใหม่</span><span data-l="en" lang="en">New</span></span>
           <svg viewBox="0 0 30 30"><path d="M5 10V7a2 2 0 0 1 2-2h3M20 5h3a2 2 0 0 1 2 2v3M25 20v3a2 2 0 0 1-2 2h-3M10 25H7a2 2 0 0 1-2-2v-3"/><path d="M11 11.5v1.5M19 11.5v1.5M15 11.5v4.5h-1M11.5 19.5a5 5 0 0 0 7 0"/></svg>
           <h3><span data-l="th" lang="th">ล็อกด้วย Face ID</span><span data-l="en" lang="en">Face ID lock</span></h3>
           <p><span data-l="th" lang="th">เปิดได้แค่คุณ</span><span data-l="en" lang="en">For your eyes only.</span></p>
         </article>
         <article class="f rv">
-          <span class="new"><span data-l="th" lang="th">ใหม่</span><span data-l="en" lang="en">New</span></span>
           <svg viewBox="0 0 30 30"><path d="M24 18.5A10 10 0 0 1 11.5 6a10 10 0 1 0 12.5 12.5z"/></svg>
           <h3><span data-l="th" lang="th">โหมดมืด</span><span data-l="en" lang="en">Dark mode</span></h3>
           <p><span data-l="th" lang="th">อัตโนมัติ สว่าง หรือมืด เลือกเองได้</span><span data-l="en" lang="en">Auto, Light or Dark. Your call.</span></p>
         </article>
         <article class="f rv">
-          <span class="new"><span data-l="th" lang="th">ใหม่</span><span data-l="en" lang="en">New</span></span>
           <svg viewBox="0 0 30 30"><circle cx="15" cy="15" r="10.5"/><path d="M4.5 15h21M15 4.5c3 3 4.2 6.5 4.2 10.5S18 22.5 15 25.5M15 4.5c-3 3-4.2 6.5-4.2 10.5S12 22.5 15 25.5"/></svg>
           <h3><span data-l="th" lang="th">จ่ายหลายสกุลเงิน รวมยอดเดียว</span><span data-l="en" lang="en">Any currency, one total</span></h3>
           <p><span data-l="th" lang="th">จ่ายเป็นดอลลาร์ ยูโร หรือปอนด์ ก็รวมเป็นบาทให้</span><span data-l="en" lang="en">Pounds, euros, dollars. Totals add up in your own currency.</span></p>
@@ -642,6 +832,7 @@ h1 em{display:inline-block;transform-origin:50% 10%}
     try{localStorage.setItem('db-lang',l);}catch(e){}
     document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l?'true':'false');});
     document.querySelectorAll('img.hs').forEach(function(im){im.src='img/hero/'+l+'-'+im.dataset.n+'.webp';});
+    document.querySelectorAll('img.nl').forEach(function(im){im.src='img/new/'+im.dataset.n+'-'+l+'.webp';});
     document.querySelectorAll('img.badgeImg').forEach(function(b){b.onerror=function(){b.onerror=null;b.src=BADGE.en;};b.src=BADGE[l];b.alt=BADGE_ALT[l];});
     document.getElementById('devs').setAttribute('aria-label',l==='th'?'อุปกรณ์':'Device');
     askTitle(l);paint();
@@ -694,6 +885,20 @@ h1 em{display:inline-block;transform-origin:50% 10%}
   document.querySelectorAll('.tiles .tile').forEach(function(f,k){f.style.transitionDelay=k*90+'ms';});
   // stagger feature cards
   document.querySelectorAll('.feats .f').forEach(function(f,k){f.style.transitionDelay=(k%3)*70+'ms';});
+
+  // New in Datebell: theme switcher (cycles until the visitor picks one)
+  (function(){
+    var card=document.getElementById('themeCard');if(!card)return;
+    var btns=card.querySelectorAll('#themeSw button'),imgs=card.querySelectorAll('.stack img'),order=['auto','lemon','cloud','cocoa'],k=0,tAuto=!reduce,seenT=false;
+    function setT(t){
+      card.dataset.t=t;k=order.indexOf(t);
+      btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.t===t?'true':'false');});
+      imgs.forEach(function(im){im.classList.toggle('on',im.dataset.t===t);});
+    }
+    btns.forEach(function(b){b.onclick=function(){tAuto=false;setT(b.dataset.t);};});
+    if('IntersectionObserver' in window){new IntersectionObserver(function(es){seenT=es[0].isIntersecting;}).observe(card);}
+    setInterval(function(){if(!tAuto||!seenT||document.hidden)return;setT(order[(k+1)%order.length]);},2600);
+  })();
 
   // carousel autoplay until the visitor touches it
   var auto=!reduce,seen=false;
