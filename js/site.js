@@ -34,11 +34,11 @@
     :/-(gl|en)-|-(gl|en)$/.test(ct)?'en'
     :saved||(/^th\b/i.test(navigator.language||'')?'th':(ct?'th':'en'));
 
-  // home: phone plays through real screens, with a reminder on top
-  var scr=d.getElementById('reel');
-  if(scr){
-    var imgs=scr.querySelectorAll('img'),k=0;
-    if(!reduce)setInterval(function(){if(d.hidden)return;imgs[k].classList.remove('on');k=(k+1)%imgs.length;imgs[k].classList.add('on');},3000);
+  // home: real Simulator walkthrough (Bobby-style), image stays until the video plays
+  var walk=d.getElementById('walk');
+  if(walk&&!reduce){
+    walk.addEventListener('playing',function(){walk.classList.add('on');});
+    hooks.push(function(l){var src='video/walkthrough-'+l+'.mp4';if(walk.getAttribute('src')===src)return;walk.classList.remove('on');walk.src=src;var p=walk.play();if(p&&p.catch)p.catch(function(){});});
   }
   var ntf=d.getElementById('ntf');
   if(ntf){
