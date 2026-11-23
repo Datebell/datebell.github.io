@@ -47,10 +47,9 @@ html[lang="th"] h3{font-family:"Prompt",var(--display);font-weight:600;letter-sp
 .cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:26px}
 .badge{display:inline-block;line-height:0;border-radius:12px;transition:transform .2s var(--ease)}
 .badge img{height:54px;width:auto}
-.btn{display:inline-flex;align-items:center;gap:8px;min-height:54px;padding:0 22px;border-radius:14px;background:var(--mint);color:var(--g);text-decoration:none;font:600 17px/1 var(--body);transition:background .2s,transform .2s var(--ease)}
-.btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;min-width:162px;padding:0 24px;border-radius:10px;background:var(--g);color:#fff;text-decoration:none;font:500 17px/1 var(--body);letter-spacing:-.005em;transition:background .2s}
 .badge:active,.btn:active{transform:scale(.97)}
-@media (hover:hover){.btn:hover{background:#D9EDE4}.badge:hover{transform:translateY(-2px)}}
+@media (hover:hover){.btn:hover{background:var(--g-press)}.badge:hover{transform:translateY(-2px)}}
 
 /* phone */
 .phone{position:relative;width:min(280px,70vw);aspect-ratio:600/1300;border-radius:46px;padding:10px;background:#101614;box-shadow:0 40px 80px -30px rgba(7,61,45,.55),inset 0 0 0 1.5px rgba(255,255,255,.2),inset 0 0 0 3px #26302C}
@@ -80,14 +79,20 @@ html[lang="th"] h3{font-family:"Prompt",var(--display);font-weight:600;letter-sp
 .logo{display:flex;align-items:center;gap:10px;margin-bottom:22px}
 .logo svg{width:64px;height:64px}
 .logo b{font:800 34px/1 var(--display);letter-spacing:-.03em}
-.newbox{display:flex;gap:12px;align-items:center;margin-top:28px;padding:14px 16px;border-radius:18px;background:var(--soft);color:var(--ink);text-decoration:none;max-width:440px;transition:background .2s}
-.newbox .tag{flex:none;font:700 12px/1 var(--body);color:#3A2600;background:var(--yellow);border-radius:999px;padding:6px 9px}
-.newbox span{flex:1;font-size:15px;line-height:1.4;color:var(--muted)}
-.newbox svg{flex:none;width:16px;height:16px;fill:none;stroke:var(--muted);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-@media (hover:hover){.newbox:hover{background:#ECF0EC}}
-.home .right{position:relative;display:grid;place-items:center;padding:56px 20px;background:var(--g);overflow:hidden}
+.newbox{display:block;margin-top:30px;padding:16px 18px;border-radius:12px;background:var(--soft);color:var(--muted);text-decoration:none;max-width:440px;font-size:15px;line-height:1.5}
+.newbox b{color:var(--ink);font-weight:600}
+@media (hover:hover){.newbox:hover{color:var(--ink)}}
+.home .right{position:relative;display:grid;place-items:center;padding:56px 20px;background:#D6EEE2;overflow:hidden}
 .home .right .stage{position:relative;padding-top:6px}
-.home .right .copy{position:absolute;left:0;right:0;bottom:18px;text-align:center;font-size:13px;color:rgba(255,255,255,.7)}
+/* realistic iPhone: titanium edge, side buttons, Dynamic Island */
+.iphone{position:relative;width:min(300px,74vw);aspect-ratio:700/1516;border-radius:15.5%/7.2%;padding:3.4%;background:linear-gradient(135deg,#3B3F42,#1B1E20 40%,#2C3033 70%,#16181A);box-shadow:0 0 0 1px #0A0B0C,inset 0 0 0 1.5px rgba(255,255,255,.22),0 50px 90px -40px rgba(7,61,45,.55)}
+.iphone::before,.iphone::after{content:"";position:absolute;width:3px;border-radius:2px;background:#2A2E31}
+.iphone::before{left:-3px;top:19%;height:5%;box-shadow:0 calc(min(300px,74vw)*.2) 0 0 #2A2E31,0 calc(min(300px,74vw)*.36) 0 0 #2A2E31}
+.iphone::after{right:-3px;top:27%;height:10%}
+.iphone .scr{position:relative;width:100%;height:100%;border-radius:12.6%/5.9%;overflow:hidden;background:#fff}
+.iphone .scr img,.iphone .scr video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transition:opacity .7s var(--ease)}
+.iphone .scr .on{opacity:1}
+.iphone .island{position:absolute;z-index:2;left:50%;top:2.6%;width:31%;height:3.6%;transform:translateX(-50%);border-radius:999px;background:#000}
 @media (min-width:960px){
   .home{grid-template-columns:1fr 1fr}
   .mfoot{display:none}.dfoot{display:flex}
@@ -95,6 +100,7 @@ html[lang="th"] h3{font-family:"Prompt",var(--display);font-weight:600;letter-sp
   .intro{padding:40px 0}
   .home .right{padding:40px}
   .phone{width:300px}
+  .iphone{width:330px}
 }
 
 /* ---------- features page ---------- */
