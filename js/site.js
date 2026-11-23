@@ -38,7 +38,7 @@
   var walk=d.getElementById('walk');
   if(walk&&!reduce){
     walk.addEventListener('playing',function(){walk.classList.add('on');});
-    hooks.push(function(l){var src='video/walkthrough-'+l+'.mp4';if(walk.getAttribute('src')===src)return;walk.classList.remove('on');walk.src=src;var p=walk.play();if(p&&p.catch)p.catch(function(){});});
+    hooks.push(function(l){var src='video/walkthrough-'+l+'.mp4';if(walk.getAttribute('src')===src)return;walk.classList.remove('on');walk.poster='video/walkthrough-'+l+'.webp';walk.src=src;var p=walk.play();if(p&&p.catch)p.catch(function(){});});
   }
   var ntf=d.getElementById('ntf');
   if(ntf){
