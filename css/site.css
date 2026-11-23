@@ -230,13 +230,10 @@ html[lang="th"] .sec>.wrap>.k{letter-spacing:0;text-transform:none;font-size:14p
 .wrap.foot{padding-left:20px;padding-right:20px}
 
 /* Instagram follow (Nett 19 Nov: colour glyph + "Follow us on Instagram" + handle, all tappable) */
-.igb{display:inline-flex;align-items:center;gap:11px;min-height:56px;padding:4px 10px 4px 0;border-radius:16px;color:var(--ink);text-decoration:none;line-height:1;transition:transform .2s var(--ease)}
+.igb{display:inline-flex;align-items:center;gap:10px;min-height:44px;align-self:flex-start;color:var(--muted);text-decoration:none;font:400 15px/1.3 var(--body);transition:transform .2s var(--ease)}
 .igb:active{transform:scale(.97)}
-.igb .logo{flex:0 0 auto;display:grid;place-items:center;filter:drop-shadow(0 6px 14px rgba(0,0,0,.18))}
-.igb .logo img{width:52px;height:52px}
-.igb .t{display:flex;flex-direction:column;gap:5px;text-align:left}
-.igb small{font:500 13px/1 var(--body);color:var(--muted)}
-.igb b{font:700 19px/1 var(--display);letter-spacing:-.01em}
+.igb img{width:32px;height:32px;flex:none}
+.igb b{color:var(--ink);font-weight:600}
 .home .igb{margin-top:18px}
-.end .igb{margin-top:6px}
+.end .igb{margin-top:4px}
 @media (hover:hover){.igb:hover{transform:translateY(-2px)}}
