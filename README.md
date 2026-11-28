@@ -12,3 +12,5 @@ Service plan prices for the app: `prices/v1/<country>.json` (TH, US, GB, CA, AU,
 Price-rise alert (app 1.8.1+): when a plan's price goes up, keep the new price in `amountMinor` and add `"was": {"amountMinor": <old price>, "changedOn": "YYYY-MM-DD"}` (the day the new price started, never after `verifiedOn`). A subscription saved at exactly the old price, in the same currency and billing cycle, then shows the alert. Leave `was` in place for about 6 months, then remove it. Before merging, check the files with `node scripts/check-price-files.mjs <this repo>/prices/v1` from `mobile/` in the app repository. A weekly price check opens a pull request here; nothing changes for users until it is merged.
 
 This repo is now ahead of `site/` in the app repository for the landing page; the old nn3tt.github.io/Datebell-site stays as it is.
+
+Guides (for search): `help/` (English) and `help/th/` (Thai), one language per URL, built from `scripts/build-help.py` (edit the text there, then run it). Screens in `img/help/` are real Simulator shots. `sitemap.xml` and `robots.txt` list every page.

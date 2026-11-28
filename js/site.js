@@ -1,4 +1,4 @@
-// Datebell site: language, App Store campaign links, small motion. Shared by index.html and features.html.
+// Datebell site: language, App Store campaign links, small motion. Shared by index.html, features.html and the guides in help/.
 (function(){
   var d=document,q=new URLSearchParams(location.search);
   var APP='6821503223',PT='129594804';
@@ -15,13 +15,15 @@
   });
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  var BADGE={th:'https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/th-th',en:'img/badge-en.svg'};
+  var BADGE={th:'https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/th-th',en:'/img/badge-en.svg'};
   var BADGE_ALT={th:'ดาวน์โหลดบน App Store',en:'Download on the App Store'};
   var TITLE=window.DB_TITLE||{th:'Datebell',en:'Datebell'};
   var lang,hooks=[];
+  // guide pages are one language per URL (good for search): <html lang="en" data-fixed>
+  var FIXED=d.documentElement.hasAttribute('data-fixed');
   function setLang(l){
-    lang=l;d.documentElement.lang=l;d.title=TITLE[l];
-    try{localStorage.setItem('db-lang',l);}catch(e){}
+    lang=l;d.documentElement.lang=l;if(!FIXED)d.title=TITLE[l];
+    if(!FIXED)try{localStorage.setItem('db-lang',l);}catch(e){}
     d.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l?'true':'false');});
     d.querySelectorAll('img[data-src]').forEach(function(im){im.src=im.dataset.src.replace('{l}',l);});
     d.querySelectorAll('img.badgeImg').forEach(function(b){b.onerror=function(){b.onerror=null;b.src=BADGE.en;};b.src=BADGE[l];b.alt=BADGE_ALT[l];});
@@ -29,7 +31,7 @@
   }
   d.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){setLang(b.dataset.set);};});
   var saved=null;try{saved=localStorage.getItem('db-lang');}catch(e){}
-  var start=q.get('lang')==='en'||q.get('lang')==='th'?q.get('lang')
+  var start=FIXED?d.documentElement.lang:q.get('lang')==='en'||q.get('lang')==='th'?q.get('lang')
     :/-th-|^th-|-th$/.test(ct)?'th'
     :/-(gl|en)-|-(gl|en)$/.test(ct)?'en'
     :saved||(/^th\b/i.test(navigator.language||'')?'th':(ct?'th':'en'));
