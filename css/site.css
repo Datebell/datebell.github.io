@@ -256,7 +256,7 @@ html[lang="th"] .answer b{letter-spacing:0;text-transform:none;font-size:14px}
 .guide .row h2{font-size:clamp(24px,5.6vw,32px)}
 .guide .row p b{color:var(--ink);font-weight:600}
 .guide .vis .phone .scr img{opacity:1}
-.guide .vis .ntf2{top:56px}
+.guide .vis .ntf2{top:auto;bottom:22px}
 .g-extra{max-width:40em;padding:28px 0 4px;border-top:1px solid var(--line)}
 .g-extra h2{font-size:clamp(22px,5vw,28px)}
 .g-extra p{margin:0;color:var(--muted)}

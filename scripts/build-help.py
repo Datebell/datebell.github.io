@@ -41,16 +41,16 @@ GUIDES = [
       'steps': [
         ('Tap + and pick the service',
          'Open Datebell and tap <b>+</b> on Home. Under <b>Subscriptions</b>, search for the service or pick it from the list. Over 1,200 services come with their name and logo. Not there? Tap <b>Add your own</b>.',
-         'add-list', [(3, 21.6, 94, 6.6), (3, 42.4, 94, 26)], None),
+         'add-list', [(3, 23, 94, 6.4), (3, 48.6, 94, 14.2)], None),
         ('Turn on Free trial and set the end date',
-         'Turn on <b>Free trial</b> and choose the day the trial ends. Add the price you’ll pay after it, so the reminder tells you what’s at stake.',
-         'trial-form', [], None),
+         'Set the price you’ll pay after the trial, turn on <b>Free trial</b> and choose the day it ends. The reminder then tells you what you’d pay.',
+         'trial-form', [(3, 65.4, 94, 13.2)], None),
         ('Save. Datebell rings 2 days before',
-         'The reminder comes 2 days before the trial ends, at your reminder time (9:00 AM unless you change it in Settings). Home shows how many days are left.',
-         'trial-home', [], ('Free trial ends in 2 days', 'Your Disney+ free trial ends in 2 days. Cancel at least a day before if you don’t want to pay.')),
+         'The reminder comes 2 days before the trial ends, at your reminder time (9:00 AM unless you change it in Settings). On Home, the trial is marked Free trial with the days left.',
+         'trial-home', [(4, 63, 92, 12.6)], ('Free trial ends in 2 days', 'Your Disney+ free trial ends in 2 days. Cancel at least a day before if you don’t want to pay.')),
         ('Cancel it, or keep it',
-         'Open the trial to see when it ends. Tap <b>Cancel or ask for a refund</b> to see where to cancel: the App Store, Google Play, the service’s own website, or your phone provider. If you keep it, Datebell carries on as a normal subscription and reminds you before each payment.',
-         'trial-item', [], None),
+         'Open the trial to see when it ends and what it will cost. Tap <b>Cancel it</b> to see how to cancel that service, and <b>How to cancel</b> for its steps. If you keep it, Datebell carries on as a normal subscription and reminds you before each payment.',
+         'trial-item', [(19, 42.6, 62, 6.2), (3, 81.4, 94, 7.6)], None),
       ],
       'extra': [
         ('Where to find the date a trial ends',
@@ -68,16 +68,16 @@ GUIDES = [
       'steps': [
         ('แตะ + แล้วเลือกบริการ',
          'เปิด Datebell แล้วแตะ <b>+</b> ที่หน้าแรก ในหมวด<b>ค่าสมาชิก</b> ค้นชื่อหรือเลือกจากรายการ มีกว่า 1,200 บริการพร้อมชื่อและโลโก้ ถ้าไม่เจอ แตะ<b>เพิ่มชื่อเอง</b>',
-         'add-list', [(3, 21.6, 94, 6.6), (3, 42.4, 94, 26)], None),
+         'add-list', [(3, 23, 94, 6.4), (3, 48.6, 94, 14.2)], None),
         ('เปิดทดลองใช้ฟรี แล้วใส่วันที่หมด',
-         'เปิดสวิตช์<b>ทดลองใช้ฟรี</b> แล้วเลือกวันที่ทดลองฟรีหมด ใส่ราคาที่จะต้องจ่ายหลังจากนั้นด้วย การแจ้งเตือนจะบอกว่าถ้าไม่ยกเลิกจะเสียเท่าไหร่',
-         'trial-form', [], None),
+         'ใส่ราคาที่ต้องจ่ายหลังหมดทดลอง เปิดสวิตช์<b>ทดลองใช้ฟรี</b> แล้วเลือกวันที่หมด การแจ้งเตือนจะบอกว่าถ้าไม่ยกเลิกจะเสียเท่าไหร่',
+         'trial-form', [(3, 65.4, 94, 13.2)], None),
         ('บันทึก แล้ว Datebell จะเตือนก่อน 2 วัน',
-         'การแจ้งเตือนมาก่อนทดลองฟรีหมด 2 วัน ตามเวลาเตือนของคุณ (9:00 น. ถ้าไม่ได้เปลี่ยนในตั้งค่า) หน้าแรกบอกด้วยว่าเหลืออีกกี่วัน',
-         'trial-home', [], ('ทดลองใช้ฟรีหมดในอีก 2 วัน', 'ทดลองใช้ฟรี Disney+ จะหมดในอีก 2 วัน ถ้าไม่ใช้ต่อ ยกเลิกล่วงหน้าอย่างน้อย 1 วัน')),
+         'การแจ้งเตือนมาก่อนทดลองฟรีหมด 2 วัน ตามเวลาเตือนของคุณ (9:00 น. ถ้าไม่ได้เปลี่ยนในตั้งค่า) หน้าแรกมีป้ายทดลองฟรี พร้อมบอกว่าเหลืออีกกี่วัน',
+         'trial-home', [(4, 63, 92, 12.6)], ('ทดลองใช้ฟรีหมดในอีก 2 วัน', 'ทดลองใช้ฟรี Disney+ จะหมดในอีก 2 วัน ถ้าไม่ใช้ต่อ ยกเลิกล่วงหน้าอย่างน้อย 1 วัน')),
         ('ยกเลิก หรือใช้ต่อ',
-         'เปิดรายการเพื่อดูว่าหมดวันไหน แตะ<b>ยกเลิกหรือขอเงินคืน</b> เพื่อดูว่าต้องไปยกเลิกที่ไหน App Store, Google Play, เว็บของบริการ หรือค่ายมือถือ ถ้าใช้ต่อ Datebell จะติดตามเป็นค่าสมาชิกปกติ และเตือนก่อนตัดเงินทุกรอบ',
-         'trial-item', [], None),
+         'เปิดรายการเพื่อดูว่าหมดวันไหน และจะต้องจ่ายเท่าไหร่ แตะ<b>ไปยกเลิก</b> เพื่อดูว่ายกเลิกบริการนั้นได้อย่างไร หรือแตะ<b>วิธียกเลิก</b> เพื่อดูขั้นตอน ถ้าใช้ต่อ Datebell จะติดตามเป็นค่าสมาชิกปกติ และเตือนก่อนตัดเงินทุกรอบ',
+         'trial-item', [(19, 42.6, 62, 6.2), (3, 81.4, 94, 7.6)], None),
       ],
       'extra': [
         ('ดูวันที่ทดลองใช้ฟรีหมดได้ที่ไหน',
@@ -98,16 +98,16 @@ GUIDES = [
       'steps': [
         ('Tap + and pick the service',
          'Tap <b>+</b> on Home, keep <b>Subscriptions</b> selected and search for the service. The name and logo fill in for you.',
-         'add-list', [(3, 21.6, 94, 6.6)], None),
+         'add-list', [(3, 23, 94, 6.4)], None),
         ('Add the price, how often and the billing date',
          'Type the price per charge, or tap <b>Choose a plan</b> for many popular services. Pick Monthly, Yearly, Weekly or Other, then the billing date. A past date is fine: future charges follow the same day. 15 currencies are supported.',
-         'sub-form', [], None),
+         'sub-form', [(3, 45.8, 94, 18.8), (3, 70.8, 94, 6.4), (3, 82.6, 94, 6.4)], None),
         ('Save, and see your totals',
          'Home shows what’s due in the next 30 days and what it all costs in a year, with the next charge at the top.',
-         'sub-home', [], None),
+         'trial-home', [(3, 32.6, 94, 12.2)], None),
         ('Get a reminder before every charge',
          'Datebell reminds you 7 days and 1 day before each payment, and on the day, at your reminder time. If a plan you picked from the list goes up in price, the reminder tells you.',
-         'sub-detail', [], None),
+         'sub-detail', [(3, 59, 94, 11.4)], None),
       ],
       'extra': [
         ('Why not just use the iPhone Subscriptions list?',
@@ -125,16 +125,16 @@ GUIDES = [
       'steps': [
         ('แตะ + แล้วเลือกบริการ',
          'แตะ <b>+</b> ที่หน้าแรก เลือกหมวด<b>ค่าสมาชิก</b> แล้วค้นชื่อบริการ ชื่อและโลโก้มาให้เอง',
-         'add-list', [(3, 21.6, 94, 6.6)], None),
+         'add-list', [(3, 23, 94, 6.4)], None),
         ('ใส่ราคา รอบการจ่าย และวันที่ตัดเงิน',
          'พิมพ์ราคาต่อรอบ หรือแตะ<b>เลือกแพ็กเกจ</b> สำหรับบริการยอดนิยม เลือกรายเดือน รายปี รายสัปดาห์ หรืออื่นๆ แล้วใส่วันที่ตัดเงิน ใส่วันที่ผ่านมาแล้วก็ได้ รอบถัดไปจะยึดวันเดียวกัน รองรับ 15 สกุลเงิน',
-         'sub-form', [], None),
+         'sub-form', [(3, 45.8, 94, 18.8), (3, 70.8, 94, 6.4), (3, 82.6, 94, 6.4)], None),
         ('บันทึก แล้วดูยอดรวม',
          'หน้าแรกบอกยอดที่ต้องจ่ายใน 30 วันข้างหน้า และรวมทั้งปีเท่าไหร่ รายการที่จะตัดเงินถัดไปอยู่บนสุด',
-         'sub-home', [], None),
+         'trial-home', [(3, 32.6, 94, 12.2)], None),
         ('เตือนก่อนตัดเงินทุกรอบ',
          'Datebell เตือนก่อนตัดเงิน 7 วัน 1 วัน และในวันจริง ตามเวลาเตือนของคุณ ถ้าแพ็กเกจที่เลือกจากรายการขึ้นราคา การแจ้งเตือนจะบอกด้วย',
-         'sub-detail', [], None),
+         'sub-detail', [(3, 59, 94, 11.4)], None),
       ],
       'extra': [
         ('ทำไมไม่ใช้รายการการสมัครรับใน iPhone',
@@ -271,7 +271,7 @@ def guide_page(g, lang):
         alt_txt = esc(strip_tags(h))
         out.append(f'''      <li class="row{flip} rv">
         <div class="txt"><span class="g-n">{u['step']} {i + 1}</span><h2>{h}</h2><p>{p}</p></div>
-        <div class="vis"><div class="phone"><div class="scr"><img src="/img/help/{shot}-{lang}.webp" alt="{alt_txt}" width="700" height="1522" loading="{'eager' if i == 0 else 'lazy'}" decoding="async">{rg}</div></div>{nt}</div>
+        <div class="vis"><div class="phone{' top' if rings and max(y + hh for _, y, _, hh in rings) > 70 else ''}"><div class="scr"><img src="/img/help/{shot}-{lang}.webp" alt="{alt_txt}" width="700" height="1522" loading="{'eager' if i == 0 else 'lazy'}" decoding="async">{rg}</div></div>{nt}</div>
       </li>''')
     out.append('    </ol>')
     for h, body in c['extra']:
